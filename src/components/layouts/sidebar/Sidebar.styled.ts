@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const SidebarContainer = styled.aside`
+  display: flex;
+  flex-direction: column;
   height: 100%;
   color: rgba(25, 23, 17, 0.6);
-  padding: 4px 4px 4px;
 
   &:hover {
     svg {
@@ -21,16 +22,13 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const SidebarHeader = styled.div`
+  height: 3.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
+  margin-bottom: 10px;
   transition: 270ms;
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--gray100-color);
-  }
 `;
 export const UserInfoBox = styled.div`
   display: flex;
@@ -40,14 +38,14 @@ export const UserInfoBox = styled.div`
 `;
 
 export const NameBox = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   background-color: var(--gray400-color);
 `;
 
@@ -58,13 +56,13 @@ export const NameEmail = styled.div`
 
   & p:first-child {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 3px;
     color: #000;
   }
 
   & p:last-child {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     color: var(--gray500-color);
   }
 `;
@@ -87,5 +85,35 @@ export const AnglesIcon = styled.div`
 
   &:hover {
     background-color: var(--gray300-color);
+  }
+`;
+
+interface SidebarLiProps {
+  clicked: boolean;
+}
+
+export const SidebarLi = styled.li<SidebarLiProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.875rem;
+  background-color: ${({ clicked }) => clicked && `var(--gray100-color)`};
+
+  transition: 270ms;
+  cursor: pointer;
+
+  & img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  & p {
+    font-weight: 500;
+    color: var(--gray500-color);
+  }
+
+  &:hover {
+    background-color: var(--gray100-color);
   }
 `;
