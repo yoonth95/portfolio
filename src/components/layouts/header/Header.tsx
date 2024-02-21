@@ -1,9 +1,8 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useSidebarStore } from "@/stores";
-import notebook from "@/assets/images/notebook.png";
+import { notebook } from "@/assets/images";
 import * as H from "./Header.styled";
 
 const Header = () => {
