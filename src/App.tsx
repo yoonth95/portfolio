@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Sidebar, Header } from "@/components/layouts";
+import { Sidebar, Header, Footer } from "@/components/layouts";
 import { useSidebarStore } from "./stores";
 import styled from "styled-components";
 
@@ -18,6 +18,7 @@ function App() {
       <ContentContainer>
         <Header />
         <Outlet />
+        <Footer />
       </ContentContainer>
     </WebContainer>
   );
@@ -36,6 +37,8 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
 `;
 
 const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   background-color: #fff;
   overflow-y: auto;
