@@ -10,8 +10,29 @@ const router = createBrowserRouter([
       {
         path: "/",
         async lazy() {
-          const { default: MainPage } = await import("../pages/main/MainPage");
-          return { Component: MainPage };
+          const { default: ProfilePage } = await import("../pages/profile/ProfilePage");
+          return { Component: ProfilePage };
+        },
+      },
+      {
+        path: "/skill",
+        async lazy() {
+          const { default: SkillPage } = await import("../pages/skill/SkillPage");
+          return { Component: SkillPage };
+        },
+      },
+      {
+        path: "/career",
+        async lazy() {
+          const { default: CareerPage } = await import("../pages/career/CareerPage");
+          return { Component: CareerPage };
+        },
+      },
+      {
+        path: "/award",
+        async lazy() {
+          const { default: AwardPage } = await import("../pages/award/AwardPage");
+          return { Component: AwardPage };
         },
       },
     ],
