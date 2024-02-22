@@ -1,8 +1,5 @@
+import { ClickedType } from "@/types";
 import styled from "styled-components";
-
-interface MenuButtonProps {
-  toggle: boolean;
-}
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -12,8 +9,8 @@ export const HeaderContainer = styled.header`
   padding: 0.75rem;
 `;
 
-export const MenuButton = styled.button<MenuButtonProps>`
-  display: ${({ toggle }) => (toggle ? "none" : "block")};
+export const MenuButton = styled.button<ClickedType>`
+  display: ${({ clicked }) => (clicked ? "none" : "block")};
   width: 1.5rem;
   height: 1.5rem;
   transition: 270ms;

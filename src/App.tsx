@@ -1,18 +1,15 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar, Header, Footer } from "@/components/layouts";
 import { useSidebarStore } from "./stores";
+import { ClickedType } from "./types";
 import styled from "styled-components";
-
-interface SidebarContainerProps {
-  toggle: boolean;
-}
 
 function App() {
   const { toggleSidebar } = useSidebarStore();
 
   return (
     <WebContainer>
-      <SidebarContainer toggle={toggleSidebar}>
+      <SidebarContainer clicked={toggleSidebar}>
         <Sidebar />
       </SidebarContainer>
       <ContentContainer>
@@ -29,8 +26,8 @@ const WebContainer = styled.div`
   height: 100vh;
 `;
 
-const SidebarContainer = styled.div<SidebarContainerProps>`
-  width: ${({ toggle }) => (toggle ? "15rem" : "0")};
+const SidebarContainer = styled.div<ClickedType>`
+  width: ${({ clicked }) => (clicked ? "15rem" : "0")};
   background-color: var(--gray100-color);
   overflow-y: auto;
   transition: width 270ms ease 0s;
