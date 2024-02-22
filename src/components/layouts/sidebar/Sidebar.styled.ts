@@ -1,7 +1,8 @@
+import { ClickedType } from "@/types";
 import styled from "styled-components";
 
-export const SidebarContainer = styled.aside`
-  display: flex;
+export const SidebarContainer = styled.aside<ClickedType>`
+  display: ${({ clicked }) => (clicked ? "block" : "none")};
   flex-direction: column;
   height: 100%;
   color: rgba(25, 23, 17, 0.6);
@@ -88,11 +89,7 @@ export const AnglesIcon = styled.div`
   }
 `;
 
-interface SidebarLiProps {
-  clicked: boolean;
-}
-
-export const SidebarLi = styled.li<SidebarLiProps>`
+export const TabLi = styled.li<ClickedType>`
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -111,6 +108,75 @@ export const SidebarLi = styled.li<SidebarLiProps>`
   & p {
     font-weight: 500;
     color: var(--gray500-color);
+  }
+
+  &:hover {
+    background-color: var(--gray100-color);
+  }
+`;
+
+export const ProjectArea = styled.div`
+  font-weight: 500;
+  color: var(--gray500-color);
+
+  & > p {
+    padding: 2rem 1rem 0;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+`;
+
+export const PostUl = styled.ul<ClickedType>`
+  & > div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  & > .menu > svg {
+    transform: ${({ clicked }) => (clicked ? `rotate(90deg)` : `rotate(0deg)`)};
+    transition: transform 270ms ease-in-out;
+  }
+
+  & > .list {
+    max-height: ${({ clicked }) => (clicked ? `7rem` : 0)};
+    flex-direction: column;
+    align-items: start;
+    transition: 270ms ease-in-out 0s;
+    overflow: hidden;
+  }
+`;
+
+export const PostMenu = styled.div`
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: 270ms;
+
+  & p {
+    font-size: 0.8125rem;
+  }
+
+  &:hover {
+    background-color: var(--gray100-color);
+  }
+`;
+
+export const PostLi = styled.li<ClickedType>`
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  background-color: ${({ clicked }) => clicked && `var(--gray100-color)`};
+  transition: 270ms;
+
+  & img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  & p {
+    font-size: 0.75rem;
   }
 
   &:hover {
