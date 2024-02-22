@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <H.HeaderContainer>
-      <H.MenuButton toggle={toggleSidebar} onClick={() => setToggleSidebar()}>
+      <H.MenuButton clicked={toggleSidebar} onClick={() => setToggleSidebar()}>
         <FontAwesomeIcon icon={faBars} />
       </H.MenuButton>
       <H.Title onClick={() => navigator("/")}>
