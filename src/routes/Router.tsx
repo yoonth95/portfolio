@@ -35,6 +35,39 @@ const router = createBrowserRouter([
           return { Component: AwardPage };
         },
       },
+      {
+        path: "/project",
+        children: [
+          {
+            path: "egg-mbti",
+            async lazy() {
+              const { default: EggMbtiPage } = await import("../pages/eggMbti/EggMbtiPage");
+              return { Component: EggMbtiPage };
+            },
+          },
+          {
+            path: "happymanwon",
+            async lazy() {
+              const { default: HappymanwonPage } = await import("../pages/happymanwon/HappymanwonPage");
+              return { Component: HappymanwonPage };
+            },
+          },
+          {
+            path: "beta-beta",
+            async lazy() {
+              const { default: BetaBetaPage } = await import("../pages/betaBeta/BetaBetaPage");
+              return { Component: BetaBetaPage };
+            },
+          },
+          {
+            path: "web-builder",
+            async lazy() {
+              const { default: WebBuilderPage } = await import("../pages/webBuilder/WebBuilderPage");
+              return { Component: WebBuilderPage };
+            },
+          },
+        ],
+      },
     ],
   },
 ]);
