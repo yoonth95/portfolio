@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     --gray300-color: #37352f14;
     --gray400-color: #37352f4d;
     --gray500-color: #767676;
+    --gray500-color: #525252;
   }
 
   html,
@@ -155,6 +156,12 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  hr {
+    width: 100%;
+    margin: 1.5rem 0px;
+    border: 0.5px solid var(--gray200-color);
   }
 
   /* 기본 스크롤바 스타일링 */
