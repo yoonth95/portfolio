@@ -15,13 +15,6 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "/skill",
-        async lazy() {
-          const { default: SkillPage } = await import("../pages/skill/SkillPage");
-          return { Component: SkillPage };
-        },
-      },
-      {
         path: "/career",
         async lazy() {
           const { default: CareerPage } = await import("../pages/career/CareerPage");
