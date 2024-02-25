@@ -1,8 +1,7 @@
-import { profile, book, career, trophy, beta, egg, happymanwon, webBuilder } from "@/assets/images";
+import { profile, career, trophy, beta, egg, happymanwon, webBuilder } from "@/assets/images";
 
 const tabList = [
   { icon: profile, text: "프로필", link: "/" },
-  { icon: book, text: "스킬", link: "/skill" },
   { icon: career, text: "이력", link: "/career" },
   { icon: trophy, text: "수상 및 자격증", link: "/award" },
 ];
