@@ -1,3 +1,5 @@
-import { ClickedType } from "./clickedType";
+import { ClickedType } from "./ClickedType";
+import { SlickProps } from "./SlickTpye";
+import { StackInfoType } from "./StackInfoType";
 
-export { type ClickedType };
+export { type ClickedType, type SlickProps, type StackInfoType };
