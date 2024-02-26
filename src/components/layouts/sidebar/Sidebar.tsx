@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +6,7 @@ import { useSidebarStore } from "@/stores";
 import { tabList, projectList } from "@/data/sidebarInfo";
 import * as S from "./Sidebar.styled";
 
-const Sidebar = () => {
+const Sidebar: React.FC = React.memo(() => {
   const navigator = useNavigate();
   const location = useLocation();
   const { toggleSidebar, setToggleSidebar } = useSidebarStore();
@@ -14,12 +14,27 @@ const Sidebar = () => {
 
   const closeSidebar = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setToggleSidebar();
+    setToggleSidebar(false);
   };
 
   const toggleMenu = (index: number) => () => {
     setClickPostMenu((prevState) => prevState.map((open, i) => (i === index ? !open : open)));
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      if (windowWidth <= 1240) {
+        setToggleSidebar(false);
+      } else {
+        setToggleSidebar(true);
+      }
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <S.SidebarContainer clicked={toggleSidebar}>
@@ -31,7 +46,7 @@ const Sidebar = () => {
             <p>yoonth0919@gmail.com</p>
           </S.NameEmail>
         </S.UserInfoBox>
-        <S.AnglesIcon onClick={closeSidebar}>
+        <S.AnglesIcon innerWidth={window.innerWidth} onClick={closeSidebar}>
           <FontAwesomeIcon icon={faAnglesLeft} />
         </S.AnglesIcon>
       </S.SidebarHeader>
@@ -66,6 +81,6 @@ const Sidebar = () => {
       </S.ProjectArea>
     </S.SidebarContainer>
   );
-};
+});
 
 export default Sidebar;

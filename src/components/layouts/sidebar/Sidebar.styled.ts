@@ -68,7 +68,11 @@ export const NameEmail = styled.div`
   }
 `;
 
-export const AnglesIcon = styled.div`
+interface AnglesIconProps {
+  innerWidth: number;
+}
+
+export const AnglesIcon = styled.div<AnglesIconProps>`
   width: 1.5rem;
   height: 1.5rem;
   display: flex;
@@ -79,7 +83,7 @@ export const AnglesIcon = styled.div`
   cursor: pointer;
 
   & svg {
-    opacity: 0;
+    opacity: ${({ innerWidth }) => (innerWidth <= 1240 ? "1" : "0")};
     color: rgba(55, 53, 47, 0.45);
     transition: 270ms;
   }

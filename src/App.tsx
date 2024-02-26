@@ -5,11 +5,16 @@ import { ClickedType } from "./types";
 import styled from "styled-components";
 
 function App() {
-  const { toggleSidebar } = useSidebarStore();
+  const { toggleSidebar, setToggleSidebar } = useSidebarStore();
+
+  const dimClick = () => {
+    setToggleSidebar(!toggleSidebar);
+  };
 
   return (
     <WebContainer>
-      <SidebarContainer clicked={toggleSidebar}>
+      {window.innerWidth <= 1240 && toggleSidebar && <Dim onClick={dimClick} />}
+      <SidebarContainer clicked={toggleSidebar} innerWidth={window.innerWidth}>
         <Sidebar />
       </SidebarContainer>
       <ContentContainer>
@@ -26,11 +31,26 @@ const WebContainer = styled.div`
   height: 100vh;
 `;
 
-const SidebarContainer = styled.div<ClickedType>`
+const Dim = styled.div`
+  position: fixed;
+  inset: 0;
+  background-color: var(--modal-bg-color);
+  height: 100vh;
+  z-index: 9;
+`;
+
+interface SidebarContainerProps extends ClickedType {
+  innerWidth: number;
+}
+
+const SidebarContainer = styled.div<SidebarContainerProps>`
+  position: ${({ innerWidth }) => (innerWidth <= 1240 ? "fixed" : "relative")};
   width: ${({ clicked }) => (clicked ? "15rem" : "0")};
+  height: 100vh;
   background-color: var(--gray100-color);
   overflow-y: auto;
-  transition: width 270ms ease 0s;
+  transition: width 270ms;
+  z-index: 10;
 `;
 
 const ContentContainer = styled.div`
