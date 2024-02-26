@@ -2,11 +2,15 @@ import { ClickedType } from "@/types";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  height: 3.75rem;
-  padding: 0.75rem;
+  padding: 1rem;
+  font-size: 14px;
+  background-color: #fff;
+  z-index: 8;
 `;
 
 export const MenuButton = styled.button<ClickedType>`
