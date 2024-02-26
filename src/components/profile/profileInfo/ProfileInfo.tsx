@@ -35,7 +35,7 @@ const ProfileInfo: React.FC = () => {
       <hr />
       <P.ProfileTechStack>
         <P.ProfileTechStackTitle>
-          <h2>Teck Stack</h2>
+          <h2>Tech Stack</h2>
           <span>{stackInfoList[slideIndex].name}</span>
         </P.ProfileTechStackTitle>
         <P.ProfileSkill>
