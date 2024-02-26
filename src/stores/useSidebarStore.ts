@@ -2,12 +2,12 @@ import { create } from "zustand";
 
 interface useSidebarStoreType {
   toggleSidebar: boolean;
-  setToggleSidebar: () => void;
+  setToggleSidebar: (isToggle: boolean) => void;
 }
 
 const useSidebarStore = create<useSidebarStoreType>((set) => ({
   toggleSidebar: true,
-  setToggleSidebar: () => set((state) => ({ toggleSidebar: !state.toggleSidebar })),
+  setToggleSidebar: (isToggle) => set(() => ({ toggleSidebar: isToggle })),
 }));
 
 export default useSidebarStore;
