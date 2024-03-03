@@ -1,4 +1,5 @@
 import React from "react";
+import { careerTimelineYear } from "@/data/careerInfoList";
 import * as C from "./CareerTimeline.styled";
 
 const CareerTimeline = () => {
@@ -12,13 +13,12 @@ const CareerTimeline = () => {
           <span>개발 경력 1년 5개월</span>
         </C.TimelinePeriod>
         <C.TimelineGridWrap>
-          <C.TimelineGridLabels>
-            <div className="year">2021</div>
-            <div className="year">2022</div>
-            <div className="year">2023</div>
-            <div className="year">2024</div>
+          <C.TimelineGridLabels totalYear={careerTimelineYear.length}>
+            {careerTimelineYear.map((year) => (
+              <div className="year">{year}</div>
+            ))}
           </C.TimelineGridLabels>
-          <C.TimelineGrid>
+          <C.TimelineGrid totalYear={careerTimelineYear.length}>
             <div className="items education">
               한서대학교 <C.AddText>항공전자공학과</C.AddText>
             </div>

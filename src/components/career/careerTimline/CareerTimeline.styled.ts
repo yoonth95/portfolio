@@ -57,9 +57,12 @@ export const TimelineGridWrap = styled.div`
   min-height: 50px;
 `;
 
-export const TimelineGridLabels = styled.div`
+interface TimelineGridLabelsProps {
+  totalYear: number;
+}
+export const TimelineGridLabels = styled.div<TimelineGridLabelsProps>`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(${({ totalYear }) => totalYear}, 1fr);
   margin-bottom: 0.125rem;
 
   & .year {
@@ -81,12 +84,12 @@ export const TimelineGridLabels = styled.div`
   }
 `;
 
-export const TimelineGrid = styled.div`
+export const TimelineGrid = styled.div<TimelineGridLabelsProps>`
   display: grid;
-  grid-template-columns: repeat(72, 1fr);
+  grid-template-columns: repeat(${({ totalYear }) => totalYear * 12}, 1fr);
   grid-auto-flow: column dense;
-  grid-gap: 0.125rem;
-  /* padding-top: 0.25rem; */
+  /* grid-gap: 0.125rem; */
+  padding-top: 7px;
 
   & .items {
     position: relative;
