@@ -99,7 +99,7 @@ export const TabLi = styled.li<ClickedType>`
   gap: 0.7rem;
   padding: 0.7rem 1rem;
   font-size: 0.875rem;
-  background-color: ${({ clicked }) => clicked && `var(--gray100-color)`};
+  background-color: ${({ clicked }) => clicked && `var(--gray300-color)`};
 
   transition: 270ms;
   cursor: pointer;
@@ -115,7 +115,7 @@ export const TabLi = styled.li<ClickedType>`
   }
 
   &:hover {
-    background-color: var(--gray100-color);
+    background-color: var(--gray300-color);
   }
 `;
 
@@ -161,7 +161,7 @@ export const PostMenu = styled.div`
   }
 
   &:hover {
-    background-color: var(--gray100-color);
+    background-color: var(--gray300-color);
   }
 `;
 
@@ -171,7 +171,7 @@ export const PostLi = styled.li<ClickedType>`
   gap: 0.625rem;
   width: 100%;
   padding: 0.7rem 2rem;
-  background-color: ${({ clicked }) => clicked && `var(--gray100-color)`};
+  background-color: ${({ clicked }) => clicked && `var(--gray300-color)`};
   transition: 270ms;
 
   & img {
@@ -184,6 +184,6 @@ export const PostLi = styled.li<ClickedType>`
   }
 
   &:hover {
-    background-color: var(--gray100-color);
+    background-color: var(--gray300-color);
   }
 `;
