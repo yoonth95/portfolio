@@ -1,5 +1,6 @@
 import { ClickedType } from "./ClickedType";
 import { SlickProps } from "./SlickTpye";
 import { StackInfoType } from "./StackInfoType";
+import { CareerYearType, CareerDataType } from "./CareerInfoType";
 
-export { type ClickedType, type SlickProps, type StackInfoType };
+export { type ClickedType, type SlickProps, type StackInfoType, type CareerYearType, type CareerDataType };
