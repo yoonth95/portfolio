@@ -1,36 +1,5 @@
 import styled from "styled-components";
 
-export const TimelineSection = styled.section`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 1000px;
-  border-radius: 0.75rem;
-  border: 0.0625rem solid #e9ecf3;
-  padding: 0 1.5rem;
-`;
-
-export const TimelineLeft = styled.div`
-  width: 11rem;
-  max-height: 2.125rem;
-
-  & h4 {
-    font-weight: bold;
-    margin: 1.5rem 0;
-  }
-`;
-
-export const TimelineRight = styled.div`
-  width: calc(100% - 11rem);
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 1.5rem 0;
-`;
-
 export const TimelinePeriod = styled.div`
   display: inline-flex;
   flex-direction: row;
@@ -38,7 +7,7 @@ export const TimelinePeriod = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   & span {
     display: flex;
@@ -105,28 +74,48 @@ export const TimelineGrid = styled.div<TimelineGridLabelsProps>`
     color: white;
     cursor: text;
   }
+
+  & .items.education {
+    background-color: #637c8c;
+  }
+  & .items.experience {
+    background-color: #637c8c;
+  }
+  & .items.active {
+    background-color: #7890a0;
+  }
+`;
+
+interface TimelineItemProps {
+  gridColumn: string;
+}
+export const TimelineItem = styled.div<TimelineItemProps>`
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.125rem;
+  background-color: #44576c;
+  font-size: 12px;
+  z-index: 2;
+  color: white;
+  cursor: text;
+  grid-column: ${({ gridColumn }) => gridColumn};
+
+  &.education {
+    background-color: #637c8c;
+  }
+  &.experience {
+    background-color: #637c8c;
+  }
+  &.active {
+    background-color: #7890a0;
+  }
 `;
 
 export const AddText = styled.span`
   font-style: italic;
   opacity: 0.48;
 `;
-
-// .grid-timeline .items.education {
-//   grid-column: 1 / 39;
-//   background-color: #7890a0;
-// }
-
-// .grid-timeline .items.active1 {
-//   grid-column: 39 / 45;
-//   background-color: #637c8c;
-// }
-
-// .grid-timeline .items.experience {
-//   grid-column: 48 / 66;
-// }
-
-// .grid-timeline .items.active2 {
-//   grid-column: 66 / 69;
-//   background-color: #637c8c;
-// }

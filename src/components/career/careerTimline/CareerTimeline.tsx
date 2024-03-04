@@ -1,43 +1,83 @@
-import React from "react";
-import { careerTimelineYear } from "@/data/careerInfoList";
+import { Tooltip } from "react-tooltip";
+import { CareerYearType, CareerDataType } from "@/types/CareerInfoType";
+import { diffMonth, formatDuration } from "@/utils/dateUtil";
 import * as C from "./CareerTimeline.styled";
 
-const CareerTimeline = () => {
+interface CareerTimelineType {
+  careerYear: CareerYearType;
+  careerData: CareerDataType[];
+}
+
+const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }) => {
+  // careerYear의 가장 빠른 년도와 careerData의 start_date 년도 값 비교
+  const getAdjustedStartDate = (dataStartDate: string, baseYear: number) => {
+    const start = new Date(dataStartDate);
+    return start.getFullYear() < baseYear ? `${baseYear}-01` : dataStartDate;
+  };
+
+  // 전체 개발 경력
+  const totalExperience = () => {
+    const filterData = careerData.filter((item) => item.type === "experience");
+    return filterData.reduce((total, item) => {
+      const start_date = new Date(item.start_date);
+      const end_date = new Date(item.end_date);
+      const months = (end_date.getFullYear() - start_date.getFullYear()) * 12 + end_date.getMonth() - start_date.getMonth() + 1;
+      return total + months;
+    }, 0);
+  };
+
   return (
-    <C.TimelineSection>
-      <C.TimelineLeft>
-        <h4>타임라인</h4>
-      </C.TimelineLeft>
-      <C.TimelineRight>
-        <C.TimelinePeriod>
-          <span>개발 경력 1년 5개월</span>
-        </C.TimelinePeriod>
-        <C.TimelineGridWrap>
-          <C.TimelineGridLabels totalYear={careerTimelineYear.length}>
-            {careerTimelineYear.map((year) => (
-              <div className="year">{year}</div>
-            ))}
-          </C.TimelineGridLabels>
-          <C.TimelineGrid totalYear={careerTimelineYear.length}>
-            <div className="items education">
-              한서대학교 <C.AddText>항공전자공학과</C.AddText>
+    <>
+      <C.TimelinePeriod>
+        <span>{`개발 경력 ${formatDuration(totalExperience())}`}</span>
+      </C.TimelinePeriod>
+      <C.TimelineGridWrap>
+        <C.TimelineGridLabels totalYear={careerYear.length}>
+          {careerYear.map((year, index) => (
+            <div key={index} className="year">
+              {year}
             </div>
-            <div className="items active1" title="한경닷컴IT교육센터">
-              한경닷컴IT교육센터
-            </div>
-            <div className="items experience" title="(주)스마트디아그노시스 연구원">
-              (주)스마트디아그노시스 <C.AddText>연구원</C.AddText>
-            </div>
-            <div className="items active2" title="[유데미X웅진씽크빅] React 프로젝트 캠프">
-              [유데미X웅진씽크빅] React 프로젝트 캠프
-            </div>
-            <div className="items active3" title="[멋쟁이사자처럼] 프론트엔드 스쿨 (심화)">
-              [멋쟁이사자처럼] 프론트엔드 스쿨 (심화)
-            </div>
-          </C.TimelineGrid>
-        </C.TimelineGridWrap>
-      </C.TimelineRight>
-    </C.TimelineSection>
+          ))}
+        </C.TimelineGridLabels>
+        <C.TimelineGrid totalYear={careerYear.length}>
+          {careerData.map((data, index) => {
+            const adjustedStartDate = getAdjustedStartDate(data.start_date, careerYear[0]);
+            const gridColumnStart = diffMonth(`${careerYear[0]}-01`, adjustedStartDate);
+            const gridColumnEnd = gridColumnStart + diffMonth(adjustedStartDate, data.end_date);
+
+            const transDiffMonth = formatDuration(diffMonth(data.start_date, data.end_date));
+
+            return (
+              <C.TimelineItem
+                key={index}
+                className={data.type}
+                data-tooltip-id="items"
+                data-tooltip-content={`${data.title} ${data.subTitle}`}
+                data-diff-month={transDiffMonth}
+                data-duration-date={`${data.start_date} ~ ${data.end_date}`}
+                gridColumn={`${gridColumnStart} / ${gridColumnEnd}`}
+              >
+                {data.title} <C.AddText>{data.subTitle}</C.AddText>
+              </C.TimelineItem>
+            );
+          })}
+          <Tooltip
+            id="items"
+            opacity={1}
+            style={{ zIndex: 10 }}
+            render={({ content, activeAnchor }) => (
+              <>
+                <h3>{content}</h3>
+                <br />
+                {activeAnchor?.getAttribute("data-diff-month")}
+                <br />
+                {activeAnchor?.getAttribute("data-duration-date")}
+              </>
+            )}
+          />
+        </C.TimelineGrid>
+      </C.TimelineGridWrap>
+    </>
   );
 };
 
