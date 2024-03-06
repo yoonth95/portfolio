@@ -10,14 +10,14 @@ const ProfileArea = () => {
       <P.ProfileImg src={profileImg} alt="프로필 이미지"></P.ProfileImg>
       <P.LinkList>
         {iconList.map((item) => (
-          <NavLink to={item.link} target="_blank">
+          <NavLink key={item.text} to={item.link} target="_blank">
             <img src={item.icon} alt={item.text} />
           </NavLink>
         ))}
       </P.LinkList>
       <P.BoxList>
         {detailList.map((item) => (
-          <P.Box>
+          <P.Box key={item.detail}>
             <P.Icon>
               <FontAwesomeIcon icon={item.icon} />
             </P.Icon>
