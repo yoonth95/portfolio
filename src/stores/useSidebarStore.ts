@@ -6,7 +6,7 @@ interface useSidebarStoreType {
 }
 
 const useSidebarStore = create<useSidebarStoreType>((set) => ({
-  toggleSidebar: true,
+  toggleSidebar: false,
   setToggleSidebar: (isToggle) => set(() => ({ toggleSidebar: isToggle })),
 }));
 
