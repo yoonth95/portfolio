@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header`
 `;
 
 export const MenuButton = styled.button<ClickedType>`
-  display: ${({ clicked }) => (clicked ? "none" : "block")};
+  display: ${({ $clicked }) => ($clicked ? "none" : "block")};
   width: 1.5rem;
   height: 1.5rem;
   transition: 270ms;

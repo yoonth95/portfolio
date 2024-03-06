@@ -1,3 +1,3 @@
 export interface ClickedType {
-  clicked: boolean;
+  $clicked: boolean;
 }

@@ -27,11 +27,11 @@ export const TimelineGridWrap = styled.div`
 `;
 
 interface TimelineGridLabelsProps {
-  totalYear: number;
+  $totalYear: number;
 }
 export const TimelineGridLabels = styled.div<TimelineGridLabelsProps>`
   display: grid;
-  grid-template-columns: repeat(${({ totalYear }) => totalYear}, 1fr);
+  grid-template-columns: repeat(${({ $totalYear }) => $totalYear}, 1fr);
   margin-bottom: 0.125rem;
 
   & .year {
@@ -55,7 +55,7 @@ export const TimelineGridLabels = styled.div<TimelineGridLabelsProps>`
 
 export const TimelineGrid = styled.div<TimelineGridLabelsProps>`
   display: grid;
-  grid-template-columns: repeat(${({ totalYear }) => totalYear * 12}, 1fr);
+  grid-template-columns: repeat(${({ $totalYear }) => $totalYear * 12}, 1fr);
   grid-auto-flow: column dense;
   /* grid-gap: 0.125rem; */
   padding-top: 7px;
@@ -87,7 +87,7 @@ export const TimelineGrid = styled.div<TimelineGridLabelsProps>`
 `;
 
 interface TimelineItemProps {
-  gridColumn: string;
+  $gridColumn: string;
 }
 export const TimelineItem = styled.div<TimelineItemProps>`
   position: relative;
@@ -102,7 +102,7 @@ export const TimelineItem = styled.div<TimelineItemProps>`
   z-index: 2;
   color: white;
   cursor: text;
-  grid-column: ${({ gridColumn }) => gridColumn};
+  grid-column: ${({ $gridColumn }) => $gridColumn};
 
   &.education {
     background-color: #637c8c;

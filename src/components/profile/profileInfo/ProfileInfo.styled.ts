@@ -74,7 +74,7 @@ export const SlickList = styled.div`
 `;
 
 interface IsHoverd {
-  isHovered: boolean;
+  $isHovered: boolean;
 }
 
 export const SlickItem = styled.div<IsHoverd>`
@@ -86,8 +86,8 @@ export const SlickItem = styled.div<IsHoverd>`
   justify-content: center;
   gap: 10px;
   border-radius: 8px;
-  background-color: ${({ isHovered }) => (isHovered ? "#fff" : "rgba(255, 255, 255, 0)")};
-  box-shadow: ${({ isHovered }) => (isHovered ? "0px 4px 8px rgba(0, 0, 0, 0.2)" : "none")};
+  background-color: ${({ $isHovered }) => ($isHovered ? "#fff" : "rgba(255, 255, 255, 0)")};
+  box-shadow: ${({ $isHovered }) => ($isHovered ? "0px 4px 8px rgba(0, 0, 0, 0.2)" : "none")};
   cursor: pointer;
 
   & p {

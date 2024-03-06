@@ -32,14 +32,14 @@ const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }
         <span>{`개발 경력 ${formatDuration(totalExperience())}`}</span>
       </C.TimelinePeriod>
       <C.TimelineGridWrap>
-        <C.TimelineGridLabels totalYear={careerYear.length}>
+        <C.TimelineGridLabels $totalYear={careerYear.length}>
           {careerYear.map((year, index) => (
             <div key={index} className="year">
               {year}
             </div>
           ))}
         </C.TimelineGridLabels>
-        <C.TimelineGrid totalYear={careerYear.length}>
+        <C.TimelineGrid $totalYear={careerYear.length}>
           {careerData.map((data, index) => {
             const adjustedStartDate = getAdjustedStartDate(data.start_date, careerYear[0]);
             const gridColumnStart = diffMonth(`${careerYear[0]}-01`, adjustedStartDate);
@@ -55,7 +55,7 @@ const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }
                 data-tooltip-content={`${data.title} ${data.subTitle}`}
                 data-diff-month={transDiffMonth}
                 data-duration-date={`${data.start_date} ~ ${data.end_date}`}
-                gridColumn={`${gridColumnStart} / ${gridColumnEnd}`}
+                $gridColumn={`${gridColumnStart} / ${gridColumnEnd}`}
               >
                 {data.title} <C.AddText>{data.subTitle}</C.AddText>
               </C.TimelineItem>

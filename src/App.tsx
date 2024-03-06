@@ -14,7 +14,7 @@ function App() {
   return (
     <WebContainer>
       {window.innerWidth <= 1240 && toggleSidebar && <Dim onClick={dimClick} />}
-      <SidebarContainer clicked={toggleSidebar} innerWidth={window.innerWidth}>
+      <SidebarContainer $clicked={toggleSidebar} $innerWidth={window.innerWidth}>
         <Sidebar />
       </SidebarContainer>
       <ContentContainer>
@@ -40,12 +40,12 @@ const Dim = styled.div`
 `;
 
 interface SidebarContainerProps extends ClickedType {
-  innerWidth: number;
+  $innerWidth: number;
 }
 
 const SidebarContainer = styled.div<SidebarContainerProps>`
-  position: ${({ innerWidth }) => (innerWidth <= 1240 ? "fixed" : "relative")};
-  width: ${({ clicked }) => (clicked ? "15rem" : "0")};
+  position: ${({ $innerWidth }) => ($innerWidth <= 1240 ? "fixed" : "relative")};
+  width: ${({ $clicked }) => ($clicked ? "15rem" : "0")};
   height: 100vh;
   background-color: var(--gray100-color);
   overflow-y: auto;

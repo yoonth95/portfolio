@@ -2,7 +2,7 @@ import { ClickedType } from "@/types";
 import styled from "styled-components";
 
 export const SidebarContainer = styled.aside<ClickedType>`
-  display: ${({ clicked }) => (clicked ? "block" : "none")};
+  display: ${({ $clicked }) => ($clicked ? "block" : "none")};
   flex-direction: column;
   height: 100%;
   color: rgba(25, 23, 17, 0.6);
@@ -69,7 +69,7 @@ export const NameEmail = styled.div`
 `;
 
 interface AnglesIconProps {
-  innerWidth: number;
+  $innerWidth: number;
 }
 
 export const AnglesIcon = styled.div<AnglesIconProps>`
@@ -83,7 +83,7 @@ export const AnglesIcon = styled.div<AnglesIconProps>`
   cursor: pointer;
 
   & svg {
-    opacity: ${({ innerWidth }) => (innerWidth <= 1240 ? "1" : "0")};
+    opacity: ${({ $innerWidth }) => ($innerWidth <= 1240 ? "1" : "0")};
     color: rgba(55, 53, 47, 0.45);
     transition: 270ms;
   }
@@ -99,7 +99,7 @@ export const TabLi = styled.li<ClickedType>`
   gap: 0.7rem;
   padding: 0.7rem 1rem;
   font-size: 0.875rem;
-  background-color: ${({ clicked }) => clicked && `var(--gray300-color)`};
+  background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
 
   transition: 270ms;
   cursor: pointer;
@@ -138,12 +138,12 @@ export const PostUl = styled.ul<ClickedType>`
   }
 
   & > .menu > svg {
-    transform: ${({ clicked }) => (clicked ? `rotate(90deg)` : `rotate(0deg)`)};
+    transform: ${({ $clicked }) => ($clicked ? `rotate(90deg)` : `rotate(0deg)`)};
     transition: transform 270ms ease-in-out;
   }
 
   & > .list {
-    max-height: ${({ clicked }) => (clicked ? `7rem` : 0)};
+    max-height: ${({ $clicked }) => ($clicked ? `7rem` : 0)};
     flex-direction: column;
     align-items: start;
     transition: 270ms ease-in-out 0s;
@@ -171,7 +171,7 @@ export const PostLi = styled.li<ClickedType>`
   gap: 0.625rem;
   width: 100%;
   padding: 0.7rem 2rem;
-  background-color: ${({ clicked }) => clicked && `var(--gray300-color)`};
+  background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
   transition: 270ms;
 
   & img {

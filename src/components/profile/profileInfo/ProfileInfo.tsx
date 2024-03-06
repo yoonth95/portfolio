@@ -43,7 +43,7 @@ const ProfileInfo: React.FC = () => {
             {stackInfoList.map((slideItems, index) => (
               <P.SlickList key={index}>
                 {slideItems.stackList.map((item) => (
-                  <P.SlickItem key={item.stack} onMouseOver={() => onMouseOver(item.stack)} isHovered={hoveredItem === item.stack}>
+                  <P.SlickItem key={item.stack} onMouseOver={() => onMouseOver(item.stack)} $isHovered={hoveredItem === item.stack}>
                     <img src={item.img} alt="아이콘" />
                     <p>{item.stack}</p>
                   </P.SlickItem>
