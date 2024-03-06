@@ -38,7 +38,7 @@ const profileReducer = (state: ProfileState, action: ProfileAction): ProfileStat
   }
 };
 
-export const useProfileInfo = () => {
+const useProfileInfo = () => {
   const { slideIndex, setSlideIndex } = useSlideIndexStore();
   const [state, dispatch] = useReducer(profileReducer, {
     ...initialState,
@@ -54,3 +54,5 @@ export const useProfileInfo = () => {
 
   return { state, dispatch, slideIndex, setSlideIndex };
 };
+
+export default useProfileInfo;
