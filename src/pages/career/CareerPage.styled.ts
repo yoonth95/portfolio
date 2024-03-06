@@ -6,5 +6,6 @@ export const CareerPageContainer = styled.main`
   justify-content: center;
   align-items: center;
   flex: 1;
+  gap: 1.4rem;
   padding: 3rem 5rem;
 `;
