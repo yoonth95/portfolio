@@ -1,6 +1,6 @@
 import React from "react";
 import Slick from "@/components/slick/Slick";
-import { useProfileInfo } from "@/hooks/useProfileInfo";
+import { useProfileInfo } from "@/hooks";
 import { stackInfoList } from "@/data/stackInfoList";
 import * as P from "./ProfileInfo.styled";
 
