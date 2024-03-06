@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { LazyImage } from "@/components/common";
 import { useSidebarStore } from "@/stores";
 import { tabList, projectList } from "@/data/sidebarInfo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import * as S from "./Sidebar.styled";
 
 const Sidebar: React.FC = React.memo(() => {
@@ -54,7 +55,7 @@ const Sidebar: React.FC = React.memo(() => {
       <ul>
         {tabList.map((item) => (
           <S.TabLi clicked={location.pathname === item.link} onClick={() => navigator(item.link)}>
-            <img src={item.icon} alt="아이콘이미지" />
+            <LazyImage src={item.icon} alt={"아이콘이미지"} />
             <p>{item.text}</p>
           </S.TabLi>
         ))}
@@ -71,7 +72,7 @@ const Sidebar: React.FC = React.memo(() => {
             <div className="list">
               {project.projects.map((item) => (
                 <S.PostLi clicked={location.pathname === item.link} key={item.link} onClick={() => navigator(item.link)}>
-                  <img src={item.icon} alt="아이콘이미지" />
+                  <LazyImage src={item.icon} alt={"아이콘이미지"} />
                   <p>{item.text}</p>
                 </S.PostLi>
               ))}
