@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const TimelineContainer = styled.div`
+  width: calc(100% - 11rem);
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 1.5rem 0;
+`;
+
 export const TimelinePeriod = styled.div`
   display: inline-flex;
   flex-direction: row;
@@ -59,39 +69,17 @@ export const TimelineGrid = styled.div<TimelineGridLabelsProps>`
   grid-auto-flow: column dense;
   /* grid-gap: 0.125rem; */
   padding-top: 7px;
-
-  & .items {
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    padding: 0.3rem 0.5rem;
-    border-radius: 0.125rem;
-    background-color: #44576c;
-    font-size: 12px;
-    z-index: 2;
-    color: white;
-    cursor: text;
-  }
-
-  & .items.education {
-    background-color: #637c8c;
-  }
-  & .items.experience {
-    background-color: #637c8c;
-  }
-  & .items.active {
-    background-color: #7890a0;
-  }
 `;
 
 interface TimelineItemProps {
   $gridColumn: string;
 }
 export const TimelineItem = styled.div<TimelineItemProps>`
+  height: 1.6rem;
+  line-height: 1.4;
   position: relative;
   text-align: center;
+  vertical-align: middle;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
