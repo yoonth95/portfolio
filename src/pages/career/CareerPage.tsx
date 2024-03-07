@@ -1,22 +1,22 @@
 import React from "react";
-import { CareerTimeline, CareerBox, CareerBoxActive } from "@/components/career";
+import { CareerTimeline, CareerBox, CareerBoxRight, CareerActive, CareerExp, CareerEdu } from "@/components/career";
 import { careerYear, careerData } from "@/data/careerInfoList";
 import * as C from "./CareerPage.styled";
 
 const CareerPage = () => {
   return (
     <C.CareerPageContainer>
-      <CareerBox boxTitle="타임라인">
+      <CareerBox boxTitle="타임라인" flexDirection="row">
         <CareerTimeline careerYear={careerYear} careerData={careerData} />
       </CareerBox>
-      <CareerBox boxTitle="학력">
-        <CareerBoxActive careerData={careerData.filter((item) => item.type === "education")} />
+      <CareerBox boxTitle="학력" flexDirection="column">
+        <CareerBoxRight careerData={careerData.filter((item) => item.type === "education")} InfoComponent={CareerEdu} />
       </CareerBox>
-      <CareerBox boxTitle="경력">
-        <CareerBoxActive careerData={careerData.filter((item) => item.type === "experience")} />
+      <CareerBox boxTitle="경력" flexDirection="column">
+        <CareerBoxRight careerData={careerData.filter((item) => item.type === "experience")} InfoComponent={CareerExp} />
       </CareerBox>
-      <CareerBox boxTitle="교육이력">
-        <CareerBoxActive careerData={careerData.filter((item) => item.type === "active")} />
+      <CareerBox boxTitle="교육이력" flexDirection="column">
+        <CareerBoxRight careerData={careerData.filter((item) => item.type === "active")} InfoComponent={CareerActive} />
       </CareerBox>
     </C.CareerPageContainer>
   );

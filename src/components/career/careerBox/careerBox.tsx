@@ -3,16 +3,17 @@ import * as C from "./CareerBox.styled";
 
 interface CareerBoxProps {
   boxTitle: string;
+  flexDirection: string;
   children: React.ReactNode;
 }
 
-const CareerBox: React.FC<CareerBoxProps> = ({ boxTitle, children }) => {
+const CareerBox: React.FC<CareerBoxProps> = ({ boxTitle, flexDirection, children }) => {
   return (
-    <C.CareerBoxSection>
+    <C.CareerBoxSection $flexDirection={flexDirection}>
       <C.CareerBoxLeft>
         <h4>{boxTitle}</h4>
       </C.CareerBoxLeft>
-      <C.CareerBoxRight>{children}</C.CareerBoxRight>
+      {children}
     </C.CareerBoxSection>
   );
 };
