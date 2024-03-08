@@ -7,7 +7,17 @@ interface CareerActiveProps {
 }
 
 const CareerActive: React.FC<CareerActiveProps> = ({ data }) => {
-  return <div></div>;
+  return (
+    <>
+      <h2>{data.title}</h2>
+      <ul className="techStackList">
+        {data.techStack?.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      <C.ActiveText>{data.summary}</C.ActiveText>
+    </>
+  );
 };
 
 export default CareerActive;
