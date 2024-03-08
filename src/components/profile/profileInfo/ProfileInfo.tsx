@@ -24,9 +24,9 @@ const ProfileInfo: React.FC = () => {
 
   return (
     <P.ProfileInfoSection>
-      <P.ProfileInfoTitle>
+      <div className="quotation">
         <h2>👋 안녕하세요, 프론트엔드 개발자 윤태현입니다!</h2>
-      </P.ProfileInfoTitle>
+      </div>
       <P.ProfileIntro>
         <p>새로운 기술을 향한 도전을 주저하지 않으며, 사용자 중심의 혁신을 추구합니다.</p>
         <br />
@@ -53,7 +53,7 @@ const ProfileInfo: React.FC = () => {
           </Slick>
         </P.ProfileSkill>
         <P.ProfileSkillDetail>
-          <P.ProfileInfoTitle>{filterItem.description.title}</P.ProfileInfoTitle>
+          <div className="quotation">{filterItem.description.title}</div>
           <ul>
             {filterItem.description.text.map((text, index) => (
               <P.DetailLi key={index}>{text}</P.DetailLi>

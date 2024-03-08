@@ -29,7 +29,7 @@ const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }
   return (
     <C.TimelineContainer>
       <C.TimelinePeriod>
-        <span>{`개발 경력 ${formatDuration(totalExperience())}`}</span>
+        <h2>{`개발 경력 ${formatDuration(totalExperience())}`}</h2>
       </C.TimelinePeriod>
       <C.TimelineGridWrap>
         <C.TimelineGridLabels $totalYear={careerYear.length}>

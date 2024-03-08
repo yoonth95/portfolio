@@ -17,8 +17,4 @@ export const CareerBoxSection = styled.section<CareerBoxSectionProps>`
 export const CareerBoxLeft = styled.div`
   width: 11rem;
   max-height: 2.125rem;
-
-  & h4 {
-    font-weight: bold;
-  }
 `;

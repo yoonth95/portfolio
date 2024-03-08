@@ -6,12 +6,6 @@ export const ProfileInfoSection = styled.section`
 `;
 
 export const ProfileInfoTitle = styled.div`
-  width: 100%;
-  padding-left: 14px;
-  padding-right: 14px;
-  border-left: 3px solid currentcolor;
-  margin-bottom: 15px;
-  font-size: 15px;
   & h2 {
     font-size: 18px;
   }

@@ -11,7 +11,7 @@ const CareerBox: React.FC<CareerBoxProps> = ({ boxTitle, flexDirection, children
   return (
     <C.CareerBoxSection $flexDirection={flexDirection}>
       <C.CareerBoxLeft>
-        <h4>{boxTitle}</h4>
+        <h2>{boxTitle}</h2>
       </C.CareerBoxLeft>
       {children}
     </C.CareerBoxSection>
