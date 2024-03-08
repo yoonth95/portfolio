@@ -165,6 +165,47 @@ export const GlobalStyles = createGlobalStyle`
     border: 0.5px solid var(--gray200-color);
   }
 
+  h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 15px;
+    color: #596e84;
+    margin-bottom: 8px;
+  }
+
+  .react-tooltip-content-wrapper h3 {
+    font-size: inherit;
+    color: inherit;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+
+  .quotation {
+    width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-left: 3px solid currentcolor;
+    margin-bottom: 15px;
+    font-size: 15px;
+
+    & > strong {
+      font-size: 16px;
+    }
+
+    & > span {
+      margin-left: 10px;
+      color: #98a8b9;
+      font-size: 0.9rem;
+    }
+  };
+
   /* 기본 스크롤바 스타일링 */
   *::-webkit-scrollbar {
     background-color: inherit;
