@@ -7,12 +7,11 @@ interface CareerEduProps {
 }
 
 const CareerEdu: React.FC<CareerEduProps> = ({ data }) => {
-  console.log(data);
   return (
     <>
-      <C.EduTitle>{data.title}</C.EduTitle>
-      <C.EduSubTitle>{`${data.major} / ${data.minor}`}</C.EduSubTitle>
-      <C.EduSubTitle>{`${data.score}`}</C.EduSubTitle>
+      <h2>{data.title}</h2>
+      <h3>{`${data.major} / ${data.minor}`}</h3>
+      <h3>{`${data.score}`}</h3>
     </>
   );
 };
