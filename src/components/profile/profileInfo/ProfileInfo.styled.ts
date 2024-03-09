@@ -31,7 +31,7 @@ export const ProfileTechStack = styled.div`
 
 export const ProfileTechStackTitle = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
 
   & h2 {
