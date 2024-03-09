@@ -7,5 +7,5 @@ export const CareerPageContainer = styled.main`
   align-items: center;
   flex: 1;
   gap: 1.4rem;
-  padding: 3rem 5rem;
+  padding: 3rem 0;
 `;
