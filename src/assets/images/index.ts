@@ -12,6 +12,8 @@ import instagram from "@/assets/images/instagram.png";
 import velog from "@/assets/images/velog.png";
 import github from "@/assets/images/github.png";
 import gmail from "@/assets/images/gmail.png";
+import certifivation from "@/assets/images/certification.gif";
+import trophyGif from "@/assets/images/trophy.gif";
 
 import aws from "@/assets/images/aws.png";
 import firebase from "@/assets/images/firebase.png";
@@ -38,6 +40,8 @@ export {
   velog,
   github,
   gmail,
+  certifivation,
+  trophyGif,
   aws,
   firebase,
   flask,
