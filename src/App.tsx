@@ -54,6 +54,7 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
 `;
 
 const ContentContainer = styled.div`
+  width: calc(100% - 16rem);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
