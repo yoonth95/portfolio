@@ -30,6 +30,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/project",
+        async lazy() {
+          const { default: ProfilePage } = await import("../pages/project/ProjectPage");
+          return { Component: ProfilePage };
+        },
         children: [
           {
             path: "egg-mbti",
