@@ -4,7 +4,7 @@ export const AwardBoxContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
+  padding: 25px 50px;
   border-bottom: 0.0625rem solid #e9ecf3;
 
   &:is(:first-of-type) {
