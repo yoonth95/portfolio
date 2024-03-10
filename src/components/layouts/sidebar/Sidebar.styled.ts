@@ -122,11 +122,16 @@ export const TabLi = styled.li<ClickedType>`
 export const ProjectArea = styled.div`
   font-weight: 500;
   color: var(--gray500-color);
+`;
 
-  & > p {
-    padding: 2rem 1rem 0;
-    font-size: 0.75rem;
-    margin-bottom: 10px;
+export const ProjectTab = styled.p<ClickedType>`
+  padding: 0.8rem 2rem;
+  font-size: 0.75rem;
+  background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--gray300-color);
   }
 `;
 

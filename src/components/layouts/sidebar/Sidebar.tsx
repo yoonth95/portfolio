@@ -52,7 +52,7 @@ const Sidebar: React.FC = React.memo(() => {
         </S.AnglesIcon>
       </S.SidebarHeader>
 
-      <ul>
+      <ul style={{ marginBottom: "2rem" }}>
         {tabList.map((item) => (
           <S.TabLi key={item.text} $clicked={location.pathname === item.link} onClick={() => navigator(item.link)}>
             <LazyImage src={item.icon} alt={"아이콘이미지"} />
@@ -62,7 +62,9 @@ const Sidebar: React.FC = React.memo(() => {
       </ul>
 
       <S.ProjectArea>
-        <p>프로젝트</p>
+        <S.ProjectTab $clicked={location.pathname === "/project"} onClick={() => navigator("/project")}>
+          프로젝트
+        </S.ProjectTab>
         {projectList.map((project, index) => (
           <S.PostUl key={project.title} $clicked={clickPostMenu[index]}>
             <S.PostMenu className="menu" onClick={toggleMenu(index)}>
