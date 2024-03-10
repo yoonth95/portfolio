@@ -5,6 +5,7 @@ import career from "@/assets/images/career.png";
 import trophy from "@/assets/images/trophy.png";
 import beta from "@/assets/images/beta-beta-icon.png";
 import egg from "@/assets/images/egg-mbti-icon.png";
+import eggMbti from "@/assets/images/egg-mbti.png";
 import happymanwon from "@/assets/images/happymanwon-icon.png";
 import webBuilder from "@/assets/images/web-builder-icon.png";
 import profileImg from "@/assets/images/profileImg.png";
@@ -14,6 +15,8 @@ import github from "@/assets/images/github.png";
 import gmail from "@/assets/images/gmail.png";
 import certifivation from "@/assets/images/certification.gif";
 import trophyGif from "@/assets/images/trophy.gif";
+
+import desktopGif from "@/assets/images/desktop.gif";
 
 import aws from "@/assets/images/aws.png";
 import firebase from "@/assets/images/firebase.png";
@@ -33,6 +36,7 @@ export {
   notebook,
   beta,
   egg,
+  eggMbti,
   happymanwon,
   webBuilder,
   profileImg,
@@ -42,6 +46,7 @@ export {
   gmail,
   certifivation,
   trophyGif,
+  desktopGif,
   aws,
   firebase,
   flask,
