@@ -1,3 +1,4 @@
-import LazyImage from "./LazyImage";
+import LazyImage from "./lazyImage/LazyImage";
+import Slick from "./slick/Slick";
 
-export { LazyImage };
+export { Slick, LazyImage };
