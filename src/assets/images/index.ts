@@ -4,10 +4,13 @@ import book from "@/assets/images/book.png";
 import career from "@/assets/images/career.png";
 import trophy from "@/assets/images/trophy.png";
 import beta from "@/assets/images/beta-beta-icon.png";
+import betaTumbnail from "@/assets/images/beta-thumbnail.png";
 import egg from "@/assets/images/egg-mbti-icon.png";
 import eggMbti from "@/assets/images/egg-mbti.png";
 import happymanwon from "@/assets/images/happymanwon-icon.png";
+import happymanwonThumbnail from "@/assets/images/happymanwon.png";
 import webBuilder from "@/assets/images/web-builder-icon.png";
+import webBuilderThumbnail from "@/assets/images/web-builder-thumbnail.png";
 import profileImg from "@/assets/images/profileImg.png";
 import instagram from "@/assets/images/instagram.png";
 import velog from "@/assets/images/velog.png";
@@ -35,10 +38,13 @@ export {
   trophy,
   notebook,
   beta,
+  betaTumbnail,
   egg,
   eggMbti,
   happymanwon,
+  happymanwonThumbnail,
   webBuilder,
+  webBuilderThumbnail,
   profileImg,
   instagram,
   velog,
