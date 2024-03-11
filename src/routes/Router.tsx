@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
+        index: true,
         async lazy() {
           const { default: ProfilePage } = await import("../pages/profile/ProfilePage");
           return { Component: ProfilePage };
@@ -30,11 +30,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/project",
-        async lazy() {
-          const { default: ProfilePage } = await import("../pages/project/ProjectPage");
-          return { Component: ProfilePage };
-        },
         children: [
+          {
+            index: true,
+            async lazy() {
+              const { default: ProjectPage } = await import("../pages/project/ProjectPage");
+              return { Component: ProjectPage };
+            },
+          },
           {
             path: "egg-mbti",
             async lazy() {
