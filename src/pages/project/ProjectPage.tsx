@@ -1,4 +1,3 @@
-import React from "react";
 import { ProjectBox } from "@/components/project";
 import { projectList } from "@/data/sidebarInfo";
 import { desktopGif } from "@/assets/images";
@@ -18,7 +17,9 @@ const ProjectPage = () => {
             .map((item) => item.projects)
             .flat()
             .map((item, index) => (
-              <ProjectBox key={index} data={item} />
+              <li key={index}>
+                <ProjectBox data={item} />
+              </li>
             ))}
         </P.ProjectBoxList>
       </section>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BoxContainer = styled.article`
-  width: 20rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -17,6 +17,7 @@ export const BoxContainer = styled.article`
 export const BoxImgDiv = styled.div`
   width: 100%;
   aspect-ratio: 16/9;
+  border-bottom: 1px solid rgba(15, 15, 15, 0.1);
 
   & img {
     width: 100%;
@@ -65,9 +66,11 @@ export const BoxTechList = styled.ul`
   border-radius: 5px;
   font-size: 12px;
   white-space: nowrap;
-  min-width: fit-content;
-  width: fit-content;
+  /* min-width: fit-content; */
+  /* width: fit-content; */
   padding: 0 12px;
+  overflow: hidden;
+  /* max-width: 100%;  */
 
   & li {
     display: flex;
@@ -81,7 +84,6 @@ export const BoxTechList = styled.ul`
     padding-right: 6px;
     font-size: 12px;
     line-height: 120%;
-    color: rgb(28, 56, 41);
     margin: 0px;
     white-space: nowrap;
     overflow: hidden;

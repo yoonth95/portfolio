@@ -19,12 +19,10 @@ export const ProjectTitle = styled.div`
   }
 `;
 
-export const ProjectBoxList = styled.div`
+export const ProjectBoxList = styled.ul`
+  padding-top: 10px;
   display: grid;
-  justify-items: center;
-  position: relative;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1rem;
-  padding-top: 16px;
-  padding-bottom: 4px;
+  gap: 1.25rem;
+  width: 100%;
 `;

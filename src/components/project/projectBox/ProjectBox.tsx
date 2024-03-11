@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ProjectType } from "@/types";
 import { darkenColor } from "@/utils/colorChangeUtil";
 import * as P from "./ProjectBox.styled";
@@ -8,8 +9,10 @@ interface ProjectBoxProps {
 }
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({ data }) => {
+  const navigator = useNavigate();
+
   return (
-    <P.BoxContainer>
+    <P.BoxContainer onClick={() => navigator(data.link)}>
       <P.BoxImgDiv>
         <img src={data.thumbnail} alt="썸네일 이미지" />
       </P.BoxImgDiv>
