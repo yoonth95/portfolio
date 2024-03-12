@@ -1,7 +1,7 @@
 import React from "react";
 
-const eggMbtiPage = () => {
+const EggMbtiPage = () => {
   return <div></div>;
 };
 
-export default eggMbtiPage;
+export default EggMbtiPage;

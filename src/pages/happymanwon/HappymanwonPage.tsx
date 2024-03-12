@@ -1,7 +1,7 @@
 import React from "react";
 
-const happymanwonPage = () => {
-  return <div></div>;
+const HappymanwonPage = () => {
+  return <div>만원의행복</div>;
 };
 
-export default happymanwonPage;
+export default HappymanwonPage;
