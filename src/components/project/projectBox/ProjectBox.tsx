@@ -1,25 +1,30 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { ProjectType } from "@/types";
+import { useModalStore } from "@/stores";
+import { LazyImage } from "@/components/common";
+import { ProjectListType } from "@/types";
 import { darkenColor } from "@/utils/colorChangeUtil";
 import * as P from "./ProjectBox.styled";
 
 interface ProjectBoxProps {
-  data: ProjectType;
+  data: ProjectListType;
 }
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({ data }) => {
-  const navigator = useNavigate();
+  const { setIsOpen, setDataName } = useModalStore();
+  const openModal = (name: string) => {
+    setDataName(name);
+    setIsOpen(true);
+  };
 
   return (
-    <P.BoxContainer onClick={() => navigator(data.link)}>
+    <P.BoxContainer onClick={() => openModal(data.name)}>
       <P.BoxImgDiv>
-        <img src={data.thumbnail} alt="썸네일 이미지" />
+        <LazyImage src={data.thumbnail} alt={"썸네일 이미지"} />
       </P.BoxImgDiv>
       <P.BoxInfo>
         <P.BoxTitle>
-          <img src={data.icon} alt="아이콘 이미지" />
-          <p>{data.text}</p>
+          <img src={data.icon} alt={"아이콘 이미지"} />
+          <p>{data.title}</p>
         </P.BoxTitle>
         <P.BoxTechList>
           {data.techStack.map((item, index) => (

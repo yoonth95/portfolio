@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { LazyImage } from "@/components/common";
 import { useSidebarStore } from "@/stores";
-import { tabList, projectList } from "@/data/sidebarInfo";
+import { tabList, projectTabList } from "@/data/sidebarInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import * as S from "./Sidebar.styled";
@@ -54,9 +54,9 @@ const Sidebar: React.FC = React.memo(() => {
 
       <ul style={{ marginBottom: "2rem" }}>
         {tabList.map((item) => (
-          <S.TabLi key={item.text} $clicked={location.pathname === item.link} onClick={() => navigator(item.link)}>
+          <S.TabLi key={item.title} $clicked={location.pathname === item.link} onClick={() => navigator(item.link)}>
             <LazyImage src={item.icon} alt={"아이콘이미지"} />
-            <p>{item.text}</p>
+            <p>{item.title}</p>
           </S.TabLi>
         ))}
       </ul>
@@ -65,17 +65,17 @@ const Sidebar: React.FC = React.memo(() => {
         <S.ProjectTab $clicked={location.pathname === "/project"} onClick={() => navigator("/project")}>
           프로젝트
         </S.ProjectTab>
-        {projectList.map((project, index) => (
-          <S.PostUl key={project.title} $clicked={clickPostMenu[index]}>
+        {projectTabList.map((project, index) => (
+          <S.PostUl key={project.type} $clicked={clickPostMenu[index]}>
             <S.PostMenu className="menu" onClick={toggleMenu(index)}>
               <FontAwesomeIcon icon={faCaretRight} />
-              <p>{project.title}</p>
+              <p>{project.type}</p>
             </S.PostMenu>
             <div className="list">
               {project.projects.map((item) => (
                 <S.PostLi key={item.link} $clicked={location.pathname === item.link} onClick={() => navigator(item.link)}>
                   <LazyImage src={item.icon} alt={"아이콘이미지"} />
-                  <p>{item.text}</p>
+                  <p>{item.title}</p>
                 </S.PostLi>
               ))}
             </div>

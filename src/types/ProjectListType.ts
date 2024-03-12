@@ -1,13 +1,11 @@
-export interface ProjectType {
+export interface ProjectListType {
+  name: string;
+  type: string;
   thumbnail: string;
   date: string;
   techStack: string[][];
   icon: string;
-  text: string;
-  link: string;
-}
-
-export interface ProjectListType {
   title: string;
-  projects: ProjectType[];
+  introduction: string;
+  link: string;
 }
