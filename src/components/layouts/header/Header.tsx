@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { LazyImage } from "@/components/common";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useSidebarStore } from "@/stores";
@@ -15,7 +16,7 @@ const Header = () => {
         <FontAwesomeIcon icon={faBars} />
       </H.MenuButton>
       <H.Title onClick={() => navigator("/")}>
-        <img src={notebook} alt="노트북이미지" />
+        <LazyImage src={notebook} alt={"노트북이미지"} />
         <p>yoonth0919</p>
       </H.Title>
     </H.HeaderContainer>

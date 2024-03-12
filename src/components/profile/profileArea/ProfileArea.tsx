@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { LazyImage } from "@/components/common";
 import { profileImg } from "@/assets/images";
 import { iconList, detailList } from "@/data/profileInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +12,7 @@ const ProfileArea = () => {
       <P.LinkList>
         {iconList.map((item) => (
           <NavLink key={item.text} to={item.link} target="_blank">
-            <img src={item.icon} alt={item.text} />
+            <LazyImage src={item.icon} alt={item.text} />
           </NavLink>
         ))}
       </P.LinkList>

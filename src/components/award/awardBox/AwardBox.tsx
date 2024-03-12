@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyImage } from "@/components/common";
 import { github } from "@/assets/images";
 import * as A from "./AwardBox.styled";
 
@@ -23,7 +24,7 @@ const AwardBox: React.FC<AwardBoxProps> = ({ data }) => {
           </A.AwardBoxText>
           <A.AwardLink $isLink={item.link ? true : false}>
             <a href={item.link} target="_blank">
-              <img src={github} alt="깃허브이미지" />
+              <LazyImage src={github} alt={"깃허브이미지"} />
             </a>
           </A.AwardLink>
         </A.AwardBoxContainer>
