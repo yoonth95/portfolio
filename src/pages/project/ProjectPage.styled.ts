@@ -5,7 +5,7 @@ export const ProjectContainer = styled.main`
   flex-direction: column;
   flex: 1;
   gap: 5rem;
-  padding: 3rem 14rem;
+  padding: 3rem 13rem;
 `;
 
 export const ProjectTitle = styled.div`
@@ -23,6 +23,6 @@ export const ProjectBoxList = styled.ul`
   padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.25rem;
+  gap: 2.25rem;
   width: 100%;
 `;
