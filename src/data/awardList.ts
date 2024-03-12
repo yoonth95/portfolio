@@ -1,6 +1,6 @@
 const awards = [
   {
-    content: "5개의 프로젝트 중 웅진씽크빅 관리자 페이지 웹 빌더 개발로 전체 2등",
+    content: "5개의 프로젝트 중에서 웅진 씽크빅 관리자 사이트 개발 프로젝트로 진행하여 전체 21개 팀에서 최종 2등",
     organization: "[유데미X웅진씽크빅] React 프로젝트 캠프",
     date: "2023-08",
     link: "https://github.com/yoonth95/Web-Builder",
