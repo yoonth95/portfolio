@@ -206,6 +206,35 @@ export const GlobalStyles = createGlobalStyle`
     }
   };
 
+  .techListUl {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 0 12px;
+    overflow: hidden;
+  }
+
+  .techListLi {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 0px;
+    max-width: 100%;
+    height: 18px;
+    border-radius: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+    line-height: 120%;
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   /* 기본 스크롤바 스타일링 */
   *::-webkit-scrollbar {
     background-color: inherit;
