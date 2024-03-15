@@ -10,14 +10,14 @@ interface ProjectBoxProps {
 }
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({ data }) => {
-  const { setIsOpen, setDataName } = useModalStore();
-  const openModal = (name: string) => {
-    setDataName(name);
+  const { setIsOpen, setProjectId } = useModalStore();
+  const openModal = (id: number) => {
+    setProjectId(id);
     setIsOpen(true);
   };
 
   return (
-    <P.BoxContainer onClick={() => openModal(data.name)}>
+    <P.BoxContainer onClick={() => openModal(data.projectId)}>
       <P.BoxImgDiv>
         <LazyImage src={data.thumbnail} alt={"썸네일 이미지"} />
       </P.BoxImgDiv>
@@ -26,13 +26,13 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ data }) => {
           <img src={data.icon} alt={"아이콘 이미지"} />
           <p>{data.title}</p>
         </P.BoxTitle>
-        <P.BoxTechList>
+        <ul className="techListUl">
           {data.techStack.map((item, index) => (
-            <li key={index} style={{ backgroundColor: item[1], color: darkenColor(item[1], 130) }}>
+            <li key={index} className="techListLi" style={{ backgroundColor: item[1], color: darkenColor(item[1], 130) }}>
               {item[0]}
             </li>
           ))}
-        </P.BoxTechList>
+        </ul>
         <P.BoxDate>{data.date}</P.BoxDate>
       </P.BoxInfo>
     </P.BoxContainer>

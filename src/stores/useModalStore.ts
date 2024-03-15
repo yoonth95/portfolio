@@ -3,15 +3,15 @@ import { create } from "zustand";
 interface useModalStoreType {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
-  dataName: string;
-  setDataName: (dataName: string) => void;
+  projectId: number;
+  setProjectId: (projectId: number) => void;
 }
 
 const useModalStore = create<useModalStoreType>((set) => ({
   isOpen: false,
   setIsOpen: (isOpen) => set(() => ({ isOpen: isOpen })),
-  dataName: "",
-  setDataName: (dataName) => set(() => ({ dataName: dataName })),
+  projectId: 0,
+  setProjectId: (projectId) => set(() => ({ projectId: projectId })),
 }));
 
 export default useModalStore;

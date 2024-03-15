@@ -1,4 +1,5 @@
 export interface ProjectListType {
+  projectId: number;
   name: string;
   type: string;
   thumbnail: string;
@@ -7,5 +8,6 @@ export interface ProjectListType {
   icon: string;
   title: string;
   introduction: string;
+  team: string;
   link: string;
 }
