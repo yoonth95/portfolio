@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
 
+const projectPaths = ["egg-mbti", "happymanwon", "beta-beta", "web-builder"];
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,38 +36,24 @@ const router = createBrowserRouter([
           {
             index: true,
             async lazy() {
+              const { default: ProjectListPage } = await import("../pages/projectList/ProjectListPage");
+              return { Component: ProjectListPage };
+            },
+          },
+          {
+            path: ":projectId", // 동적 경로 파라미터 사용
+            async lazy() {
               const { default: ProjectPage } = await import("../pages/project/ProjectPage");
               return { Component: ProjectPage };
             },
           },
-          {
-            path: "egg-mbti",
-            async lazy() {
-              const { default: EggMbtiPage } = await import("../pages/eggMbti/EggMbtiPage");
-              return { Component: EggMbtiPage };
-            },
-          },
-          {
-            path: "happymanwon",
-            async lazy() {
-              const { default: HappymanwonPage } = await import("../pages/happymanwon/HappymanwonPage");
-              return { Component: HappymanwonPage };
-            },
-          },
-          {
-            path: "beta-beta",
-            async lazy() {
-              const { default: BetaBetaPage } = await import("../pages/betaBeta/BetaBetaPage");
-              return { Component: BetaBetaPage };
-            },
-          },
-          {
-            path: "web-builder",
-            async lazy() {
-              const { default: WebBuilderPage } = await import("../pages/webBuilder/WebBuilderPage");
-              return { Component: WebBuilderPage };
-            },
-          },
+          // ...projectPaths.map((path) => ({
+          //   path,
+          //   async lazy() {
+          //     const { default: ProjectPage } = await import("../pages/project/ProjectPage");
+          //     return { Component: ProjectPage };
+          //   },
+          // })),
         ],
       },
     ],
