@@ -3,25 +3,33 @@ import { useNavigate } from "react-router-dom";
 import { useModalStore } from "@/stores";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp, faUpRightAndDownLeftFromCenter, faXmark } from "@fortawesome/free-solid-svg-icons";
-import * as M from "./Modal.styled";
+import * as M from "./ProjectModal.styled";
 import { createPortal } from "react-dom";
 
-interface ModalProps {
+interface ProjectModalProps {
   children: React.ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({ children }) => {
-  const { setIsOpen, dataName, setDataName } = useModalStore();
+const ProjectModal: React.FC<ProjectModalProps> = ({ children }) => {
+  const { setIsOpen, projectId, setProjectId } = useModalStore();
   const navigator = useNavigate();
 
   const moveLink = () => {
-    navigator(`/project/${dataName}`);
+    navigator(`/project/${projectId}`);
     setIsOpen(false);
+  };
+
+  const movePrev = () => {
+    setProjectId(1);
+  };
+
+  const moveNext = () => {
+    setProjectId(2);
   };
 
   const closeModal = () => {
     setIsOpen(false);
-    setDataName("");
+    setProjectId(0);
   };
 
   const renderModal = (
@@ -33,10 +41,10 @@ const Modal: React.FC<ModalProps> = ({ children }) => {
               <FontAwesomeIcon icon={faUpRightAndDownLeftFromCenter} style={{ transform: "rotate(90deg)" }} />
             </M.ModalHeaderIcon>
             <M.ModalHeaderLine></M.ModalHeaderLine>
-            <M.ModalHeaderIcon>
+            <M.ModalHeaderIcon onClick={movePrev}>
               <FontAwesomeIcon icon={faAngleUp} />
             </M.ModalHeaderIcon>
-            <M.ModalHeaderIcon>
+            <M.ModalHeaderIcon onClick={moveNext}>
               <FontAwesomeIcon icon={faAngleDown} />
             </M.ModalHeaderIcon>
           </M.ModalHeaderLeft>
@@ -59,4 +67,4 @@ const Modal: React.FC<ModalProps> = ({ children }) => {
   return createPortal(renderModal, rootElement);
 };
 
-export default Modal;
+export default ProjectModal;
