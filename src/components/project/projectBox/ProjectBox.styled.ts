@@ -1,5 +1,20 @@
 import styled from "styled-components";
 
+export const BoxImgDiv = styled.div`
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-bottom: 1px solid rgba(15, 15, 15, 0.1);
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: 270ms;
+  }
+`;
+
 export const BoxContainer = styled.article`
   width: 100%;
   display: flex;
@@ -11,19 +26,10 @@ export const BoxContainer = styled.article`
 
   &:hover {
     background-color: rgba(55, 53, 47, 0.04);
-  }
-`;
 
-export const BoxImgDiv = styled.div`
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-bottom: 1px solid rgba(15, 15, 15, 0.1);
-
-  & img {
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    ${BoxImgDiv} > img {
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -56,38 +62,6 @@ export const BoxTitle = styled.div`
     font-size: 14px;
     font-weight: 500;
     pointer-events: none;
-  }
-`;
-
-export const BoxTechList = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  border-radius: 5px;
-  font-size: 12px;
-  white-space: nowrap;
-  /* min-width: fit-content; */
-  /* width: fit-content; */
-  padding: 0 12px;
-  overflow: hidden;
-  /* max-width: 100%;  */
-
-  & li {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    min-width: 0px;
-    max-width: 100%;
-    height: 18px;
-    border-radius: 3px;
-    padding-left: 6px;
-    padding-right: 6px;
-    font-size: 12px;
-    line-height: 120%;
-    margin: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 `;
 
