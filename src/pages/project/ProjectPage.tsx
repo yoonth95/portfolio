@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectHeader } from "@/components/project";
+import { ProjectHeader, ProjectLinkBox } from "@/components/project";
 import { useWithProject } from "@/hooks";
 import * as P from "./ProjectPage.styled";
 
@@ -12,8 +12,11 @@ const ProjectPage = () => {
 
   return (
     <P.ProjectContainer>
-      <ProjectHeader projectData={projectData} isModal={isModal} />
+      <ProjectHeader projectData={projectData} />
       <hr />
+      <br />
+      <P.H1>배포 사이트</P.H1>
+      <ProjectLinkBox projectData={projectData} />
     </P.ProjectContainer>
   );
 };
