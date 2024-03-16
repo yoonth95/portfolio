@@ -4,14 +4,14 @@ import { darkenColor } from "@/utils/colorChangeUtil";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAlignLeft, faCalendarDays, faList, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import * as PH from "./ProjectHeader.styled";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 interface ProjectHeaderProps {
   projectData: Partial<ProjectListType>;
-  isModal: boolean;
 }
 
-const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectData, isModal }) => {
-  console.log(projectData, isModal);
+const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectData }) => {
   return (
     <>
       <PH.Icon>
@@ -55,6 +55,19 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectData, isModal }) =
               <span>팀 구성</span>
             </PH.InfoLeft>
             <PH.InfoRight>{projectData.team}</PH.InfoRight>
+          </div>
+          <div className="infoEach">
+            <PH.InfoLeft>
+              <FontAwesomeIcon icon={faGithub} />
+              <span>깃허브</span>
+            </PH.InfoLeft>
+            <PH.InfoRight>
+              {projectData.github?.map((item) => (
+                <Link key={item} to={item} target="_blank">
+                  {item}
+                </Link>
+              ))}
+            </PH.InfoRight>
           </div>
         </div>
       </PH.Info>

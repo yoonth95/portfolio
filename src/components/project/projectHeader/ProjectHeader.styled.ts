@@ -41,7 +41,7 @@ export const Info = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
-    height: 45px;
+    height: 50px;
     padding-bottom: 4px;
   }
 `;
@@ -49,7 +49,7 @@ export const Info = styled.div`
 export const InfoLeft = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   flex: 1;
   color: rgba(55, 53, 47, 0.65);
 
@@ -58,16 +58,27 @@ export const InfoLeft = styled.div`
   }
 
   & span {
-    flex: 8;
+    flex: 6;
   }
 `;
 
 export const InfoRight = styled.div`
   flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   line-height: 1.2;
 
   & ul {
     flex-wrap: wrap;
     padding: 0;
+  }
+
+  & a {
+    width: max-content;
+  }
+
+  & a:hover {
+    text-decoration: underline;
   }
 `;
