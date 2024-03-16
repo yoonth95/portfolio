@@ -7,7 +7,10 @@ export interface ProjectListType {
   techStack: string[][];
   icon: string;
   title: string;
+  link: string;
   introduction: string;
   team: string;
-  link: string;
+  projectMainImg: string;
+  siteLink: string;
+  github: string[];
 }

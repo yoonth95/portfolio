@@ -1,4 +1,17 @@
-import { beta, egg, eggMbti, happymanwon, happymanwonThumbnail, webBuilder, betaTumbnail, webBuilderThumbnail } from "@/assets/images";
+import {
+  egg,
+  eggMbti,
+  eggMbtiMain,
+  happymanwon,
+  happymanwonThumbnail,
+  happymanwonMain,
+  beta,
+  betaTumbnail,
+  betaMain,
+  webBuilder,
+  webBuilderThumbnail,
+  webBuilderMain,
+} from "@/assets/images";
 
 const projectList = [
   {
@@ -15,10 +28,13 @@ const projectList = [
       ["Amazon Route 53", "#ffe2dd"],
     ],
     icon: egg,
-    title: "계란 요리 성격 유형 검사",
-    introduction: "성격 유형 검사를 계란 요리에 비유하여 알려주는 사이트",
-    team: "1인",
+    title: "[EBTI] 계란 요리 성격 유형 검사",
     link: "/project/egg-mbti",
+    introduction: "성격 유형 검사를 계란 요리에 비유하여 알려주는 사이트",
+    team: "1인 프로젝트",
+    projectMainImg: eggMbtiMain,
+    siteLink: "https://egg-mbti.net",
+    github: ["https://github.com/yoonth95/EBTI-React"],
   },
   {
     projectId: 2,
@@ -35,9 +51,12 @@ const projectList = [
     ],
     icon: happymanwon,
     title: "만원의 행복",
+    link: "/project/happymanwon",
     introduction: "한 푼이라도 아쉬운 사람들을 위한 착한 가게 소개 웹 서비스",
     team: "기획 및 디자이너 1명, FrontEnd 2명, BackEnd 3명",
-    link: "/project/happymanwon",
+    projectMainImg: happymanwonMain,
+    siteLink: "https://happy-manwon.vercel.app",
+    github: ["https://github.com/happymanwon/Frontend"],
   },
   {
     projectId: 3,
@@ -60,9 +79,12 @@ const projectList = [
     ],
     icon: beta,
     title: "대학생 공연/전시 정보 플랫폼",
-    introduction: "예체능 분야 대학생들이 자신의 작품을 효과적으로 소개하고 홍보할 수 있는 중앙 집중형 플랫폼",
-    team: "총 3명 / 기획 및 FrontEnd 3명, BackEnd 1명",
     link: "/project/beta-beta",
+    introduction: "예체능 분야 대학생들이 자신의 작품을 소개하고 홍보할 수 있는 중앙 집중형 플랫폼",
+    team: "총 3명 / 기획 및 FrontEnd 3명, BackEnd 1명",
+    projectMainImg: betaMain,
+    siteLink: "https://beta-beta.net",
+    github: ["https://github.com/FESP-TEAM-1/beta-frontend", "https://github.com/FESP-TEAM-1/beta-backend"],
   },
   {
     projectId: 4,
@@ -83,9 +105,12 @@ const projectList = [
     ],
     icon: webBuilder,
     title: "웅진씽크빅 웹 빌더 시스템",
+    link: "/project/web-builder",
     introduction: "웅진 씽크빅 사이트와 연동이 되는 웹 빌더 관리자 페이지 개발",
     team: "총 4명 / FrontEnd 4명, BackEnd 1명",
-    link: "/project/web-builder",
+    projectMainImg: webBuilderMain,
+    siteLink: "https://web-builder.store",
+    github: ["https://github.com/yoonth95/Web-Builder"],
   },
 ];
 
