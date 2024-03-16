@@ -7,7 +7,7 @@ const tabList = [
 ];
 
 const projectTabList = [
-  { type: "개인 프로젝트", projects: [{ icon: egg, title: "계란 요리 성격 유형 검사", link: "/project/1" }] },
+  { type: "개인 프로젝트", projects: [{ icon: egg, title: "[EBTI] 계란 요리 성격 유형 검사", link: "/project/1" }] },
   {
     type: "팀 프로젝트",
     projects: [
