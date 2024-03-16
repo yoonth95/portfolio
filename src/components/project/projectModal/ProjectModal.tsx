@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { useModalStore } from "@/stores";
@@ -6,6 +6,7 @@ import { projectList } from "@/data/projectList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp, faUpRightAndDownLeftFromCenter, faXmark } from "@fortawesome/free-solid-svg-icons";
 import * as M from "./ProjectModal.styled";
+import { useScrollToElementTop } from "@/hooks";
 
 interface ProjectModalProps {
   children: React.ReactNode;
@@ -14,31 +15,40 @@ interface ProjectModalProps {
 const ProjectModal: React.FC<ProjectModalProps> = ({ children }) => {
   const { setIsOpen, projectId, setProjectId } = useModalStore();
   const navigator = useNavigate();
+  const ref = useRef<HTMLDivElement>(null);
 
+  // 페이지로 이동
   const moveLink = () => {
     navigator(`/project/${projectId}`);
     setIsOpen(false);
   };
 
+  // 이전 프로젝트
   const movePrev = () => {
     projectId > 1 && setProjectId(projectId - 1);
   };
 
+  // 다음 프로젝트
   const moveNext = () => {
     projectId < projectList.length && setProjectId(projectId + 1);
   };
 
+  // 닫기
   const closeModal = () => {
     setIsOpen(false);
     setProjectId(0);
   };
 
+  // 맨 처음, 끝 페이지 시에 버튼 동적 스타일 적용
   const calculateStyle = (isActive: boolean) => {
     return {
       color: isActive ? "#37352f73" : "#37352f29",
       cursor: isActive ? "pointer" : "default",
     };
   };
+
+  // 프로젝트 이동 시 스크롤 맨 위로
+  useScrollToElementTop(ref, projectId);
 
   const renderModal = (
     <>
@@ -60,7 +70,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ children }) => {
             <FontAwesomeIcon icon={faXmark} />
           </M.ModalHeaderIcon>
         </M.ModalHeader>
-        {children}
+        <M.ModalContent ref={ref}>{children}</M.ModalContent>
       </M.ModalContainer>
       <M.Overlay onClick={closeModal}></M.Overlay>
     </>
