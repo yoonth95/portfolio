@@ -165,6 +165,11 @@ export const GlobalStyles = createGlobalStyle`
     border: 0.5px solid var(--gray200-color);
   }
 
+  h1 {
+    font-size: 20px;
+    padding: 8px 0;
+  }
+
   h2 {
     font-size: 18px;
     margin-bottom: 8px;
