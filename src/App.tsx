@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar, Header, Footer } from "@/components/layouts";
 import { useSidebarStore } from "./stores";
 import { ClickedType } from "./types";
 import styled from "styled-components";
+import { useScrollToElementTop } from "./hooks";
 
 function App() {
   const { toggleSidebar, setToggleSidebar } = useSidebarStore();
@@ -14,11 +15,7 @@ function App() {
     setToggleSidebar(!toggleSidebar);
   };
 
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.scrollTo(0, 0);
-    }
-  }, [pathname]);
+  useScrollToElementTop(ref, pathname);
 
   return (
     <WebContainer>
