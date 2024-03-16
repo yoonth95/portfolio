@@ -68,3 +68,11 @@ export const ModalHeaderLine = styled.span`
   margin-right: 6px;
   background: rgba(55, 53, 47, 0.16);
 `;
+
+export const ModalContent = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden scroll;
+`;
