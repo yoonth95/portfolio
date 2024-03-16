@@ -125,7 +125,7 @@ export const ProjectArea = styled.div`
 `;
 
 export const ProjectTab = styled.p<ClickedType>`
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.8rem;
   font-size: 0.75rem;
   background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
   cursor: pointer;
@@ -175,7 +175,7 @@ export const PostLi = styled.li<ClickedType>`
   align-items: center;
   gap: 0.625rem;
   width: 100%;
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 1.8rem;
   background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
   transition: 270ms;
 
