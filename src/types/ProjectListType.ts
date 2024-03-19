@@ -13,4 +13,6 @@ export interface ProjectListType {
   projectMainImg: string;
   siteLink: string;
   github: string[];
+  figma: string[];
+  architecture?: string;
 }

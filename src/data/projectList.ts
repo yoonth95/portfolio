@@ -34,6 +34,7 @@ const projectList = [
     projectMainImg: eggMbtiMain,
     siteLink: "https://egg-mbti.net",
     github: ["https://github.com/yoonth95/EBTI-React"],
+    figma: [],
   },
   {
     projectId: 2,
@@ -55,6 +56,8 @@ const projectList = [
     projectMainImg: happymanwonMain,
     siteLink: "https://happy-manwon.vercel.app",
     github: ["https://github.com/happymanwon/Frontend"],
+    figma: [],
+    architecture: "",
   },
   {
     projectId: 3,
@@ -82,6 +85,8 @@ const projectList = [
     projectMainImg: betaMain,
     siteLink: "https://beta-beta.net",
     github: ["https://github.com/FESP-TEAM-1/beta-frontend", "https://github.com/FESP-TEAM-1/beta-backend"],
+    figma: [],
+    architecture: "",
   },
   {
     projectId: 4,
@@ -107,6 +112,8 @@ const projectList = [
     projectMainImg: webBuilderMain,
     siteLink: "https://web-builder.store",
     github: ["https://github.com/yoonth95/Web-Builder"],
+    figma: [],
+    architecture: "",
   },
 ];
 
