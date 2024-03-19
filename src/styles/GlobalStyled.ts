@@ -240,6 +240,18 @@ export const GlobalStyles = createGlobalStyle`
     text-overflow: ellipsis;
   }
 
+  .iconHover {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .imgHover {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   /* 기본 스크롤바 스타일링 */
   *::-webkit-scrollbar {
     background-color: inherit;

@@ -12,7 +12,7 @@ const ProfileArea = () => {
       <P.LinkList>
         {iconList.map((item) => (
           <NavLink key={item.text} to={item.link} target="_blank">
-            <LazyImage src={item.icon} alt={item.text} />
+            <LazyImage classNames="iconHover" src={item.icon} alt={item.text} />
           </NavLink>
         ))}
       </P.LinkList>

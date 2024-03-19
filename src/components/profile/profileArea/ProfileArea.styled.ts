@@ -26,10 +26,6 @@ export const LinkList = styled.div`
     width: 100%;
     transition: 270ms;
   }
-
-  & img:hover {
-    transform: scale(1.2);
-  }
 `;
 
 export const BoxList = styled.div`

@@ -56,8 +56,4 @@ export const AwardLink = styled.div<AwardLinkProps>`
     width: 2rem;
     height: 2rem;
   }
-
-  &:hover {
-    transform: scale(1.2);
-  }
 `;

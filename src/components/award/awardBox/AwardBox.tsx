@@ -22,7 +22,7 @@ const AwardBox: React.FC<AwardBoxProps> = ({ data }) => {
             <h3>{item.organization}</h3>
             <p>{item.content}</p>
           </A.AwardBoxText>
-          <A.AwardLink $isLink={item.link ? true : false}>
+          <A.AwardLink className=".iconHover" $isLink={item.link ? true : false}>
             <a href={item.link} target="_blank">
               <LazyImage src={github} alt={"깃허브이미지"} />
             </a>
