@@ -1,12 +1,37 @@
 import styled from "styled-components";
 
+export const BoxRight = styled.div`
+  flex: 1 1 180px;
+  aspect-ratio: 5/2;
+  border-left: 1px solid rgba(55, 53, 47, 0.16);
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    object-fit: cover;
+    transition: 270ms;
+  }
+`;
+
 export const ProjectLinkBoxContainer = styled.a`
   display: flex;
   background-color: #fff;
   border: 1px solid rgba(55, 53, 47, 0.16);
   border-radius: 4px;
   margin: 5px 0;
+  transition: 270ms;
   cursor: pointer;
+
+  &:hover {
+    background-color: rgba(55, 53, 47, 0.04);
+    ${BoxRight} > img {
+      transform: scale(1.1);
+    }
+  }
 `;
 
 export const BoxLeft = styled.div`
@@ -52,20 +77,5 @@ export const BoxLink = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-`;
-
-export const BoxRight = styled.div`
-  flex: 1 1 180px;
-  aspect-ratio: 5/2;
-  border-left: 1px solid rgba(55, 53, 47, 0.16);
-
-  & img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    object-fit: cover;
   }
 `;
