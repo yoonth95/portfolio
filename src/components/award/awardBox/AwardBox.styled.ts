@@ -50,10 +50,9 @@ export const AwardLink = styled.div<AwardLinkProps>`
   align-items: center;
   height: 100%;
 
-  transition: 270ms;
-
   & img {
     width: 2rem;
     height: 2rem;
+    transition: 270ms;
   }
 `;
