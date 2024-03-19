@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const BoxLeft = styled.div`
+  flex: 4 1 180px;
+  padding: 12px 14px 14px;
+  overflow: hidden;
+  text-align: left;
+  transition: 270ms;
+`;
+
 export const BoxRight = styled.div`
   flex: 1 1 180px;
   aspect-ratio: 5/2;
@@ -27,18 +35,14 @@ export const ProjectLinkBoxContainer = styled.a`
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(55, 53, 47, 0.04);
+    ${BoxLeft} {
+      background-color: rgba(55, 53, 47, 0.04);
+    }
+
     ${BoxRight} > img {
       transform: scale(1.1);
     }
   }
-`;
-
-export const BoxLeft = styled.div`
-  flex: 4 1 180px;
-  padding: 12px 14px 14px;
-  overflow: hidden;
-  text-align: left;
 `;
 
 export const BoxTitle = styled.div`
