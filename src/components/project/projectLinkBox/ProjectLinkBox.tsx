@@ -1,7 +1,7 @@
 import React from "react";
-import * as PLB from "./ProjectLinkBox.styled";
 import { ProjectListType } from "@/types";
 import { LazyImage } from "@/components/common";
+import * as PLB from "./ProjectLinkBox.styled";
 
 interface ProjectLinkBoxProps {
   projectData: Partial<ProjectListType>;
