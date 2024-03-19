@@ -27,14 +27,17 @@ import eggMbtiMain from "@/assets/images/eggMbti/egg-mbti-main.png";
 import beta from "@/assets/images/betaBeta/beta-beta-icon.png";
 import betaTumbnail from "@/assets/images/betaBeta/beta-thumbnail.png";
 import betaMain from "@/assets/images/betaBeta/beta-beta-main.png";
+import betaArchitecture from "@/assets/images/betaBeta/beta-architecture.png";
 
 import happymanwon from "@/assets/images/happymanwon/happymanwon-icon.png";
 import happymanwonThumbnail from "@/assets/images/happymanwon/happymanwon.png";
 import happymanwonMain from "@/assets/images/happymanwon/happymanwon-main.png";
+import happymanwonArchitecture from "@/assets/images/happymanwon/happymanwon-architecture.png";
 
 import webBuilder from "@/assets/images/webBuilder/web-builder-icon.png";
 import webBuilderThumbnail from "@/assets/images/webBuilder/web-builder-thumbnail.png";
 import webBuilderMain from "@/assets/images/webBuilder/web-builder-main.png";
+import webBuilderArchitecture from "@/assets/images/webBuilder/web-builder-architecture.png";
 
 import profileImg from "@/assets/images/profileImg.png";
 
@@ -47,15 +50,18 @@ export {
   beta,
   betaTumbnail,
   betaMain,
+  betaArchitecture,
   egg,
   eggMbti,
   eggMbtiMain,
   happymanwon,
   happymanwonThumbnail,
   happymanwonMain,
+  happymanwonArchitecture,
   webBuilder,
   webBuilderThumbnail,
   webBuilderMain,
+  webBuilderArchitecture,
   profileImg,
   instagram,
   velog,
