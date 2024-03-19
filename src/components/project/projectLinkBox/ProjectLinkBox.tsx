@@ -9,7 +9,7 @@ interface ProjectLinkBoxProps {
 
 const ProjectLinkBox: React.FC<ProjectLinkBoxProps> = ({ projectData }) => {
   return (
-    <PLB.ProjectLinkBoxContainer>
+    <PLB.ProjectLinkBoxContainer href={projectData.siteLink} target="_blank">
       <PLB.BoxLeft>
         <PLB.BoxTitle>{projectData.title}</PLB.BoxTitle>
         <PLB.BoxInfo>{projectData.introduction}</PLB.BoxInfo>
