@@ -53,7 +53,7 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
   position: ${({ $innerWidth }) => ($innerWidth <= 1240 ? "fixed" : "relative")};
   width: ${({ $clicked }) => ($clicked ? "15rem" : "0")};
   height: 100vh;
-  background-color: var(--gray100-color);
+  background-color: var(--gray1-color);
   overflow-y: auto;
   transition: width 270ms;
   z-index: 10;

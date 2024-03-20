@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
   margin-top: auto;
   padding: 2rem;
   font-size: 0.75rem;
-  color: var(--gray400-color);
+  color: var(--gray5-color);
 `;
 
 export const FooterLink = styled.a`

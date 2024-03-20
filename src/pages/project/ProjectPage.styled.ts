@@ -17,11 +17,11 @@ export const Hr = styled.hr`
   width: 100%;
   height: 13px;
   flex: 0 0 auto;
-  color: rgba(55, 53, 47, 0.16);
+  color: var(--gray3-color);
 `;
 
 export const H1 = styled.h1`
   padding: 13px 0;
   margin-bottom: 8px;
-  border-bottom: 1px solid rgba(55, 53, 47, 0.16);
+  border-bottom: 1px solid var(--gray3-color);
 `;

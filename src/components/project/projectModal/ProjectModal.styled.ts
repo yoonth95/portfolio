@@ -22,7 +22,7 @@ export const Overlay = styled.div`
   height: 100%;
   position: fixed;
   inset: 0px;
-  background: rgba(15, 15, 15, 0.6);
+  background: var(--modal-bg-color);
   z-index: 99;
 `;
 
@@ -33,7 +33,7 @@ export const ModalHeader = styled.div`
   align-items: center;
   padding-left: 12px;
   padding-right: 12px;
-  color: rgba(55, 53, 47, 0.45);
+  color: var(--gray5-color);
 `;
 
 export const ModalHeaderLeft = styled.div`

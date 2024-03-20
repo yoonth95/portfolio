@@ -47,7 +47,7 @@ export const NameBox = styled.div`
   border-radius: 3px;
   color: white;
   font-size: 0.875rem;
-  background-color: var(--gray400-color);
+  background-color: var(--gray5-color);
 `;
 
 export const NameEmail = styled.div`
@@ -64,7 +64,7 @@ export const NameEmail = styled.div`
 
   & p:last-child {
     font-size: 0.6875rem;
-    color: var(--gray500-color);
+    color: var(--gray6-color);
   }
 `;
 
@@ -89,7 +89,7 @@ export const AnglesIcon = styled.div<AnglesIconProps>`
   }
 
   &:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;
 
@@ -99,7 +99,7 @@ export const TabLi = styled.li<ClickedType>`
   gap: 0.7rem;
   padding: 0.7rem 1rem;
   font-size: 0.875rem;
-  background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
+  background-color: ${({ $clicked }) => $clicked && `var(--gray2-color)`};
 
   transition: 270ms;
   cursor: pointer;
@@ -111,27 +111,27 @@ export const TabLi = styled.li<ClickedType>`
 
   & p {
     font-weight: 500;
-    color: var(--gray500-color);
+    color: var(--gray6-color);
   }
 
   &:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;
 
 export const ProjectArea = styled.div`
   font-weight: 500;
-  color: var(--gray500-color);
+  color: var(--gray6-color);
 `;
 
 export const ProjectTab = styled.p<ClickedType>`
   padding: 0.8rem 1.8rem;
   font-size: 0.75rem;
-  background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
+  background-color: ${({ $clicked }) => $clicked && `var(--gray2-color)`};
   cursor: pointer;
 
   &:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;
 
@@ -166,7 +166,7 @@ export const PostMenu = styled.div`
   }
 
   &:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;
 
@@ -176,7 +176,7 @@ export const PostLi = styled.li<ClickedType>`
   gap: 0.625rem;
   width: 100%;
   padding: 0.7rem 1.8rem;
-  background-color: ${({ $clicked }) => $clicked && `var(--gray300-color)`};
+  background-color: ${({ $clicked }) => $clicked && `var(--gray2-color)`};
   transition: 270ms;
 
   & img {
@@ -189,6 +189,6 @@ export const PostLi = styled.li<ClickedType>`
   }
 
   &:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;

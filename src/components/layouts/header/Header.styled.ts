@@ -25,7 +25,7 @@ export const MenuButton = styled.button<ClickedType>`
   }
 
   &:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;
 
@@ -50,6 +50,6 @@ export const Title = styled.div`
   }
 
   &:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;

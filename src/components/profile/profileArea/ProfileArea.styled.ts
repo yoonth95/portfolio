@@ -51,7 +51,7 @@ export const Box = styled.div`
 export const Icon = styled.div`
   width: 100%;
   height: 100%;
-  background-color: var(--gray600-color);
+  background-color: var(--gray7-color);
   transition: 0.5s;
   transform-origin: top;
   transform: translateY(0px) rotateX(0deg);
@@ -74,7 +74,7 @@ export const Details = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgb(241, 241, 239);
-  color: var(--gray500-color);
+  color: var(--gray6-color);
   font-size: 13px;
   transition: 0.5s;
   transform-origin: bottom;

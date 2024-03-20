@@ -10,12 +10,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    --gray100-color: #f7f6f3;  // 사이드바 배경색
-    --gray200-color: #d9d9d9;
-    --gray300-color: #37352f14;
-    --gray400-color: #37352f4d;
-    --gray500-color: #525252;
-    --gray600-color: #37352f;
+    --gray1-color: #f7f6f3;  // 사이드바 배경색
+    --gray2-color: #37352f14;
+    --gray3-color: #37352f29;
+    --gray4-color: #d9d9d9;  // 스크롤 색
+    --gray5-color: #37352f4d;
+    --gray6-color: #525252;
+    --gray7-color: #37352f;
     --modal-bg-color: rgba(0, 0, 0, 0.55);
   }
 
@@ -162,7 +163,7 @@ export const GlobalStyles = createGlobalStyle`
   hr {
     width: 100%;
     margin: 1.5rem 0px;
-    border: 0.5px solid var(--gray200-color);
+    border: 0.5px solid var(--gray4-color);
   }
 
   h1 {
@@ -264,11 +265,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: inherit;
   }
   *::-webkit-scrollbar-thumb {
-    background-color: var(--gray200-color);
+    background-color: var(--gray4-color);
     border: 4px solid #fff;
     border-radius: 1rem;
   }
   *::-webkit-scrollbar-thumb:hover {
-    background-color: var(--gray300-color);
+    background-color: var(--gray2-color);
   }
 `;

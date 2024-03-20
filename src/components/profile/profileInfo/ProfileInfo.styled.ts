@@ -36,7 +36,7 @@ export const ProfileTechStackTitle = styled.div`
 
   & h2 {
     font-size: 1.2rem;
-    color: var(--gray500-color);
+    color: var(--gray6-color);
   }
 
   & span {
@@ -85,7 +85,7 @@ export const SlickItem = styled.div<IsHoverd>`
   cursor: pointer;
 
   & p {
-    color: var(--gray500-color);
+    color: var(--gray6-color);
     font-size: 12px;
   }
 
