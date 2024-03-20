@@ -1,7 +1,7 @@
 import { RefObject, useEffect } from "react";
 import { useProjectNavStore } from "@/stores";
 
-const useWidthToggleProjectNav = (ref: RefObject<HTMLElement>, dependency: string) => {
+const useContentComponentResponsive = (ref: RefObject<HTMLElement>, dependency: string) => {
   const { setIsOpen } = useProjectNavStore();
 
   useEffect(() => {
@@ -18,4 +18,4 @@ const useWidthToggleProjectNav = (ref: RefObject<HTMLElement>, dependency: strin
   }, [setIsOpen, dependency, ref]);
 };
 
-export default useWidthToggleProjectNav;
+export default useContentComponentResponsive;

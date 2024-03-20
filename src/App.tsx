@@ -4,11 +4,11 @@ import { Sidebar, Header, Footer } from "@/components/layouts";
 import { useSidebarStore } from "./stores";
 import { ClickedType } from "./types";
 import styled from "styled-components";
-import { useScrollToElementTop } from "./hooks";
+import { useScrollToElementTop, useContentComponentResponsive } from "./hooks";
 
 function App() {
   const { toggleSidebar, setToggleSidebar } = useSidebarStore();
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const { pathname } = useLocation();
 
   const dimClick = () => {
@@ -16,6 +16,7 @@ function App() {
   };
 
   useScrollToElementTop(ref, pathname);
+  useContentComponentResponsive(ref, pathname);
 
   return (
     <WebContainer>
