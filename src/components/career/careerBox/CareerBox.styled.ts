@@ -8,10 +8,14 @@ export const CareerBoxSection = styled.section<CareerBoxSectionProps>`
   flex-direction: ${({ $flexDirection }) => $flexDirection};
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: calc(100% - 10rem);
+  width: calc(100% - 20rem);
   border-radius: 0.75rem;
   border: 0.0625rem solid #e9ecf3;
   padding: 1.5rem;
+
+  @media (max-width: 1500px) {
+    width: calc(100% - 10rem);
+  }
 `;
 
 export const CareerBoxLeft = styled.div`
