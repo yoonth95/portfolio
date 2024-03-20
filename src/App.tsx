@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar, Header, Footer } from "@/components/layouts";
+import { useScrollToElementTop, useContentComponentResponsive } from "./hooks";
 import { useSidebarStore } from "./stores";
 import { ClickedType } from "./types";
 import styled from "styled-components";
-import { useScrollToElementTop, useContentComponentResponsive } from "./hooks";
 
 function App() {
   const { toggleSidebar, setToggleSidebar } = useSidebarStore();
