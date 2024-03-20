@@ -8,7 +8,7 @@ const useContentComponentResponsive = (ref: RefObject<HTMLElement>, dependency: 
     const handleResize = () => {
       if (ref.current) {
         const windowWidth = ref.current.offsetWidth;
-        windowWidth <= 1480 ? setIsOpen(false) : setIsOpen(true);
+        windowWidth <= 1300 ? setIsOpen(false) : setIsOpen(true);
       }
     };
     if (dependency.includes("project")) handleResize();
