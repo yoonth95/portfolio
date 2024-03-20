@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
-export const Icon = styled.div`
+interface IconProps {
+  $isModal: boolean;
+}
+export const Icon = styled.div<IconProps>`
   height: 5rem;
   width: 5rem;
   border-radius: 4px;
   flex-shrink: 0;
   position: relative;
-  margin-top: 6rem;
+  margin-top: ${({ $isModal }) => ($isModal ? "6rem" : 0)};
   margin-bottom: 1.5rem;
 
   & img {

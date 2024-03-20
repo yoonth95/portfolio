@@ -9,12 +9,13 @@ import { Link } from "react-router-dom";
 
 interface ProjectHeaderProps {
   projectData: Partial<ProjectListType>;
+  isModal: boolean;
 }
 
-const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectData }) => {
+const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectData, isModal }) => {
   return (
     <>
-      <PH.Icon>
+      <PH.Icon $isModal={isModal}>
         <img src={projectData.icon} alt="아이콘" />
       </PH.Icon>
       <PH.Title>{projectData.title}</PH.Title>
