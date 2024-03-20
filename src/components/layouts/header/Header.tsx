@@ -7,12 +7,17 @@ import { notebook } from "@/assets/images";
 import * as H from "./Header.styled";
 
 const Header = () => {
-  const { toggleSidebar, setToggleSidebar } = useSidebarStore();
+  const { setIsOpen, toggleSidebar, setToggleSidebar } = useSidebarStore();
   const navigator = useNavigate();
+
+  const sidebarOpen = () => {
+    setToggleSidebar(true);
+    setIsOpen(true);
+  };
 
   return (
     <H.HeaderContainer>
-      <H.MenuButton $clicked={toggleSidebar} onClick={() => setToggleSidebar(true)}>
+      <H.MenuButton $clicked={toggleSidebar} onClick={sidebarOpen}>
         <FontAwesomeIcon icon={faBars} />
       </H.MenuButton>
       <H.Title onClick={() => navigator("/")}>

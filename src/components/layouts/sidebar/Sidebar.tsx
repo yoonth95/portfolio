@@ -10,16 +10,17 @@ import * as S from "./Sidebar.styled";
 const Sidebar: React.FC = React.memo(() => {
   const navigator = useNavigate();
   const location = useLocation();
-  const { toggleSidebar, setToggleSidebar } = useSidebarStore();
-  const [clickPostMenu, setClickPostMenu] = useState([true, true]);
+  const { isOpen, setIsOpen, toggleSidebar, setToggleSidebar } = useSidebarStore();
+  const [dropMenu, setDropMenu] = useState([true, true]);
 
   const closeSidebar = (e: React.MouseEvent) => {
     e.stopPropagation();
     setToggleSidebar(false);
+    setIsOpen(false);
   };
 
-  const toggleMenu = (index: number) => () => {
-    setClickPostMenu((prevState) => prevState.map((open, i) => (i === index ? !open : open)));
+  const dropDownMenu = (index: number) => () => {
+    setDropMenu((prevState) => prevState.map((open, i) => (i === index ? !open : open)));
   };
 
   useEffect(() => {
@@ -27,7 +28,8 @@ const Sidebar: React.FC = React.memo(() => {
       const windowWidth = window.innerWidth;
       if (windowWidth <= 1240) {
         setToggleSidebar(false);
-      } else {
+      } else if (isOpen && windowWidth > 1240) {
+        console.log("dd");
         setToggleSidebar(true);
       }
     };
@@ -35,7 +37,7 @@ const Sidebar: React.FC = React.memo(() => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isOpen]);
 
   return (
     <S.SidebarContainer $clicked={toggleSidebar}>
@@ -66,8 +68,8 @@ const Sidebar: React.FC = React.memo(() => {
           프로젝트
         </S.ProjectTab>
         {projectTabList.map((project, index) => (
-          <S.PostUl key={project.type} $clicked={clickPostMenu[index]}>
-            <S.PostMenu className="menu" onClick={toggleMenu(index)}>
+          <S.PostUl key={project.type} $clicked={dropMenu[index]}>
+            <S.PostMenu className="menu" onClick={dropDownMenu(index)}>
               <FontAwesomeIcon icon={faCaretRight} />
               <p>{project.type}</p>
             </S.PostMenu>
