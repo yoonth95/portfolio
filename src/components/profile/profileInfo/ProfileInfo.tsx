@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import Slider from "react-slick";
 import { Slick } from "@/components/common";
 import { useProfileInfo } from "@/hooks";
 import { stackInfoList } from "@/data/stackInfoList";
 import * as P from "./ProfileInfo.styled";
 
+interface CustomSlider extends Slider {
+  slickGoTo: (slide: number) => void;
+}
+
 const ProfileInfo: React.FC = () => {
   const { state, dispatch, slideIndex, setSlideIndex } = useProfileInfo();
   const { hoveredItem, filterItem } = state;
+  const slickRef = useRef<CustomSlider | null>(null);
 
   const slickSetting = {
-    Infinity: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    beforeChange: (current: number, next: number) => setSlideIndex(next),
+    beforeChange: (_: number, next: number) => setSlideIndex(next),
     afterChange: (index: number) =>
       dispatch({ type: "SET_HOVERED_ITEM", payload: { hoveredItem: stackInfoList[index].stackList[0].stack, slideIndex: index } }),
   };
+
+  useEffect(() => {
+    slickRef.current?.slickGoTo(slideIndex);
+  }, [slideIndex]);
 
   const onMouseOver = (stack: string) => {
     if (hoveredItem !== stack) dispatch({ type: "SET_HOVERED_ITEM", payload: { hoveredItem: stack, slideIndex } });
@@ -39,7 +49,7 @@ const ProfileInfo: React.FC = () => {
           <span>{stackInfoList[slideIndex].name}</span>
         </P.ProfileTechStackTitle>
         <P.ProfileSkill>
-          <Slick slickSetting={slickSetting}>
+          <Slick ref={slickRef} slickSetting={slickSetting}>
             {stackInfoList.map((slideItems, index) => (
               <P.SlickList key={index}>
                 {slideItems.stackList.map((item) => (
