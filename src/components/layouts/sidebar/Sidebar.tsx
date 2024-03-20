@@ -29,7 +29,6 @@ const Sidebar: React.FC = React.memo(() => {
       if (windowWidth <= 1240) {
         setToggleSidebar(false);
       } else if (isOpen && windowWidth > 1240) {
-        console.log("dd");
         setToggleSidebar(true);
       }
     };
