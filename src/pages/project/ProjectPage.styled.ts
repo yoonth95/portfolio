@@ -25,3 +25,5 @@ export const H1 = styled.h1`
   margin-bottom: 8px;
   border-bottom: 1px solid var(--gray3-color);
 `;
+
+export const ProjectInfo = styled.div``;
