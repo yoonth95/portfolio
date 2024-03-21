@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <H.HeaderContainer>
+    <H.HeaderContainer $clicked={toggleSidebar}>
       <H.MenuButton $clicked={toggleSidebar} onClick={sidebarOpen}>
         <FontAwesomeIcon icon={faBars} />
       </H.MenuButton>

@@ -1,15 +1,18 @@
 import { ClickedType } from "@/types";
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
-  position: sticky;
-  top: 0;
+export const HeaderContainer = styled.header<ClickedType>`
+  height: 60px;
+  width: ${({ $clicked }) => ($clicked ? "calc(100vw - 252px)" : "calc(100vw - 12px)")};
+  position: fixed;
+  left: ${({ $clicked }) => ($clicked ? "240px" : "0")};
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
   font-size: 14px;
   background-color: #fff;
+  transition: 270ms;
   z-index: 8;
 `;
 
