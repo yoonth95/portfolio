@@ -1,11 +1,9 @@
-import { useEffect, RefObject } from "react";
+import { useEffect } from "react";
 
-const useScrollToElementTop = (ref: RefObject<HTMLElement>, dependency: string | number) => {
+const useScrollToElementTop = (dependency: string | number) => {
   useEffect(() => {
-    if (ref.current) {
-      ref.current.scrollTo(0, 0);
-    }
-  }, [dependency, ref]);
+    window.scrollTo(0, 0);
+  }, [dependency]);
 };
 
 export default useScrollToElementTop;
