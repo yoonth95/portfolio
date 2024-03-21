@@ -9,7 +9,7 @@ const useWithProject = () => {
   const pathProjectId = parseInt(location.pathname.replace("/project/", ""), 10);
   const projectId = !isNaN(pathProjectId) ? pathProjectId : storeProjectId;
 
-  const projectData = projectList.find((project) => project.projectId === projectId);
+  const projectData = projectList.find((project) => project.projectId === projectId)!;
 
   return {
     ...projectData,
