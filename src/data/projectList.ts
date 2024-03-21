@@ -5,12 +5,15 @@ import {
   happymanwon,
   happymanwonThumbnail,
   happymanwonMain,
+  happymanwonArchitecture,
   beta,
   betaTumbnail,
   betaMain,
+  betaArchitecture,
   webBuilder,
   webBuilderThumbnail,
   webBuilderMain,
+  webBuilderArchitecture,
 } from "@/assets/images";
 
 const projectList = [
@@ -57,7 +60,9 @@ const projectList = [
     siteLink: "https://happy-manwon.vercel.app",
     github: ["https://github.com/happymanwon/Frontend"],
     figma: [],
-    architecture: "",
+    architecture: happymanwonArchitecture,
+    intention:
+      "고물가와 고금리로 인해 국민들의 생활비 부담이 증가하여 만원으로 할 수 있는 것이 매우 제한적입니다. 이러한 사회적 흐름에 발맞춰, 단돈 만원으로 저렴하게 이용할 수 있는 착한 가게 들을 알려주는 공공 서비스를 개발 했습니다.",
   },
   {
     projectId: 3,
@@ -86,7 +91,9 @@ const projectList = [
     siteLink: "https://beta-beta.net",
     github: ["https://github.com/FESP-TEAM-1/beta-frontend", "https://github.com/FESP-TEAM-1/beta-backend"],
     figma: [],
-    architecture: "",
+    architecture: betaArchitecture,
+    intention:
+      "분산된 정보와 홍보의 어려움으로 예체능 분야의 대학생들의 졸업 작품 또는 정기 행사에 관심과 주목을 받기 어려운 상황에서 효과적으로 소개하고 홍보할 수 있는 플랫폼을 개발 했습니다.",
   },
   {
     projectId: 4,
@@ -113,7 +120,8 @@ const projectList = [
     siteLink: "https://web-builder.store",
     github: ["https://github.com/yoonth95/Web-Builder"],
     figma: [],
-    architecture: "",
+    architecture: webBuilderArchitecture,
+    intention: "개발자나 퍼블리셔가 아닌 누구나 쉽고 빠르게 상세 페이지를 제작 할 수 있는 웹 빌더 시스템을 개발 했습니다.",
   },
 ];
 
