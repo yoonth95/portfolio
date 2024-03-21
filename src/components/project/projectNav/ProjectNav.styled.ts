@@ -20,7 +20,7 @@ export const ProjectNav = styled.ul`
   gap: 4px;
   padding: 0.25rem 0.75rem;
   border-left: 2px solid var(--gray5-color);
-  color: var(--gray5-color);
+  color: #868e96;
   font-size: 0.875rem;
   line-height: 1.5;
 
@@ -29,9 +29,13 @@ export const ProjectNav = styled.ul`
   }
 
   & a.active {
-    color: var(--gray7-color);
+    color: #212529;
     transition: 270ms;
     transform: scale(1.05);
+  }
+
+  & .H2 {
+    margin-left: 12px;
   }
 `;
 

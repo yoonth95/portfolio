@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import { useSidebarStore } from "@/stores";
 import * as PN from "./ProjectNav.styled";
-import { Link } from "react-scroll";
 
 interface ProjectNavProps {
   isModal: boolean;
@@ -32,11 +32,14 @@ const ProjectNav: React.FC<ProjectNavProps> = ({ isModal, headings }) => {
   return (
     <PN.Navbar $isOpen={isOpen} $isModal={isModal}>
       <PN.ProjectNav>
-        {headings.map((item, index) => (
-          <Link key={index} activeClass="active" to={`section${index + 1}`} spy smooth duration={duration} offset={-60}>
-            <li>{item}</li>
-          </Link>
-        ))}
+        {headings.map((item, index) => {
+          const [tagName, text] = item.split("_");
+          return (
+            <Link key={index} activeClass="active" to={`section${index + 1}`} spy smooth duration={duration} offset={-60}>
+              <li className={`${tagName}`}>{text}</li>
+            </Link>
+          );
+        })}
       </PN.ProjectNav>
     </PN.Navbar>
   );
