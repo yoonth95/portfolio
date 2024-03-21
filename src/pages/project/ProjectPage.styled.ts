@@ -20,10 +20,18 @@ export const Hr = styled.hr`
   color: var(--gray3-color);
 `;
 
-export const H1 = styled.h1`
-  padding: 13px 0;
-  margin-bottom: 8px;
-  border-bottom: 1px solid var(--gray3-color);
+export const ProjectInfo = styled.div`
+  & h1 {
+    padding: 13px 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--gray3-color);
+  }
+
+  & h2 {
+    padding: 13px 0;
+  }
 `;
 
-export const ProjectInfo = styled.div``;
+export const ArchitectureImg = styled.img`
+  width: 100%;
+`;
