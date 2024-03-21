@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CareerPageContainer = styled.main`
+export const CareerPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
