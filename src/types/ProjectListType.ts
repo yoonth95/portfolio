@@ -7,7 +7,6 @@ export interface ProjectListType {
   techStack: string[][];
   icon: string;
   title: string;
-  link: string;
   introduction: string;
   team: string;
   projectMainImg: string;
