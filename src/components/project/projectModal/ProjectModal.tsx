@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { useModalStore } from "@/stores";
@@ -6,14 +6,13 @@ import { projectList } from "@/data/projectList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp, faUpRightAndDownLeftFromCenter, faXmark } from "@fortawesome/free-solid-svg-icons";
 import * as M from "./ProjectModal.styled";
-import { useScrollToElementTop } from "@/hooks";
 
 interface ProjectModalProps {
   children: React.ReactNode;
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ children }) => {
-  const { setIsOpen, projectId, setProjectId } = useModalStore();
+  const { isOpen, setIsOpen, projectId, setProjectId } = useModalStore();
   const navigator = useNavigate();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -48,7 +47,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ children }) => {
   };
 
   // 프로젝트 이동 시 스크롤 맨 위로
-  useScrollToElementTop(ref, projectId);
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.scrollTo(0, 0);
+    }
+  }, [projectId, ref]);
+
+  // 모달 여부에 따른 body overflow 스타일 변경
+  useEffect(() => {
+    if (isOpen) document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "hidden auto";
+    };
+  }, [isOpen]);
 
   const renderModal = (
     <>
