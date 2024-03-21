@@ -14,4 +14,5 @@ export interface ProjectListType {
   github: string[];
   figma: string[];
   architecture?: string;
+  intention?: string;
 }
