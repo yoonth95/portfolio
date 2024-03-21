@@ -1,22 +1,19 @@
-import { useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar, Header, Footer } from "@/components/layouts";
-import { useScrollToElementTop, useContentComponentResponsive } from "./hooks";
+import { useScrollToElementTop } from "./hooks";
 import { useSidebarStore } from "./stores";
 import { ClickedType } from "./types";
 import styled from "styled-components";
 
 function App() {
   const { toggleSidebar, setToggleSidebar } = useSidebarStore();
-  const ref = useRef<HTMLDivElement | null>(null);
   const { pathname } = useLocation();
 
   const dimClick = () => {
     setToggleSidebar(!toggleSidebar);
   };
 
-  useScrollToElementTop(ref, pathname);
-  useContentComponentResponsive(ref, pathname);
+  useScrollToElementTop(pathname);
 
   return (
     <WebContainer>
@@ -24,9 +21,11 @@ function App() {
       <SidebarContainer $clicked={toggleSidebar} $innerWidth={window.innerWidth}>
         <Sidebar />
       </SidebarContainer>
-      <ContentContainer ref={ref}>
+      <ContentContainer>
         <Header />
-        <Outlet />
+        <Main $clicked={toggleSidebar}>
+          <Outlet />
+        </Main>
         <Footer />
       </ContentContainer>
     </WebContainer>
@@ -51,9 +50,9 @@ interface SidebarContainerProps extends ClickedType {
 }
 
 const SidebarContainer = styled.div<SidebarContainerProps>`
-  position: ${({ $innerWidth }) => ($innerWidth <= 1240 ? "fixed" : "relative")};
+  position: fixed;
   width: ${({ $clicked }) => ($clicked ? "15rem" : "0")};
-  height: 100vh;
+  height: 100%;
   background-color: var(--gray1-color);
   overflow-y: auto;
   transition: width 270ms;
@@ -66,7 +65,16 @@ const ContentContainer = styled.div`
   flex-direction: column;
   flex-grow: 1;
   background-color: #fff;
-  overflow-y: auto;
+  min-height: 100vh;
+`;
+
+const Main = styled.main<ClickedType>`
+  width: ${({ $clicked }) => ($clicked ? "calc(100vw - 240px)" : "calc(100vw - 12px)")};
+  position: relative;
+  top: 60px;
+  left: ${({ $clicked }) => ($clicked ? "240px" : "0")};
+  padding-bottom: 60px;
+  transition: 270ms;
 `;
 
 export default App;

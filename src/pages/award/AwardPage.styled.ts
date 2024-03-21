@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AwardContainer = styled.main`
+export const AwardContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;

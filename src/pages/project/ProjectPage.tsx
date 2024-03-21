@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Element } from "react-scroll";
 import { ProjectHeader, ProjectLinkBox, ProjectNav } from "@/components/project";
 import { useWithProject } from "@/hooks";
 import * as P from "./ProjectPage.styled";
@@ -27,13 +28,30 @@ const ProjectPage = () => {
       <br />
       <ProjectNav isModal={isModal} headings={headings} />
       <P.ProjectInfo ref={containerRef}>
-        <P.H1>배포 사이트</P.H1>
-        <ProjectLinkBox projectData={projectData} />
-        <ProjectLinkBox projectData={projectData} />
-        <ProjectLinkBox projectData={projectData} />
-        <ProjectLinkBox projectData={projectData} />
-        <ProjectLinkBox projectData={projectData} />
-        <ProjectLinkBox projectData={projectData} />
+        <Element name="section1">
+          <P.H1>배포 사이트</P.H1>
+          <ProjectLinkBox projectData={projectData} />
+        </Element>
+
+        <Element name="section2">
+          {/* <P.H1>배포 사이트</P.H1> */}
+          {/* <ProjectLinkBox projectData={projectData} /> */}
+        </Element>
+
+        <Element name="section3">
+          {/* <P.H1>배포 사이트</P.H1> */}
+          {/* <ProjectLinkBox projectData={projectData} /> */}
+        </Element>
+
+        <Element name="section4">
+          {/* <P.H1>배포 사이트</P.H1> */}
+          {/* <ProjectLinkBox projectData={projectData} /> */}
+        </Element>
+
+        <Element name="section5">
+          {/* <P.H1>배포 사이트</P.H1> */}
+          {/* <ProjectLinkBox projectData={projectData} /> */}
+        </Element>
       </P.ProjectInfo>
     </P.ProjectContainer>
   );

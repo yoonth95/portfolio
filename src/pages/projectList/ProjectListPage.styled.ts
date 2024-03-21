@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProjectListContainer = styled.main`
+export const ProjectListContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;

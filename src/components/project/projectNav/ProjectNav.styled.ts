@@ -4,26 +4,34 @@ interface NavbarProps {
   $isOpen: boolean;
   $isModal: boolean;
 }
-export const Navbar = styled.div<NavbarProps>`
-  ${({ $isModal, $isOpen }) => (!$isModal ? `display: ${$isOpen ? "block" : "none"};` : `display: none;`)}
-  margin-left: calc(45rem + 80px);
+export const Navbar = styled.nav<NavbarProps>`
+  height: 0;
   position: sticky;
   top: 5rem;
-  height: 0;
+  ${({ $isModal, $isOpen }) => (!$isModal ? `display: ${$isOpen ? "block" : "none"};` : `display: none;`)}
+  margin-left: calc(45rem + 80px);
 `;
 
 export const ProjectNav = styled.ul`
   width: 240px;
-  border-left: 2px solid var(--gray5-color);
-  padding: 0.25rem 0.75rem;
-  color: var(--gray6-color);
-  line-height: 1.5;
-  font-size: 0.875rem;
   max-height: calc(-128px + 100vh);
-  overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.25rem 0.75rem;
+  border-left: 2px solid var(--gray5-color);
+  color: var(--gray5-color);
+  font-size: 0.875rem;
+  line-height: 1.5;
 
-  & > li:not(:first-of-type) {
-    margin-top: 4px;
+  & a {
+    cursor: pointer;
+  }
+
+  & a.active {
+    color: var(--gray7-color);
+    transition: 270ms;
+    transform: scale(1.05);
   }
 `;
 
