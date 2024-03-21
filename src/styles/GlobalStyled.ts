@@ -124,6 +124,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     line-height: 1;
+    overflow: hidden auto;
   }
   ol,
   ul {
