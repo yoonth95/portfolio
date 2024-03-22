@@ -15,4 +15,6 @@ export interface ProjectListType {
   figma: string[];
   architecture?: string;
   intention?: string;
+  api?: string;
+  erp?: string;
 }
