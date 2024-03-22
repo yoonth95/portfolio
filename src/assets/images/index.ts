@@ -29,19 +29,23 @@ import betaTumbnail from "@/assets/images/betaBeta/beta-thumbnail.png";
 import betaMain from "@/assets/images/betaBeta/beta-beta-main.png";
 import betaArchitecture from "@/assets/images/betaBeta/beta-architecture.png";
 
+import youtubeCloneIcon from "@/assets/images/youtubeClone/youtube-clone-icon.png";
+import youtubeCloneMain from "@/assets/images/youtubeClone/youtube-clone-main.png";
+import youtubeCloneThumbnail from "@/assets/images/youtubeClone/youtube-clone-thumbnail.png";
+
 import happymanwon from "@/assets/images/happymanwon/happymanwon-icon.png";
 import happymanwonThumbnail from "@/assets/images/happymanwon/happymanwon.png";
 import happymanwonMain from "@/assets/images/happymanwon/happymanwon-main.png";
 import happymanwonArchitecture from "@/assets/images/happymanwon/happymanwon-architecture.png";
 import happymanwonApi from "@/assets/images/happymanwon/happymanwon-api.png";
-import happymanwonErp from "@/assets/images/happymanwon/happymanwon-erp.png";
+import happymanwonErd from "@/assets/images/happymanwon/happymanwon-erd.png";
 
 import webBuilder from "@/assets/images/webBuilder/web-builder-icon.png";
 import webBuilderThumbnail from "@/assets/images/webBuilder/web-builder-thumbnail.png";
 import webBuilderMain from "@/assets/images/webBuilder/web-builder-main.png";
 import webBuilderArchitecture from "@/assets/images/webBuilder/web-builder-architecture.png";
 import webBuilderApi from "@/assets/images/webBuilder/web-builder-api.png";
-import webBuilderErp from "@/assets/images/webBuilder/web-builder-erp.png";
+import webBuilderErd from "@/assets/images/webBuilder/web-builder-erd.png";
 
 import profileImg from "@/assets/images/profileImg.png";
 
@@ -55,6 +59,9 @@ export {
   betaTumbnail,
   betaMain,
   betaArchitecture,
+  youtubeCloneIcon,
+  youtubeCloneMain,
+  youtubeCloneThumbnail,
   egg,
   eggMbti,
   eggMbtiMain,
@@ -63,13 +70,13 @@ export {
   happymanwonMain,
   happymanwonArchitecture,
   happymanwonApi,
-  happymanwonErp,
+  happymanwonErd,
   webBuilder,
   webBuilderThumbnail,
   webBuilderMain,
   webBuilderArchitecture,
   webBuilderApi,
-  webBuilderErp,
+  webBuilderErd,
   profileImg,
   instagram,
   velog,
