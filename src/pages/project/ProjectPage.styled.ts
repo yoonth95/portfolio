@@ -40,7 +40,7 @@ export const ProjectInfo = styled.div`
     line-height: 1.5;
   }
 
-  & img {
+  & .section > img {
     width: 100%;
   }
 `;
