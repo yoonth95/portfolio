@@ -1,4 +1,4 @@
-import { profile, career, trophy, beta, egg, happymanwon, webBuilder } from "@/assets/images";
+import { profile, career, trophy, beta, egg, happymanwon, webBuilder, youtubeCloneIcon } from "@/assets/images";
 
 const tabList = [
   { icon: profile, title: "프로필", link: "/" },
@@ -11,9 +11,10 @@ const projectTabList = [
   {
     type: "팀 프로젝트",
     projects: [
-      { icon: happymanwon, title: "만원의 행복", link: "/project/2" },
-      { icon: beta, title: "대학생 공연/전시 정보 플랫폼", link: "/project/3" },
-      { icon: webBuilder, title: "웅진씽크빅 웹 빌더 시스템", link: "/project/4" },
+      { icon: beta, title: "대학생 공연/전시 정보 플랫폼", link: "/project/2" },
+      { icon: happymanwon, title: "만원의 행복", link: "/project/3" },
+      { icon: youtubeCloneIcon, title: "477Tube", link: "/project/4" },
+      { icon: webBuilder, title: "웅진씽크빅 웹 빌더 시스템", link: "/project/5" },
     ],
   },
 ];
