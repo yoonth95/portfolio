@@ -21,17 +21,26 @@ export const Hr = styled.hr`
 `;
 
 export const ProjectInfo = styled.div`
-  & h1 {
+  & .section {
+    margin-bottom: 2rem;
+  }
+
+  & h1,
+  h2 {
+    line-height: 1.5;
     padding: 13px 0;
+  }
+
+  & h1 {
     margin-bottom: 8px;
     border-bottom: 1px solid var(--gray3-color);
   }
 
-  & h2 {
-    padding: 13px 0;
+  & p {
+    line-height: 1.5;
   }
-`;
 
-export const ArchitectureImg = styled.img`
-  width: 100%;
+  & img {
+    width: 100%;
+  }
 `;
