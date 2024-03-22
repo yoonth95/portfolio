@@ -148,7 +148,7 @@ export const PostUl = styled.ul<ClickedType>`
   }
 
   & > .list {
-    max-height: ${({ $clicked }) => ($clicked ? `7rem` : 0)};
+    max-height: ${({ $clicked }) => ($clicked ? `10rem` : 0)};
     flex-direction: column;
     align-items: start;
     transition: 270ms ease-in-out 0s;
