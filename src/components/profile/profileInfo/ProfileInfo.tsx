@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
-import { Slick } from "@/components/common";
+import { ProfileSlick } from "@/components/profile";
 import { useProfileInfo } from "@/hooks";
 import { stackInfoList } from "@/data/stackInfoList";
 import * as P from "./ProfileInfo.styled";
@@ -49,7 +49,7 @@ const ProfileInfo: React.FC = () => {
           <span>{stackInfoList[slideIndex].name}</span>
         </P.ProfileTechStackTitle>
         <P.ProfileSkill>
-          <Slick ref={slickRef} slickSetting={slickSetting}>
+          <ProfileSlick ref={slickRef} slickSetting={slickSetting}>
             {stackInfoList.map((slideItems, index) => (
               <P.SlickList key={index}>
                 {slideItems.stackList.map((item) => (
@@ -60,7 +60,7 @@ const ProfileInfo: React.FC = () => {
                 ))}
               </P.SlickList>
             ))}
-          </Slick>
+          </ProfileSlick>
         </P.ProfileSkill>
         <P.ProfileSkillDetail>
           <div className="quotation">{filterItem.description.title}</div>
