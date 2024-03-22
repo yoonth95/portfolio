@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Element } from "react-scroll";
+import { LazyImage } from "@/components/common";
 import { ProjectHeader, ProjectLinkBox, ProjectNav } from "@/components/project";
 import { useWithProject } from "@/hooks";
 import * as P from "./ProjectPage.styled";
@@ -41,7 +42,7 @@ const ProjectPage = () => {
           {projectData.architecture && (
             <Element className="section" name="section3">
               <h2>프로젝트 아키텍쳐</h2>
-              <img src={projectData.architecture} alt="프로젝트 아키텍쳐" />
+              <LazyImage src={projectData.architecture} alt="프로젝트 아키텍쳐" />
             </Element>
           )}
           <Element className="section" name="section4">
@@ -52,24 +53,32 @@ const ProjectPage = () => {
             <h2>피그마/디자인</h2>
             {/* <P.ArchitectureImg src={projectData.architecture} alt="프로젝트 아키텍쳐" /> */}
           </Element>
-          <Element className="section" name="section6">
-            <h2>API / ERP 설계</h2>
-            {/* <P.ArchitectureImg src={projectData.architecture} alt="프로젝트 아키텍쳐" /> */}
-          </Element>
+          {projectData.erd && (
+            <Element className="section" name="section6">
+              <h2>데이터베이스 ERD</h2>
+              <LazyImage src={projectData.erd} alt="erd 이미지" />
+            </Element>
+          )}
+          {projectData.api && (
+            <Element className="section" name="section7">
+              <h2>API 설계</h2>
+              <LazyImage src={projectData.api} alt="api 이미지" />
+            </Element>
+          )}
         </Element>
-        <Element className="section" name="section7">
+        <Element className="section" name="section8">
           <h1>담당한 기능</h1>
           {/* <ProjectLinkBox projectData={projectData} /> */}
         </Element>
-        <Element className="section" name="section8">
+        <Element className="section" name="section9">
           <h1>트러블슈팅</h1>
           {/* <ProjectLinkBox projectData={projectData} /> */}
         </Element>
-        <Element className="section" name="section9">
+        <Element className="section" name="section10">
           <h1>상세 이미지</h1>
           {/* <ProjectLinkBox projectData={projectData} /> */}
         </Element>
-        <Element className="section" name="section10">
+        <Element className="section" name="section11">
           <h1>배포 사이트</h1>
           <ProjectLinkBox projectData={projectData} />
         </Element>
