@@ -4,7 +4,7 @@ import { darkenColor } from "@/utils/colorChangeUtil";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAlignLeft, faCalendarDays, faList, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import * as PH from "./ProjectHeader.styled";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faVimeo } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 
 interface ProjectHeaderProps {
@@ -70,6 +70,19 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectData, isModal }) =
               ))}
             </PH.InfoRight>
           </div>
+          {projectData.velog && (
+            <div className="infoEach">
+              <PH.InfoLeft>
+                <FontAwesomeIcon icon={faVimeo} />
+                <span>Velog</span>
+              </PH.InfoLeft>
+              <PH.InfoRight>
+                <Link key={projectData.velog} to={projectData.velog} target="_blank">
+                  {projectData.velog}
+                </Link>
+              </PH.InfoRight>
+            </div>
+          )}
         </div>
       </PH.Info>
     </>
