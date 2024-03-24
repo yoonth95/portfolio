@@ -36,11 +36,43 @@ export const ProjectInfo = styled.div`
     border-bottom: 1px solid var(--gray3-color);
   }
 
+  & h3 {
+    color: inherit;
+    margin-bottom: 1rem;
+  }
+
   & p {
     line-height: 1.5;
   }
 
   & .section > img {
     width: 100%;
+  }
+
+  & .quotation {
+    margin-bottom: 20px;
+  }
+
+  & li {
+    font-size: 15px;
+    line-height: 1.5;
+    list-style: outside;
+    margin: 0 0 0.625rem 1.5rem;
+  }
+`;
+
+export const ReferenceBox = styled.div`
+  & > span,
+  strong,
+  a {
+    font-size: 14px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  & a:hover {
+    text-decoration: underline;
   }
 `;
