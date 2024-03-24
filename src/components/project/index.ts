@@ -3,5 +3,6 @@ import ProjectHeader from "./projectHeader/ProjectHeader";
 import ProjectModal from "./projectModal/ProjectModal";
 import ProjectLinkBox from "./projectLinkBox/ProjectLinkBox";
 import ProjectNav from "./projectNav/ProjectNav";
+import ProjectImgSlide from "./projectImgSlide/ProjectImgSlide";
 
-export { ProjectBox, ProjectHeader, ProjectModal, ProjectLinkBox, ProjectNav };
+export { ProjectBox, ProjectHeader, ProjectModal, ProjectLinkBox, ProjectNav, ProjectImgSlide };
