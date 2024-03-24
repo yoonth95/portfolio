@@ -7,14 +7,19 @@ export interface ProjectListType {
   techStack: string[][];
   icon: string;
   title: string;
-  introduction: string;
   team: string;
+  introduction: string;
   projectMainImg: string;
   siteLink: string;
   github: string[];
-  figma: string[];
+  velog?: string;
+  intention: string[];
+  reference?: string[];
   architecture?: string;
-  intention?: string;
+  figma?: string[];
   api?: string;
   erp?: string;
+  responsibleRole?: string[];
+  projectImgList: string[];
+  troubleshooting?: string[];
 }
