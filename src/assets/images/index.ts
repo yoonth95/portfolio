@@ -23,11 +23,18 @@ import desktopGif from "@/assets/images/icons/desktop.gif";
 import egg from "@/assets/images/eggMbti/egg-mbti-icon.png";
 import eggMbti from "@/assets/images/eggMbti/egg-mbti.png";
 import eggMbtiMain from "@/assets/images/eggMbti/egg-mbti-main.png";
+import eggMbti1 from "@/assets/images/eggMbti/egg-mbti-1.png";
+import eggMbti2 from "@/assets/images/eggMbti/egg-mbti-2.png";
+import eggMbti3 from "@/assets/images/eggMbti/egg-mbti-3.png";
+import eggMbti4 from "@/assets/images/eggMbti/egg-mbti-4.png";
+import eggMbti5 from "@/assets/images/eggMbti/egg-mbti-5.png";
 
 import beta from "@/assets/images/betaBeta/beta-beta-icon.png";
 import betaTumbnail from "@/assets/images/betaBeta/beta-thumbnail.png";
 import betaMain from "@/assets/images/betaBeta/beta-beta-main.png";
 import betaArchitecture from "@/assets/images/betaBeta/beta-architecture.png";
+import betaApi from "@/assets/images/betaBeta/beta-api.png";
+import betaErd from "@/assets/images/betaBeta/beta-erd.png";
 
 import youtubeCloneIcon from "@/assets/images/youtubeClone/youtube-clone-icon.png";
 import youtubeCloneMain from "@/assets/images/youtubeClone/youtube-clone-main.png";
@@ -59,12 +66,19 @@ export {
   betaTumbnail,
   betaMain,
   betaArchitecture,
+  betaApi,
+  betaErd,
   youtubeCloneIcon,
   youtubeCloneMain,
   youtubeCloneThumbnail,
   egg,
   eggMbti,
   eggMbtiMain,
+  eggMbti1,
+  eggMbti2,
+  eggMbti3,
+  eggMbti4,
+  eggMbti5,
   happymanwon,
   happymanwonThumbnail,
   happymanwonMain,
