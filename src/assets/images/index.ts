@@ -35,6 +35,26 @@ import betaMain from "@/assets/images/betaBeta/beta-beta-main.png";
 import betaArchitecture from "@/assets/images/betaBeta/beta-architecture.png";
 import betaApi from "@/assets/images/betaBeta/beta-api.png";
 import betaErd from "@/assets/images/betaBeta/beta-erd.png";
+import betaFigma from "@/assets/images/betaBeta/beta-figma.png";
+import betaImageDetail from "@/assets/images/betaBeta/beta-img-detail.gif";
+import betaImageExhibition from "@/assets/images/betaBeta/beta-img-exhibition.gif";
+import betaImageGoogleForm from "@/assets/images/betaBeta/beta-img-google-form.gif";
+import betaImageLikeManage from "@/assets/images/betaBeta/beta-img-like-manage.gif";
+import betaImageLike from "@/assets/images/betaBeta/beta-img-like.gif";
+import betaImageMain from "@/assets/images/betaBeta/beta-img-main.gif";
+import betaImagePostManage from "@/assets/images/betaBeta/beta-img-post-manage.gif";
+import betaImagePostUpdate from "@/assets/images/betaBeta/beta-img-post-update.gif";
+import betaImagePostUpload from "@/assets/images/betaBeta/beta-img-post-upload.gif";
+import betaImageProfile from "@/assets/images/betaBeta/beta-img-profile.gif";
+import betaImageProfileAdmin from "@/assets/images/betaBeta/beta-img-profile-admin.gif";
+import betaImageReservationManageAdmin from "@/assets/images/betaBeta/beta-img-reservation-manage-admin.gif";
+import betaImageReservationManage from "@/assets/images/betaBeta/beta-img-reservation-manage.gif";
+import betaImageReview from "@/assets/images/betaBeta/beta-img-review.gif";
+import betaImageReviewManage from "@/assets/images/betaBeta/beta-img-review-manage.gif";
+import betaImageShow from "@/assets/images/betaBeta/beta-img-show.gif";
+import betaImageStoryManage from "@/assets/images/betaBeta/beta-img-story-manage.gif";
+import betaImageStory from "@/assets/images/betaBeta/beta-img-story.gif";
+import betaImageToss from "@/assets/images/betaBeta/beta-img-toss.gif";
 
 import youtubeCloneIcon from "@/assets/images/youtubeClone/youtube-clone-icon.png";
 import youtubeCloneMain from "@/assets/images/youtubeClone/youtube-clone-main.png";
@@ -68,6 +88,26 @@ export {
   betaArchitecture,
   betaApi,
   betaErd,
+  betaFigma,
+  betaImageDetail,
+  betaImageExhibition,
+  betaImageGoogleForm,
+  betaImageLikeManage,
+  betaImageLike,
+  betaImageMain,
+  betaImagePostManage,
+  betaImagePostUpdate,
+  betaImagePostUpload,
+  betaImageProfile,
+  betaImageProfileAdmin,
+  betaImageReservationManageAdmin,
+  betaImageReservationManage,
+  betaImageReview,
+  betaImageReviewManage,
+  betaImageShow,
+  betaImageStoryManage,
+  betaImageStory,
+  betaImageToss,
   youtubeCloneIcon,
   youtubeCloneMain,
   youtubeCloneThumbnail,
