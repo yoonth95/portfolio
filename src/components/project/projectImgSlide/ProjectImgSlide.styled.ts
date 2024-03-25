@@ -14,6 +14,9 @@ export const SlideContainer = styled.div<SlideContainerProps>`
   .slick-next:before {
     color: black;
   }
+  .slick-dots {
+    bottom: -30px;
+  }
 
   & img {
     aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
