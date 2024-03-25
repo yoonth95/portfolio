@@ -63,6 +63,7 @@ const ContentContainer = styled.div`
   width: calc(100% - 16rem);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
   background-color: #fff;
   min-height: 100vh;
