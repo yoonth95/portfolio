@@ -1,4 +1,3 @@
-import React from "react";
 import { ProfileArea, ProfileInfo } from "@/components/profile";
 import * as P from "./ProfilePage.styled";
 

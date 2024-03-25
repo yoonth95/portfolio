@@ -1,4 +1,3 @@
-import React from "react";
 import { CareerTimeline, CareerBox, CareerBoxRight, CareerActive, CareerExp, CareerEdu } from "@/components/career";
 import { careerYear, careerData } from "@/data/careerInfoList";
 import * as C from "./CareerPage.styled";

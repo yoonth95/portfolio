@@ -1,4 +1,3 @@
-import React from "react";
 import { useSidebarStore } from "@/stores";
 import * as F from "./Footer.styled";
 

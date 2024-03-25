@@ -1,6 +1,5 @@
 import React from "react";
 import { CareerDataType } from "@/types/CareerInfoType";
-import * as C from "./CareerEdu.styled";
 
 interface CareerEduProps {
   data: CareerDataType;
