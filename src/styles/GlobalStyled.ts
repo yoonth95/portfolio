@@ -254,6 +254,15 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .textBox {
+    line-height: normal;
+    background: rgba(135, 131, 120, 0.15);
+    color: #5757eb;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0.3rem 0.4rem;
+  }
+
   /* 기본 스크롤바 스타일링 */
   *::-webkit-scrollbar {
     background-color: inherit;

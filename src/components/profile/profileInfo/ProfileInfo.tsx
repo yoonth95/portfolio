@@ -46,7 +46,7 @@ const ProfileInfo: React.FC = () => {
       <P.ProfileTechStack>
         <P.ProfileTechStackTitle>
           <h2>Tech Stack</h2>
-          <span>{stackInfoList[slideIndex].name}</span>
+          <span className="textBox">{stackInfoList[slideIndex].name}</span>
         </P.ProfileTechStackTitle>
         <P.ProfileSkill>
           <ProfileSlick ref={slickRef} slickSetting={slickSetting}>

@@ -38,15 +38,6 @@ export const ProfileTechStackTitle = styled.div`
     font-size: 1.2rem;
     color: var(--gray6-color);
   }
-
-  & span {
-    line-height: normal;
-    background: rgba(135, 131, 120, 0.15);
-    color: #5757eb;
-    border-radius: 4px;
-    font-size: 12px;
-    padding: 0.3rem 0.7rem;
-  }
 `;
 
 export const ProfileSkill = styled.div`
