@@ -33,9 +33,9 @@ const ProjectNav: React.FC<ProjectNavProps> = ({ isModal, headings }) => {
     <PN.Navbar $isOpen={isOpen} $isModal={isModal}>
       <PN.ProjectNav>
         {headings.map((item, index) => {
-          const [tagName, text] = item.split("_");
+          const [tagId, tagName, text] = item.split("_");
           return (
-            <Link key={index} activeClass="active" to={`section${index + 1}`} spy smooth duration={duration} offset={-60}>
+            <Link key={index} activeClass="active" to={`${tagId}`} spy smooth duration={duration} offset={-60}>
               <li className={`${tagName}`}>{text}</li>
             </Link>
           );
