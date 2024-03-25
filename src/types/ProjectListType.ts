@@ -13,13 +13,17 @@ export interface ProjectListType {
   siteLink: string;
   github: string[];
   velog?: string;
-  intention: string[];
+  intention: (string | { [key: string]: string[] | undefined })[];
   reference?: string[];
   architecture?: string;
-  figma?: string[];
+  figma?: string[] | string;
   api?: string;
-  erp?: string;
+  erd?: string;
   responsibleRole?: string[];
-  projectImgList: string[];
-  troubleshooting?: string[];
+  projectImgAspectRatio: string;
+  projectImgList: (string | { [key: string]: string[] })[];
+  pageDescription?: { [sectionTitle: string]: string[] };
+  troubleshooting?: {
+    [key: string]: string[];
+  };
 }
