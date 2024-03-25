@@ -13,6 +13,7 @@ export const ProfileSection = styled.section`
   justify-content: center;
   gap: 4rem;
   height: 600px;
+  margin-top: 50px;
 `;
 
 export const ProfileAwardSection = styled.section`
