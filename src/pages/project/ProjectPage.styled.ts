@@ -59,6 +59,14 @@ export const ProjectInfo = styled.div`
     list-style: outside;
     margin: 0 0 0.625rem 1.5rem;
   }
+
+  & .subLi {
+    list-style: circle;
+  }
+
+  & .imgDescription {
+    margin-top: 30px;
+  }
 `;
 
 export const ReferenceBox = styled.div`
