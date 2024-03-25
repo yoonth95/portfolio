@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
 
-const projectPaths = ["egg-mbti", "happymanwon", "beta-beta", "web-builder"];
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,13 +45,6 @@ const router = createBrowserRouter([
               return { Component: ProjectPage };
             },
           },
-          // ...projectPaths.map((path) => ({
-          //   path,
-          //   async lazy() {
-          //     const { default: ProjectPage } = await import("../pages/project/ProjectPage");
-          //     return { Component: ProjectPage };
-          //   },
-          // })),
         ],
       },
     ],
