@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ProjectListType } from "@/types";
 import { darkenColor } from "@/utils/colorChangeUtil";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAlignLeft, faCalendarDays, faList, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
-import * as PH from "./ProjectHeader.styled";
 import { faGithub, faVimeo } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
+import * as PH from "./ProjectHeader.styled";
 
 interface ProjectHeaderProps {
   projectData: Partial<ProjectListType>;
