@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
-export const SlideContainer = styled.div`
+interface SlideContainerProps {
+  $aspectRatio: string;
+}
+export const SlideContainer = styled.div<SlideContainerProps>`
   .slick-prev {
-    left: -35px;
+    left: 0px;
   }
   .slick-next {
-    right: -35px;
+    right: 0px;
   }
   .slick-prev:before,
   .slick-next:before {
@@ -13,7 +16,7 @@ export const SlideContainer = styled.div`
   }
 
   & img {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
     object-fit: contain;
   }
 `;
