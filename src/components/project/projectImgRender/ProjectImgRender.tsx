@@ -18,21 +18,27 @@ const ProjectImgRender: React.FC<ProjectImgRenderProps> = ({ projectData }) => {
       ) : (
         // 객체인 경우: 각 섹션별로 ProjectImgSlide 컴포넌트를 사용
         projectData.projectImgList.map((section) =>
-          Object.entries(section).map(([sectionTitle, images], index) => (
-            <div key={index} style={{ marginBottom: "3rem" }}>
-              <h3>{sectionTitle}</h3>
-              <ProjectImgSlide aspectRatio={projectData.projectImgAspectRatio}>
-                {images.map((imgSrc: string, imgIndex: number) => (
-                  <img key={imgIndex} src={imgSrc} alt={`${sectionTitle} 이미지 ${imgIndex}`} />
-                ))}
-              </ProjectImgSlide>
-              <ul className="imgDescription">
-                {projectData.pageDescription?.[sectionTitle]?.map((description, descIndex) => (
-                  <li key={descIndex}>{description}</li>
-                ))}
-              </ul>
-            </div>
-          )),
+          Object.entries(section).map(([sectionTitle, images], index) => {
+            return (
+              <div key={index} style={{ marginBottom: "3rem" }}>
+                <h3>{sectionTitle}</h3>
+                {Array.isArray(images) ? (
+                  <ProjectImgSlide aspectRatio={projectData.projectImgAspectRatio}>
+                    {images.map((imgSrc: string, imgIndex: number) => (
+                      <img key={imgIndex} src={imgSrc} alt={`${sectionTitle} 이미지 ${imgIndex}`} />
+                    ))}
+                  </ProjectImgSlide>
+                ) : (
+                  <img src={images} alt={`${sectionTitle} 이미지`} style={{ width: "100%" }} />
+                )}
+                <ul className="imgDescription">
+                  {projectData.pageDescription?.[sectionTitle]?.map((description, descIndex) => (
+                    <li key={descIndex}>{description}</li>
+                  ))}
+                </ul>
+              </div>
+            );
+          }),
         )
       )}
     </>
