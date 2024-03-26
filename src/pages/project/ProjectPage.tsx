@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Element } from "react-scroll";
 import { SafeHtml } from "@/components/common";
-import { ProjectHeader, ProjectImgRender, ProjectLinkBox, ProjectNav } from "@/components/project";
+import { ProjectHeader, ProjectImgRender, ProjectImgSlide, ProjectLinkBox, ProjectNav } from "@/components/project";
 import { useWithProject } from "@/hooks";
 import * as P from "./ProjectPage.styled";
 
@@ -43,7 +43,11 @@ const ProjectPage = () => {
               <ul>
                 {projectData.intention.map((item, index) => {
                   if (typeof item === "string") {
-                    return <li key={index}>{item}</li>;
+                    return (
+                      <li key={index}>
+                        <SafeHtml html={item} />
+                      </li>
+                    );
                   } else if (typeof item === "object") {
                     const [objectKey, objectValues] = Object.entries(item)[0];
 
@@ -84,34 +88,48 @@ const ProjectPage = () => {
               </pre>
             </div>
           )}
-          {projectData.architecture && (
+          {projectData.duration && (
             <Element className="section" name="section4">
-              <h2 id="section4">프로젝트 아키텍쳐</h2>
+              <h2 id="section4">개발 기간</h2>
+              <img src={projectData.duration} alt="프로젝트 개발 기간" />
+            </Element>
+          )}
+          {projectData.architecture && (
+            <Element className="section" name="section5">
+              <h2 id="section5">프로젝트 아키텍쳐</h2>
               <img src={projectData.architecture} alt="프로젝트 아키텍쳐" />
             </Element>
           )}
           {projectData.figma && (
-            <Element className="section" name="section5">
-              <h2 id="section5">피그마 디자인</h2>
-              <img src={projectData.figma} alt="figma 이미지" />
+            <Element className="section" name="section6">
+              <h2 id="section6">피그마 디자인</h2>
+              {typeof projectData.figma === "string" ? (
+                <img src={projectData.figma} alt="figma 이미지" />
+              ) : (
+                <ProjectImgSlide aspectRatio={projectData.projectImgAspectRatio}>
+                  {projectData.figma.map((imgSrc, index) => (
+                    <img key={index} src={imgSrc as string} alt={`프로젝트 피그마 ${index}`} />
+                  ))}
+                </ProjectImgSlide>
+              )}
             </Element>
           )}
           {projectData.erd && (
-            <Element className="section" name="section6">
-              <h2 id="section6">데이터베이스 ERD</h2>
+            <Element className="section" name="section7">
+              <h2 id="section7">데이터베이스 ERD</h2>
               <img src={projectData.erd} alt="erd 이미지" />
             </Element>
           )}
           {projectData.api && (
-            <Element className="section" name="section7">
-              <h2 id="section7">API 설계</h2>
+            <Element className="section" name="section8">
+              <h2 id="section8">API 설계</h2>
               <img src={projectData.api} alt="api 이미지" />
             </Element>
           )}
         </Element>
         {projectData.responsibleRole && (
-          <Element className="section" name="section8">
-            <h1 id="section8">담당한 기능</h1>
+          <Element className="section" name="section9">
+            <h1 id="section9">담당한 기능</h1>
             <ul>
               {projectData.responsibleRole.map((item, index) => (
                 <li key={index}>
@@ -122,14 +140,14 @@ const ProjectPage = () => {
           </Element>
         )}
         {projectData.troubleshooting && (
-          <Element className="section" name="section9">
-            <h1 id="section9">트러블슈팅</h1>
+          <Element className="section" name="section10">
+            <h1 id="section10">트러블슈팅</h1>
             <ul>
               {Object.entries(projectData.troubleshooting).map(([problem, solutions], index) => (
                 <li key={index}>
                   <SafeHtml html={problem} />
                   <ul>
-                    {solutions.map((solution, solutionIndex) => (
+                    {solutions.map((solution: string, solutionIndex: number) => (
                       <li key={solutionIndex} className="subLi">
                         <SafeHtml html={solution} />
                       </li>
@@ -140,8 +158,8 @@ const ProjectPage = () => {
             </ul>
           </Element>
         )}
-        <Element className="section" name="section10">
-          <h1 id="section10">상세 이미지</h1>
+        <Element className="section" name="section11">
+          <h1 id="section11">상세 이미지</h1>
           <ProjectImgRender projectData={projectData} />
         </Element>
       </P.ProjectInfo>
