@@ -65,7 +65,7 @@ export const ProjectInfo = styled.div`
   }
 
   & .imgDescription {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 `;
 
