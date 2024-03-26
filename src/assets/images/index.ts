@@ -60,6 +60,9 @@ import betaImageToss from "@/assets/images/betaBeta/beta-img-toss.gif";
 import youtubeCloneIcon from "@/assets/images/youtubeClone/youtube-clone-icon.png";
 import youtubeCloneMain from "@/assets/images/youtubeClone/youtube-clone-main.png";
 import youtubeCloneThumbnail from "@/assets/images/youtubeClone/youtube-clone-thumbnail.png";
+import youtubeCloneMainPage from "@/assets/images/youtubeClone/youtube-clone-img-main.gif";
+import youtubeCloneDetail from "@/assets/images/youtubeClone/youtube-clone-img-detail.gif";
+import youtubeCloneSearch from "@/assets/images/youtubeClone/youtube-clone-img-search.gif";
 
 import happymanwon from "@/assets/images/happymanwon/happymanwon-icon.png";
 import happymanwonThumbnail from "@/assets/images/happymanwon/happymanwon.png";
@@ -96,6 +99,18 @@ import webBuilderMain from "@/assets/images/webBuilder/web-builder-main.png";
 import webBuilderArchitecture from "@/assets/images/webBuilder/web-builder-architecture.png";
 import webBuilderApi from "@/assets/images/webBuilder/web-builder-api.png";
 import webBuilderErd from "@/assets/images/webBuilder/web-builder-erd.png";
+import webBuilderFigma1 from "@/assets/images/webBuilder/web-builder-figma-1.png";
+import webBuilderFigma2 from "@/assets/images/webBuilder/web-builder-figma-2.png";
+import webBuilderDesign from "@/assets/images/webBuilder/web-builder-img-design.gif";
+import webBuilderEditor11 from "@/assets/images/webBuilder/web-builder-img-editor-1-1.gif";
+import webBuilderEditor12 from "@/assets/images/webBuilder/web-builder-img-editor-1-2.gif";
+import webBuilderEditor13 from "@/assets/images/webBuilder/web-builder-img-editor-1-3.gif";
+import webBuilderEditor21 from "@/assets/images/webBuilder/web-builder-img-editor-2-1.gif";
+import webBuilderEditor22 from "@/assets/images/webBuilder/web-builder-img-editor-2-2.gif";
+import webBuilderEditor23 from "@/assets/images/webBuilder/web-builder-img-editor-2-3.gif";
+import webBuilderLogin from "@/assets/images/webBuilder/web-builder-img-login.gif";
+import webBuilderManage from "@/assets/images/webBuilder/web-builder-img-manage.gif";
+import webBuilderMainPage from "@/assets/images/webBuilder/web-builder-img-main.gif";
 
 import profileImg from "@/assets/images/profileImg.png";
 
@@ -135,6 +150,9 @@ export {
   youtubeCloneIcon,
   youtubeCloneMain,
   youtubeCloneThumbnail,
+  youtubeCloneMainPage,
+  youtubeCloneDetail,
+  youtubeCloneSearch,
   egg,
   eggMbti,
   eggMbtiMain,
@@ -177,6 +195,18 @@ export {
   webBuilderArchitecture,
   webBuilderApi,
   webBuilderErd,
+  webBuilderFigma1,
+  webBuilderFigma2,
+  webBuilderDesign,
+  webBuilderEditor11,
+  webBuilderEditor12,
+  webBuilderEditor13,
+  webBuilderEditor21,
+  webBuilderEditor22,
+  webBuilderEditor23,
+  webBuilderLogin,
+  webBuilderManage,
+  webBuilderMainPage,
   profileImg,
   instagram,
   velog,
