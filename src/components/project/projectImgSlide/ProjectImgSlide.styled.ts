@@ -21,7 +21,7 @@ export const SlideContainer = styled.div<SlideContainerProps>`
     color: black;
   }
   .slick-dots {
-    bottom: -30px;
+    bottom: -40px;
   }
 
   & img {
