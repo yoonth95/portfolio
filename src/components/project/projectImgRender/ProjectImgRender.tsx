@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectImgSlide } from "@/components/project";
 import { ProjectListType } from "@/types";
+import { SafeHtml } from "@/components/common";
 
 interface ProjectImgRenderProps {
   projectData: ProjectListType;
@@ -33,7 +34,9 @@ const ProjectImgRender: React.FC<ProjectImgRenderProps> = ({ projectData }) => {
                 )}
                 <ul className="imgDescription">
                   {projectData.pageDescription?.[sectionTitle]?.map((description, descIndex) => (
-                    <li key={descIndex}>{description}</li>
+                    <li key={descIndex}>
+                      <SafeHtml html={description} />
+                    </li>
                   ))}
                 </ul>
               </div>
