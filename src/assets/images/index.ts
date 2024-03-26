@@ -32,6 +32,7 @@ import eggMbti5 from "@/assets/images/eggMbti/egg-mbti-5.png";
 import beta from "@/assets/images/betaBeta/beta-beta-icon.png";
 import betaTumbnail from "@/assets/images/betaBeta/beta-thumbnail.png";
 import betaMain from "@/assets/images/betaBeta/beta-beta-main.png";
+import betaDuration from "@/assets/images/betaBeta/beta-duration.png";
 import betaArchitecture from "@/assets/images/betaBeta/beta-architecture.png";
 import betaApi from "@/assets/images/betaBeta/beta-api.png";
 import betaErd from "@/assets/images/betaBeta/beta-erd.png";
@@ -66,6 +67,28 @@ import happymanwonMain from "@/assets/images/happymanwon/happymanwon-main.png";
 import happymanwonArchitecture from "@/assets/images/happymanwon/happymanwon-architecture.png";
 import happymanwonApi from "@/assets/images/happymanwon/happymanwon-api.png";
 import happymanwonErd from "@/assets/images/happymanwon/happymanwon-erd.png";
+import happymanwonFigma1 from "@/assets/images/happymanwon/happymanwon-figma1.png";
+import happymanwonFigma2 from "@/assets/images/happymanwon/happymanwon-figma2.png";
+import happymanwonCategory1 from "@/assets/images/happymanwon/happymanwon-img-category-1.png";
+import happymanwonCategory2 from "@/assets/images/happymanwon/happymanwon-img-category-2.png";
+import happymanwonCategory3 from "@/assets/images/happymanwon/happymanwon-img-category-3.png";
+import happymanwonCommunity1 from "@/assets/images/happymanwon/happymanwon-img-community-1.png";
+import happymanwonCommunity2 from "@/assets/images/happymanwon/happymanwon-img-community-2.png";
+import happymanwonCommunity3 from "@/assets/images/happymanwon/happymanwon-img-community-3.png";
+import happymanwonCommunity4 from "@/assets/images/happymanwon/happymanwon-img-community-4.png";
+import happymanwonMainPage from "@/assets/images/happymanwon/happymanwon-img-main.png";
+import happymanwonMap1 from "@/assets/images/happymanwon/happymanwon-img-map-1.png";
+import happymanwonMap2 from "@/assets/images/happymanwon/happymanwon-img-map-2.png";
+import happymanwonMypage1 from "@/assets/images/happymanwon/happymanwon-img-mypage-1.png";
+import happymanwonMypage2 from "@/assets/images/happymanwon/happymanwon-img-mypage-2.png";
+import happymanwonMypage3 from "@/assets/images/happymanwon/happymanwon-img-mypage-3.png";
+import happymanwonMypage4 from "@/assets/images/happymanwon/happymanwon-img-mypage-4.png";
+import happymanwonMypage5 from "@/assets/images/happymanwon/happymanwon-img-mypage-5.png";
+import happymanwonSale1 from "@/assets/images/happymanwon/happymanwon-img-sale-1.png";
+import happymanwonSale2 from "@/assets/images/happymanwon/happymanwon-img-sale-2.png";
+import happymanwonSale3 from "@/assets/images/happymanwon/happymanwon-img-sale-3.png";
+import happymanwonSale4 from "@/assets/images/happymanwon/happymanwon-img-sale-4.png";
+import happymanwonSale5 from "@/assets/images/happymanwon/happymanwon-img-sale-5.png";
 
 import webBuilder from "@/assets/images/webBuilder/web-builder-icon.png";
 import webBuilderThumbnail from "@/assets/images/webBuilder/web-builder-thumbnail.png";
@@ -85,6 +108,7 @@ export {
   beta,
   betaTumbnail,
   betaMain,
+  betaDuration,
   betaArchitecture,
   betaApi,
   betaErd,
@@ -125,6 +149,28 @@ export {
   happymanwonArchitecture,
   happymanwonApi,
   happymanwonErd,
+  happymanwonFigma1,
+  happymanwonFigma2,
+  happymanwonCategory1,
+  happymanwonCategory2,
+  happymanwonCategory3,
+  happymanwonCommunity1,
+  happymanwonCommunity2,
+  happymanwonCommunity3,
+  happymanwonCommunity4,
+  happymanwonMainPage,
+  happymanwonMap1,
+  happymanwonMap2,
+  happymanwonMypage1,
+  happymanwonMypage2,
+  happymanwonMypage3,
+  happymanwonMypage4,
+  happymanwonMypage5,
+  happymanwonSale1,
+  happymanwonSale2,
+  happymanwonSale3,
+  happymanwonSale4,
+  happymanwonSale5,
   webBuilder,
   webBuilderThumbnail,
   webBuilderMain,
