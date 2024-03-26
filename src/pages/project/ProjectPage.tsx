@@ -57,7 +57,7 @@ const ProjectPage = () => {
                         <ul>
                           {objectValues.map((value: string, valueIndex: number) => (
                             <li key={valueIndex} className="subLi">
-                              {value}
+                              <SafeHtml html={value} />
                             </li>
                           ))}
                         </ul>
