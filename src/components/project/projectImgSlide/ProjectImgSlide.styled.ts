@@ -4,6 +4,10 @@ interface SlideContainerProps {
   $aspectRatio: string;
 }
 export const SlideContainer = styled.div<SlideContainerProps>`
+  .slick-list {
+    width: 90%;
+    left: 35px;
+  }
   .slick-prev {
     left: 0px;
     z-index: 1;
