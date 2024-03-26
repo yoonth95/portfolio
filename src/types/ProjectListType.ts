@@ -15,15 +15,14 @@ export interface ProjectListType {
   velog?: string;
   intention: (string | { [key: string]: string[] | undefined })[];
   reference?: string[];
+  duration?: string;
   architecture?: string;
   figma?: string[] | string;
   api?: string;
   erd?: string;
   responsibleRole?: string[];
   projectImgAspectRatio: string;
-  projectImgList: (string | { [key: string]: string[] })[];
-  pageDescription?: { [sectionTitle: string]: string[] };
-  troubleshooting?: {
-    [key: string]: string[];
-  };
+  projectImgList: (string | { [sectionTitle: string]: string[] | string })[];
+  pageDescription?: { [sectionTitle: string]: string[] | undefined };
+  troubleshooting?: { [key: string]: string[] | undefined };
 }
