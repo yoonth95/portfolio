@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
+import { logEvent } from "@firebase/analytics";
+import { analytics } from "@/firebase/firebaseInit";
 import { useModalStore } from "@/stores";
 import { projectList } from "@/data/projectList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,6 +20,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ children }) => {
 
   // 페이지로 이동
   const moveLink = () => {
+    logEvent(analytics, `/project/${projectId}`);
     navigator(`/project/${projectId}`);
     setIsOpen(false);
   };
@@ -49,6 +52,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ children }) => {
   // 프로젝트 이동 시 스크롤 맨 위로
   useEffect(() => {
     if (ref.current) {
+      logEvent(analytics, `/project/${projectId}`);
       ref.current.scrollTo(0, 0);
     }
   }, [projectId, ref]);

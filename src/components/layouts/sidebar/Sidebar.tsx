@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { logEvent } from "@firebase/analytics";
+import { analytics } from "@/firebase/firebaseInit";
 import { LazyImage } from "@/components/common";
 import { useSidebarStore } from "@/stores";
 import { tabList, projectTabList } from "@/data/sidebarInfo";
@@ -38,6 +40,11 @@ const Sidebar: React.FC = React.memo(() => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isOpen]);
 
+  const moveLink = (link: string) => {
+    logEvent(analytics, link);
+    navigator(link);
+  };
+
   return (
     <S.SidebarContainer $clicked={toggleSidebar}>
       <S.SidebarHeader>
@@ -55,7 +62,7 @@ const Sidebar: React.FC = React.memo(() => {
 
       <ul style={{ marginBottom: "2rem" }}>
         {tabList.map((item) => (
-          <S.TabLi key={item.title} $clicked={location.pathname === item.link} onClick={() => navigator(item.link)}>
+          <S.TabLi key={item.title} $clicked={location.pathname === item.link} onClick={() => moveLink(item.link)}>
             <LazyImage src={item.icon} alt={"아이콘이미지"} />
             <p>{item.title}</p>
           </S.TabLi>
@@ -63,7 +70,7 @@ const Sidebar: React.FC = React.memo(() => {
       </ul>
 
       <S.ProjectArea>
-        <S.ProjectTab $clicked={location.pathname === "/project"} onClick={() => navigator("/project")}>
+        <S.ProjectTab $clicked={location.pathname === "/project"} onClick={() => moveLink("/project")}>
           프로젝트
         </S.ProjectTab>
         {projectTabList.map((project, index) => (
@@ -74,7 +81,7 @@ const Sidebar: React.FC = React.memo(() => {
             </S.PostMenu>
             <div className="list">
               {project.projects.map((item) => (
-                <S.PostLi key={item.link} $clicked={location.pathname === item.link} onClick={() => navigator(item.link)}>
+                <S.PostLi key={item.link} $clicked={location.pathname === item.link} onClick={() => moveLink(item.link)}>
                   <LazyImage src={item.icon} alt={"아이콘이미지"} />
                   <p>{item.title}</p>
                 </S.PostLi>
