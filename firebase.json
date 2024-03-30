@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "yoonth",
+    "site": "yoonth0919",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
