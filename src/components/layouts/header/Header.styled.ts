@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header<ClickedType>`
   height: 60px;
-  width: ${({ $clicked }) => ($clicked ? "calc(100vw - 252px)" : "calc(100vw - 12px)")};
+  width: ${({ $clicked }) => ($clicked && window.innerWidth > 1240 ? "calc(100vw - 252px)" : "calc(100vw - 12px)")};
   position: fixed;
-  left: ${({ $clicked }) => ($clicked ? "240px" : "0")};
+  left: ${({ $clicked }) => ($clicked && window.innerWidth > 1240 ? "240px" : "0")};
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -17,7 +17,7 @@ export const HeaderContainer = styled.header<ClickedType>`
 `;
 
 export const MenuButton = styled.button<ClickedType>`
-  display: ${({ $clicked }) => ($clicked ? "none" : "block")};
+  display: ${({ $clicked }) => ($clicked && window.innerWidth > 1240 ? "none" : "block")};
   width: 1.5rem;
   height: 1.5rem;
   transition: 270ms;
