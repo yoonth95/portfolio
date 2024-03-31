@@ -196,22 +196,50 @@ export const GlobalStyles = createGlobalStyle`
 
   .quotation {
     width: 100%;
-    padding-left: 14px;
-    padding-right: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
     border-left: 3px solid currentcolor;
     margin-bottom: 15px;
     font-size: 15px;
+    line-height: 1.5;
 
-    & > strong {
+    strong {
       font-size: 16px;
     }
 
-    & > span {
+    span {
       margin-left: 10px;
       color: #98a8b9;
       font-size: 0.9rem;
     }
-  };
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: baseline;
+
+      span {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: baseline;
+
+      span {
+        margin-left: 0;
+      }
+    }
+  }
+
 
   .techListUl {
     display: flex;
