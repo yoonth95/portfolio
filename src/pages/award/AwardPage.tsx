@@ -14,7 +14,7 @@ const AwardPage = () => {
         </A.AwardTitle>
         <hr />
         <A.AwardInfo>
-          <AwardBox data={awards} />
+          <AwardBox data={awards} type={"award"} />
         </A.AwardInfo>
       </section>
       <section>
@@ -24,7 +24,7 @@ const AwardPage = () => {
         </A.AwardTitle>
         <hr />
         <A.AwardInfo>
-          <AwardBox data={certificates} />
+          <AwardBox data={certificates} type={"certificates"} />
         </A.AwardInfo>
       </section>
     </A.AwardContainer>
