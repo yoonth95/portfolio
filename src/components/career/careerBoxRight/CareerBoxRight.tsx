@@ -14,9 +14,8 @@ const CareerBoxActive: React.FC<CareerBoxActiveProps> = ({ careerData, InfoCompo
       {careerData.map((item, index) => (
         <C.CareerBoxRightArticle key={index}>
           <C.CareerBoxRightPeriod>
-            {`${item.start_date} ~ ${item.end_date}`}
-            <br />
-            {item.type === "experience" && `(${formatDuration(diffMonth(item.start_date, item.end_date))})`}
+            <span>{`${item.start_date} ~ ${item.end_date}`}</span>
+            <span>{item.type === "experience" && `(${formatDuration(diffMonth(item.start_date, item.end_date))})`}</span>
           </C.CareerBoxRightPeriod>
           <C.CareerBoxRightInfo>
             <InfoComponent data={item} />
