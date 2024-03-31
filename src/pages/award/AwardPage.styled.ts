@@ -7,12 +7,24 @@ export const AwardContainer = styled.div`
   gap: 5rem;
   padding: 3rem 10rem;
 
+  @media (max-width: 1024px) {
+    padding: 3rem 5rem;
+  }
+
   @media (max-width: 850px) {
     padding: 3rem 3rem;
   }
 
   @media (max-width: 570px) {
     zoom: 0.8;
+  }
+
+  @media (max-width: 375px) {
+    zoom: 0.7;
+  }
+
+  @media (max-width: 320px) {
+    padding: 3rem 1.5rem;
   }
 `;
 
