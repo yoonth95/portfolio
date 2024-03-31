@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CareerBoxRightContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 20px;
 `;
 
 export const CareerBoxRightArticle = styled.article`
@@ -18,13 +19,28 @@ export const CareerBoxRightArticle = styled.article`
   &:not(:last-of-type) {
     border-bottom: 0.0625rem solid #e9ecf3;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 10px;
+  }
 `;
 
 export const CareerBoxRightPeriod = styled.div`
+  width: 11rem;
+  display: flex;
+  flex-direction: column;
   color: #98a8b9;
   font-size: 0.9rem;
-  width: 11rem;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    width: fit-content;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const CareerBoxRightInfo = styled.div`
@@ -48,5 +64,9 @@ export const CareerBoxRightInfo = styled.div`
     margin: 0 0.25rem 0.25rem 0;
     padding: 0.125rem 0.375rem;
     vertical-align: top;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
