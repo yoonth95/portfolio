@@ -238,6 +238,14 @@ export const GlobalStyles = createGlobalStyle`
         margin-left: 0;
       }
     }
+
+    @media (max-width: 321px) {
+      h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+      }
+    }
   }
 
 
