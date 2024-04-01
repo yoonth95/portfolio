@@ -1,10 +1,10 @@
 import { CareerTimeline, CareerBox, CareerBoxRight, CareerActive, CareerExp, CareerEdu } from "@/components/career";
 import { careerYear, careerData } from "@/data/careerInfoList";
-import { useResizeZoom } from "@/hooks";
+import { useResize } from "@/hooks";
 import * as C from "./CareerPage.styled";
 
 const CareerPage = () => {
-  const { zoom } = useResizeZoom(600);
+  const { zoom } = useResize(600);
 
   return (
     <C.CareerPageContainer $zoom={zoom}>
