@@ -3,6 +3,28 @@ import styled from "styled-components";
 export const ProfileInfoSection = styled.section`
   max-width: 600px;
   flex: 0.5;
+
+  & h2 {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 650px) {
+    max-width: 95%;
+  }
+
+  @media (max-width: 376px) {
+    max-width: 100%;
+  }
+`;
+
+export const ProfileInfoTop = styled.div`
+  @media (max-width: 376px) {
+    zoom: 0.9;
+  }
+
+  @media (max-width: 350px) {
+    zoom: 0.8;
+  }
 `;
 
 export const ProfileInfoTitle = styled.div`
@@ -21,17 +43,29 @@ export const ProfileIntro = styled.div`
 
   & p {
     font-size: 14px;
-    line-height: 0.6;
+    line-height: 1.5;
   }
 `;
 
 export const ProfileTechStack = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 376px) {
+    zoom: 0.9;
+  }
+
+  @media (max-width: 350px) {
+    zoom: 0.8;
+  }
 `;
 
 export const ProfileTechStackTitle = styled.div`
+  width: 100%;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
 
   & h2 {
@@ -41,21 +75,30 @@ export const ProfileTechStackTitle = styled.div`
 `;
 
 export const ProfileSkill = styled.div`
-  width: 34rem;
+  width: 87%;
   border: 3px solid rgb(241, 241, 239);
   border-radius: 8px;
-  margin: 25px 35px;
+  margin: 25px 0;
 `;
 
 export const SlickList = styled.div`
-  height: 10rem;
+  /* height: 10rem; */
   display: flex !important;
   justify-content: space-around;
   align-items: center;
   justify-items: center;
+  /* flex-wrap: wrap; */
   gap: 1.5rem;
   padding: 1rem;
   background: rgb(241, 241, 239);
+
+  @media (max-width: 470px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 426px) {
+    gap: 0;
+  }
 `;
 
 interface IsHoverd {
@@ -63,13 +106,13 @@ interface IsHoverd {
 }
 
 export const SlickItem = styled.div<IsHoverd>`
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  flex: 1 20%;
+  padding: 1rem;
   border-radius: 8px;
   background-color: ${({ $isHovered }) => ($isHovered ? "#fff" : "rgba(255, 255, 255, 0)")};
   box-shadow: ${({ $isHovered }) => ($isHovered ? "0px 4px 8px rgba(0, 0, 0, 0.2)" : "none")};
@@ -81,12 +124,13 @@ export const SlickItem = styled.div<IsHoverd>`
   }
 
   & img {
-    width: 4.5rem;
+    width: 70%;
   }
 `;
 
 export const ProfileSkillDetail = styled.div`
   max-width: 530px;
+  width: 100%;
   margin: 1rem 35px;
   display: flex;
   flex-direction: column;

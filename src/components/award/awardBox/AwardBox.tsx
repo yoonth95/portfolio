@@ -10,23 +10,26 @@ interface AwardBoxProps {
     date: string;
     link?: string;
   }[];
+  type: string;
 }
 
-const AwardBox: React.FC<AwardBoxProps> = ({ data }) => {
+const AwardBox: React.FC<AwardBoxProps> = ({ data, type }) => {
   return (
     <>
       {data.map((item, index) => (
-        <A.AwardBoxContainer key={index}>
+        <A.AwardBoxContainer key={index} $type={type}>
           <A.AwardBoxDate>{item.date}</A.AwardBoxDate>
-          <A.AwardBoxText>
-            <h3>{item.organization}</h3>
-            <p>{item.content}</p>
-          </A.AwardBoxText>
-          <A.AwardLink className=".iconHover" $isLink={item.link ? true : false}>
-            <a href={item.link} target="_blank">
-              <LazyImage classNames="iconHover" src={github} alt={"깃허브이미지"} />
-            </a>
-          </A.AwardLink>
+          <A.AwardBoxInfo>
+            <A.AwardInfoText>
+              <h3>{item.organization}</h3>
+              <p>{item.content}</p>
+            </A.AwardInfoText>
+            <A.AwardInfoLink className=".iconHover" $isLink={item.link ? true : false}>
+              <a href={item.link} target="_blank">
+                <LazyImage classNames="iconHover" src={github} alt={"깃허브이미지"} />
+              </a>
+            </A.AwardInfoLink>
+          </A.AwardBoxInfo>
         </A.AwardBoxContainer>
       ))}
     </>

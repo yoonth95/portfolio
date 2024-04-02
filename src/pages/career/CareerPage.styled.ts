@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const CareerPageContainer = styled.div`
+interface CareerPageContainerProps {
+  $zoom: number;
+}
+
+export const CareerPageContainer = styled.div<CareerPageContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,4 +12,10 @@ export const CareerPageContainer = styled.div`
   flex: 1;
   gap: 1.4rem;
   padding: 3rem 0;
+  zoom: ${({ $zoom }) => $zoom};
+
+  @media (max-width: 426px) {
+    position: relative;
+    left: 6px;
+  }
 `;

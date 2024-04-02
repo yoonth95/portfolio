@@ -5,6 +5,13 @@ export const DescriptionList = styled.div`
 `;
 
 export const DescriptionLink = styled.a`
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  word-break: break-all;
   font-style: italic;
   color: #525252bf;
 

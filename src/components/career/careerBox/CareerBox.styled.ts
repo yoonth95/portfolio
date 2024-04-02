@@ -16,6 +16,18 @@ export const CareerBoxSection = styled.section<CareerBoxSectionProps>`
   @media (max-width: 1500px) {
     width: calc(100% - 10rem);
   }
+
+  @media (max-width: 900px) {
+    width: calc(100% - 3rem);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 426px) {
+    width: 100%;
+  }
 `;
 
 export const CareerBoxLeft = styled.div`
