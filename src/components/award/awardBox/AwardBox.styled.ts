@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
-export const AwardBoxContainer = styled.div`
+export const AwardBoxInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 75%;
+`;
+
+interface AwardBoxContainerProps {
+  $type: string;
+}
+export const AwardBoxContainer = styled.div<AwardBoxContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,22 +25,30 @@ export const AwardBoxContainer = styled.div`
   &:is(:last-of-type) {
     border-bottom: none;
   }
+
+  @media (max-width: 700px) {
+    padding: 25px 0;
+  }
+
+  @media (max-width: 425px) {
+    flex-direction: ${({ $type }) => ($type === "award" ? "column" : "row")};
+    align-items: flex-start;
+    gap: 25px;
+
+    ${AwardBoxInfo} {
+      width: 100%;
+    }
+  }
 `;
 
 export const AwardBoxDate = styled.div`
-  align-items: flex-start;
   color: #98a8b9;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  width: 15%;
+  width: 25%;
 `;
 
-export const AwardBoxText = styled.div`
+export const AwardInfoText = styled.div`
   display: flex;
   flex-direction: column;
-  width: 65%;
 
   & h3 {
     color: black;
@@ -40,10 +59,10 @@ export const AwardBoxText = styled.div`
   }
 `;
 
-interface AwardLinkProps {
+interface AwardInfoLinkProps {
   $isLink: boolean;
 }
-export const AwardLink = styled.div<AwardLinkProps>`
+export const AwardInfoLink = styled.div<AwardInfoLinkProps>`
   visibility: ${({ $isLink }) => ($isLink ? "visible" : "hidden")};
 
   display: flex;

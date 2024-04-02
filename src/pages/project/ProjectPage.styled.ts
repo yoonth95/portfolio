@@ -7,6 +7,18 @@ export const ProjectContainer = styled.div`
   flex-direction: column;
   margin: auto;
   padding-bottom: 80px;
+
+  @media (max-width: 900px) {
+    max-width: 40rem;
+  }
+
+  @media (max-width: 700px) {
+    max-width: 35rem;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 30rem;
+  }
 `;
 
 export const Hr = styled.hr`
@@ -51,6 +63,8 @@ export const ProjectInfo = styled.div`
 
   & .quotation {
     margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   & li {
@@ -70,10 +84,20 @@ export const ProjectInfo = styled.div`
 `;
 
 export const ReferenceBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
   & > span,
   strong,
   a {
     font-size: 14px;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    word-break: break-all;
   }
 
   &:not(:last-of-type) {

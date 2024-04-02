@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { CareerTimeline, CareerBox, CareerBoxRight, CareerActive, CareerExp, CareerEdu } from "@/components/career";
 import { careerYear, careerData } from "@/data/careerInfoList";
+import { useResize } from "@/hooks";
 import * as C from "./CareerPage.styled";
 
 const CareerPage = () => {
+  const [zoom, setZoom] = useState(1);
+  useResize({ maxWidth: 600, setZoom });
+
   return (
-    <C.CareerPageContainer>
+    <C.CareerPageContainer $zoom={zoom}>
       <CareerBox boxTitle="타임라인" flexDirection="row">
         <CareerTimeline careerYear={careerYear} careerData={careerData} />
       </CareerBox>

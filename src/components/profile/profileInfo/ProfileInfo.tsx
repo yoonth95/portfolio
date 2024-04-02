@@ -34,14 +34,19 @@ const ProfileInfo: React.FC = () => {
 
   return (
     <P.ProfileInfoSection>
-      <div className="quotation">
-        <h2>👋 안녕하세요, 프론트엔드 개발자 윤태현입니다!</h2>
-      </div>
-      <P.ProfileIntro>
-        <p>새로운 기술을 향한 도전을 주저하지 않으며, 사용자 중심의 혁신을 추구합니다.</p>
-        <br />
-        <p>웹 프론트엔드 개발을 위주로 하며, 백엔드 기술도 겸비한 개발자입니다!</p>
-      </P.ProfileIntro>
+      <P.ProfileInfoTop>
+        <div className="quotation">
+          <h2>
+            <strong>👋 안녕하세요, </strong>
+            <strong>프론트엔드 개발자 윤태현입니다!</strong>
+          </h2>
+        </div>
+        <P.ProfileIntro>
+          <p>새로운 기술을 향한 도전을 주저하지 않으며, 사용자 중심의 혁신을 추구합니다.</p>
+          <br />
+          <p>웹 프론트엔드 개발을 위주로 하며, 백엔드 기술도 겸비한 개발자입니다!</p>
+        </P.ProfileIntro>
+      </P.ProfileInfoTop>
       <hr />
       <P.ProfileTechStack>
         <P.ProfileTechStackTitle>

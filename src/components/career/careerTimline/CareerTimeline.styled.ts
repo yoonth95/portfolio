@@ -7,6 +7,10 @@ export const TimelineContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const TimelinePeriod = styled.div`

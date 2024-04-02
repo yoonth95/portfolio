@@ -70,12 +70,16 @@ const ContentContainer = styled.div`
 `;
 
 const Main = styled.main<ClickedType>`
-  width: ${({ $clicked }) => ($clicked ? "calc(100vw - 240px)" : "calc(100vw - 12px)")};
+  width: ${({ $clicked }) => ($clicked && window.innerWidth > 1240 ? "calc(100vw - 240px)" : "calc(100vw - 12px)")};
   position: relative;
   top: 60px;
-  left: ${({ $clicked }) => ($clicked ? "240px" : "0")};
+  left: ${({ $clicked }) => ($clicked && window.innerWidth > 1240 ? "240px" : "0")};
   padding-bottom: 60px;
   transition: 270ms;
+
+  @media (max-width: 376px) {
+    width: 100vw;
+  }
 `;
 
 export default App;

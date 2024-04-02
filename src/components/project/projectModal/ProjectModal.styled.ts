@@ -15,6 +15,11 @@ export const ModalContainer = styled.article`
   box-shadow: rgba(15, 15, 15, 0.04) 0px 0px 0px 1px, rgba(15, 15, 15, 0.03) 0px 3px 6px, rgba(15, 15, 15, 0.06) 0px 9px 24px;
   border-radius: 4px;
   z-index: 100;
+
+  @media (max-width: 830px) {
+    width: 98%;
+    left: 9px;
+  }
 `;
 
 export const Overlay = styled.div`

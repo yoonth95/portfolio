@@ -3,14 +3,17 @@ import { Link, useLocation } from "react-router-dom";
 import { Element } from "react-scroll";
 import { SafeHtml } from "@/components/common";
 import { ProjectHeader, ProjectImgRender, ProjectImgSlide, ProjectLinkBox, ProjectNav } from "@/components/project";
-import { useWithProject } from "@/hooks";
+import { useResize, useWithProject } from "@/hooks";
 import * as P from "./ProjectPage.styled";
 
 const ProjectPage = () => {
-  const { isModal, ...projectData } = useWithProject();
+  const [zoom, setZoom] = useState(1);
   const [headings, setHeadings] = useState<string[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const { pathname } = useLocation();
+  const { isModal, ...projectData } = useWithProject();
+
+  useResize({ maxWidth: 550, setZoom });
 
   useEffect(() => {
     if (containerRef.current) {
@@ -25,7 +28,7 @@ const ProjectPage = () => {
   }
 
   return (
-    <P.ProjectContainer>
+    <P.ProjectContainer style={{ zoom: zoom }}>
       <ProjectHeader projectData={projectData} isModal={isModal} />
       <hr />
       <br />
