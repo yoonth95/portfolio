@@ -82,17 +82,17 @@ export const ProfileSkill = styled.div`
 `;
 
 export const SlickList = styled.div`
-  /* height: 10rem; */
+  height: 11rem;
   display: flex !important;
   justify-content: space-around;
   align-items: center;
   justify-items: center;
-  /* flex-wrap: wrap; */
   gap: 1.5rem;
   padding: 1rem;
   background: rgb(241, 241, 239);
 
-  @media (max-width: 470px) {
+  @media (max-width: 570px) {
+    height: 8rem;
     gap: 1rem;
   }
 
@@ -121,10 +121,17 @@ export const SlickItem = styled.div<IsHoverd>`
   & p {
     color: var(--gray6-color);
     font-size: 12px;
+    margin-top: 10px;
   }
 
   & img {
-    width: 70%;
+    width: 50%;
+  }
+
+  @media (max-width: 570px) {
+    & img {
+      width: 45%;
+    }
   }
 `;
 
