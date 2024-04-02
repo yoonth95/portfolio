@@ -14,6 +14,10 @@ export const HeaderContainer = styled.header<ClickedType>`
   background-color: #fff;
   transition: 270ms;
   z-index: 8;
+
+  @media (max-width: 376px) {
+    width: 100vw;
+  }
 `;
 
 export const MenuButton = styled.button<ClickedType>`

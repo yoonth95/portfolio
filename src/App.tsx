@@ -76,6 +76,10 @@ const Main = styled.main<ClickedType>`
   left: ${({ $clicked }) => ($clicked && window.innerWidth > 1240 ? "240px" : "0")};
   padding-bottom: 60px;
   transition: 270ms;
+
+  @media (max-width: 376px) {
+    width: 100vw;
+  }
 `;
 
 export default App;

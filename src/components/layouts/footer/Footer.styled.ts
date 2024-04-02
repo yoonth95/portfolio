@@ -12,6 +12,10 @@ export const FooterContainer = styled.footer<ClickedType>`
   font-size: 0.75rem;
   color: var(--gray5-color);
   transition: 270ms;
+
+  @media (max-width: 376px) {
+    width: 100vw;
+  }
 `;
 
 export const FooterLink = styled.a`
