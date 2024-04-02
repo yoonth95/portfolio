@@ -169,6 +169,7 @@ export const ResizeInfoName = styled.div`
 export const ResizeInfoContacts = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   & .link {
     background: rgba(255, 255, 255, 0.25);
@@ -180,8 +181,7 @@ export const ResizeInfoContacts = styled.div`
     font-size: 40px;
     padding: 4px;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 17%;
     margin: 10px;
     cursor: pointer;
   }
