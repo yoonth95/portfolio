@@ -1,17 +1,19 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-const useResize = (maxWidth: number) => {
-  const [zoom, setZoom] = useState(1);
-  const [isResizeScreen, setIsResizeScreen] = useState(false);
-
+interface useResizeProps {
+  maxWidth: number;
+  setZoom?: React.Dispatch<React.SetStateAction<number>>;
+  setIsResizeScreen?: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const useResize = ({ maxWidth, setZoom, setIsResizeScreen }: useResizeProps) => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       const newZoom = width < maxWidth ? width / maxWidth : 1;
       const isResize = width < maxWidth;
 
-      setZoom(newZoom);
-      setIsResizeScreen(isResize);
+      setZoom && setZoom(newZoom);
+      setIsResizeScreen && setIsResizeScreen((prev) => (prev && isResize) || isResize);
     };
 
     handleResize();
@@ -19,9 +21,7 @@ const useResize = (maxWidth: number) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [maxWidth]);
-
-  return { zoom, isResizeScreen };
+  }, [maxWidth, setZoom, setIsResizeScreen]);
 };
 
 export default useResize;
