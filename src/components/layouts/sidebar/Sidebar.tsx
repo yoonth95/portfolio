@@ -43,6 +43,10 @@ const Sidebar: React.FC = React.memo(() => {
   const moveLink = (link: string) => {
     logEvent(analytics, link);
     navigator(link);
+    if (window.innerWidth <= 1240) {
+      setToggleSidebar(false);
+      setIsOpen(false);
+    }
   };
 
   return (
