@@ -78,7 +78,7 @@ export const ProfileSkill = styled.div`
   width: 87%;
   border: 3px solid rgb(241, 241, 239);
   border-radius: 8px;
-  margin: 25px 0;
+  margin: 25px 0 0;
 `;
 
 export const SlickList = styled.div`
