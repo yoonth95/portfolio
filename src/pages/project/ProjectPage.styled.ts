@@ -74,6 +74,10 @@ export const ProjectInfo = styled.div`
     margin: 0 0 0.625rem 1.5rem;
   }
 
+  & li > ul {
+    margin-bottom: 25px;
+  }
+
   & .subLi {
     list-style: circle;
   }
