@@ -13,7 +13,7 @@ function App() {
     setToggleSidebar(!toggleSidebar);
   };
 
-  console.log("자동배포 테스트");
+  console.log("자동배포 테스트2222");
 
   useScrollToElementTop(pathname);
 
