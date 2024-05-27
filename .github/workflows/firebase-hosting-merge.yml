@@ -12,6 +12,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 환경변수 .env 파일 생성
+      - name: Generate Environment Variables File for .env
+        run: |
+          touch .env
+          echo "VITE_APP_APIKEY=$VITE_APP_APIKEY" >> .env
+          echo "VITE_APP_APPID=$VITE_APP_APPID" >> .env
+          echo "VITE_APP_AUTHDOMAIN=$VITE_APP_AUTHDOMAIN" >> .env
+          echo "VITE_APP_MESSAGINGSENDERID=$VITE_APP_MESSAGINGSENDERID" >> .env
+          echo "VITE_APP_PROJECTID=$VITE_APP_PROJECTID" >> .env
+          echo "VITE_APP_STORAGEBUCKET=$VITE_APP_STORAGEBUCKET" >> .env
+        env:
+          VITE_APP_APIKEY: ${{ secrets.VITE_APP_APIKEY }}
+          VITE_APP_APPID: ${{ secrets.VITE_APP_APPID }}
+          VITE_APP_AUTHDOMAIN: ${{ secrets.VITE_APP_AUTHDOMAIN }}
+          VITE_APP_MESSAGINGSENDERID: ${{ secrets.VITE_APP_MESSAGINGSENDERID }}
+          VITE_APP_PROJECTID: ${{ secrets.VITE_APP_PROJECTID }}
+          VITE_APP_STORAGEBUCKET: ${{ secrets.VITE_APP_STORAGEBUCKET }}
+
       # npm 패키지 설치
       - name: Install dependencies
         run: npm install
