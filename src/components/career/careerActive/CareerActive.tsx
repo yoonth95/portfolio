@@ -6,6 +6,19 @@ interface CareerActiveProps {
   data: CareerDataType;
 }
 
+const formatText = (text: string): JSX.Element => {
+  return (
+    <>
+      {text.split("\n").map((line, index) => (
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      ))}
+    </>
+  );
+};
+
 const CareerActive: React.FC<CareerActiveProps> = ({ data }) => {
   return (
     <>
@@ -15,7 +28,7 @@ const CareerActive: React.FC<CareerActiveProps> = ({ data }) => {
           <li key={item}>{item}</li>
         ))}
       </ul>
-      <C.ActiveText>{data.summary}</C.ActiveText>
+      <C.ActiveText>{formatText(data.summary)}</C.ActiveText>
     </>
   );
 };
