@@ -90,8 +90,7 @@ import {
 
 const projectList = [
   {
-    projectId: 1,
-    name: "egg-mbti",
+    projectName: "egg-mbti",
     type: "개인 프로젝트",
     thumbnail: eggMbti,
     date: "2023-09 ~ 2023-10",
@@ -129,8 +128,7 @@ const projectList = [
     projectImgList: [eggMbti1, eggMbti2, eggMbti3, eggMbti4, eggMbti5],
   },
   {
-    projectId: 2,
-    name: "beta-beta",
+    projectName: "beta-beta",
     type: "팀 프로젝트",
     thumbnail: betaTumbnail,
     date: "2023-12 ~ 2024-02",
@@ -265,8 +263,7 @@ const projectList = [
     },
   },
   {
-    projectId: 3,
-    name: "happymanwon",
+    projectName: "happymanwon",
     type: "팀 프로젝트",
     thumbnail: happymanwonThumbnail,
     date: "2023-11 ~ 2023-12",
@@ -410,8 +407,7 @@ const projectList = [
     },
   },
   {
-    projectId: 4,
-    name: "web-builder",
+    projectName: "web-builder",
     type: "팀 프로젝트",
     thumbnail: webBuilderThumbnail,
     date: "2023-07 ~ 2023-08",
@@ -515,8 +511,7 @@ const projectList = [
     },
   },
   {
-    projectId: 5,
-    name: "477Tube",
+    projectName: "youtube-clone",
     type: "팀 프로젝트",
     thumbnail: youtubeCloneThumbnail,
     date: "2023-11 ~ 2023-11",

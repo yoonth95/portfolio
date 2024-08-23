@@ -10,14 +10,14 @@ interface ProjectBoxProps {
 }
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({ data }) => {
-  const { setIsOpen, setProjectId } = useModalStore();
-  const openModal = (id: number) => {
-    setProjectId(id);
+  const { setIsOpen, setProject } = useModalStore();
+  const openModal = (projectName: string) => {
+    setProject(projectName);
     setIsOpen(true);
   };
 
   return (
-    <P.BoxContainer onClick={() => openModal(data.projectId)}>
+    <P.BoxContainer onClick={() => openModal(data.projectName)}>
       <P.BoxImgDiv>
         <LazyImage src={data.thumbnail} alt={"썸네일 이미지"} />
       </P.BoxImgDiv>

@@ -1,6 +1,5 @@
 export interface ProjectListType {
-  projectId: number;
-  name: string;
+  projectName: string;
   type: string;
   thumbnail: string;
   date: string;

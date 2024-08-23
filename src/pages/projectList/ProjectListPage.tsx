@@ -19,7 +19,7 @@ const ProjectListPage = () => {
         <hr />
         <P.ProjectListArea>
           {projectList.map((item) => (
-            <li key={item.name}>
+            <li key={item.projectName}>
               <ProjectBox data={item} />
             </li>
           ))}
