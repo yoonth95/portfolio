@@ -1,7 +1,13 @@
 const awards = [
   {
+    content: "기업 연계 프로젝트 해외 주식 분석 웹사이트 개발로 최종 1위 팀 수상",
+    organization: "[웅진씽크빅X스나이퍼팩토리] Next 프로젝트 캠프",
+    date: "2024-08",
+    link: "https://github.com/orgs/doksuri5/repositories",
+  },
+  {
     content: "5개의 프로젝트 중에서 웅진 씽크빅 관리자 사이트 개발 프로젝트로 진행하여 전체 21개 팀에서 최종 2등",
-    organization: "[유데미X웅진씽크빅] React 프로젝트 캠프",
+    organization: "[웅진씽크빅X스나이퍼팩토리] React 프로젝트 캠프",
     date: "2023-08",
     link: "https://github.com/yoonth95/Web-Builder",
   },

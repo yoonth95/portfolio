@@ -1,4 +1,4 @@
-const careerYear = [2020, 2021, 2022, 2023, 2024];
+const careerYear = [2021, 2022, 2023, 2024];
 
 const careerData = [
   {
@@ -55,6 +55,16 @@ const careerData = [
   },
   {
     type: "active",
+    start_date: "2024-05",
+    end_date: "2024-08",
+    title: "[웅진씽크빅X스나이퍼팩토리] Next.js 프로젝트 캠프",
+    subTitle: "",
+    techStack: ["Next.js", "TypeScript"],
+    summary:
+      "Next.js 개념을 이해하면서 React와의 차이점, 렌더링 및 캐싱 전략을 습득하고 현업 연계 실무 프로젝트 진행\n\n- 우수 수료생 선정\n- 기업 연계 프로젝트 1위 팀 선정",
+  },
+  {
+    type: "active",
     start_date: "2023-10",
     end_date: "2023-12",
     title: "멋쟁이사자처럼 프론트엔드 스쿨 (심화)",
@@ -66,10 +76,11 @@ const careerData = [
     type: "active",
     start_date: "2023-06",
     end_date: "2023-08",
-    title: "[유데미X웅진씽크빅] React 프로젝트 캠프",
+    title: "[웅진씽크빅X스나이퍼팩토리] React 프로젝트 캠프",
     subTitle: "",
     techStack: ["React", "Redux toolkit"],
-    summary: "역량 강화 코스를 통해 서비스 기획, React 개념 / 문법, 심화 과정을 습득하고, 프로젝트 코스를 통한 기업 실무 프로젝트 진행",
+    summary:
+      "역량 강화 코스를 통해 서비스 기획, React 개념 / 문법, 심화 과정을 습득하고, 프로젝트 코스를 통한 기업 실무 프로젝트 진행\n\n- 웅진 씽크빅 기업 연계 프로젝트로 진행하여 최종 2위",
   },
   {
     type: "active",
@@ -79,7 +90,7 @@ const careerData = [
     subTitle: "",
     techStack: ["Python", "R", "MariaDB", "TensorFlow"],
     summary:
-      "빅데이터 분석 과정에서 파이썬과 R을 사용하여 데이터 처리, 정제 및 시각화 기술 습득, 텐서플로우를 활용한 인공지능 모델 구축에 대한 학습으로 대용량 데이터셋 분석과 머신러닝, 딥러닝 알고리즘 적용하는 교육 진행",
+      "빅데이터 분석 과정에서 파이썬과 R을 사용하여 데이터 처리, 정제 및 시각화 기술 습득, 텐서플로우를 활용한 인공지능 모델 구축에 대한 학습으로 대용량 데이터셋 분석과 머신러닝, 딥러닝 알고리즘 적용하는 교육 진행\n\n- 어린이집 아동 학대 데이터 분석과 CCTV 영상 분류 및 챗봇으로 1등 상 수상",
   },
 ];
 
