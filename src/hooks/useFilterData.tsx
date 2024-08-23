@@ -1,15 +1,23 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useModalStore } from "@/stores";
 import { projectList } from "@/data/projectList";
 
+const filterProjectData = (projectName: string) => {
+  return projectList.find((project) => project.projectName === projectName);
+};
+
 const useWithProject = () => {
   const location = useLocation();
-  const { projectId: storeProjectId, isOpen: isModal } = useModalStore();
+  const navigator = useNavigate();
+  const { projectName: storeProjectName, isOpen: isModal } = useModalStore();
 
-  const pathProjectId = parseInt(location.pathname.replace("/project/", ""), 10);
-  const projectId = !isNaN(pathProjectId) ? pathProjectId : storeProjectId;
+  const pathProjectName = location.pathname.replace("/project/", "");
 
-  const projectData = projectList.find((project) => project.projectId === projectId)!;
+  const projectData = pathProjectName === "/project" ? filterProjectData(storeProjectName) : filterProjectData(pathProjectName);
+
+  if (!projectData) {
+    navigator("/error");
+  }
 
   return {
     ...projectData,

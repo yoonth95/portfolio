@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
+import ErrorPage from "@/pages/error/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     id: "root",
+    errorElement: <ErrorPage />,
     element: <App />,
     children: [
       {
@@ -39,7 +41,7 @@ const router = createBrowserRouter([
             },
           },
           {
-            path: ":projectId", // 동적 경로 파라미터 사용
+            path: ":projectName", // 동적 경로 파라미터 사용
             async lazy() {
               const { default: ProjectPage } = await import("../pages/project/ProjectPage");
               return { Component: ProjectPage };
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
         ],
       },
     ],
+  },
+  {
+    path: "/error",
+    element: <ErrorPage />, // 특정 경로에 대한 에러 페이지
   },
 ]);
 
