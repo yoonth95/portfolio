@@ -11,7 +11,7 @@ const projectTabList = [
   {
     type: "팀 프로젝트",
     projects: [
-      { icon: beta, title: "해외 주식 분석 플랫폼", link: "/project/aightnow" },
+      // { icon: beta, title: "해외 주식 분석 플랫폼", link: "/project/aightnow" },
       { icon: beta, title: "대학생 공연/전시 정보 플랫폼", link: "/project/beta-beta" },
       { icon: happymanwon, title: "만원의 행복", link: "/project/happymanwon" },
       { icon: webBuilder, title: "웅진씽크빅 웹 빌더 시스템", link: "/project/web-builder" },
