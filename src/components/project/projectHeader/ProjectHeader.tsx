@@ -57,7 +57,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ projectData, isModal }) =
             </PH.InfoLeft>
             <PH.InfoRight>{projectData.team}</PH.InfoRight>
           </div>
-          <div className="infoEach">
+          <div className="infoEach" style={projectData.github && projectData.github.length > 2 ? { height: "70px" } : undefined}>
             <PH.InfoLeft>
               <FontAwesomeIcon icon={faGithub} />
               <span>깃허브</span>
