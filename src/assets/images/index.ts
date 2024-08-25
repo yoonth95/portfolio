@@ -29,8 +29,16 @@ import eggMbti3 from "@/assets/images/eggMbti/egg-mbti-3.png";
 import eggMbti4 from "@/assets/images/eggMbti/egg-mbti-4.png";
 import eggMbti5 from "@/assets/images/eggMbti/egg-mbti-5.png";
 
+import aightnow from "@/assets/images/aightnow/aightnow-icon.png";
+import aightnowTumbnail from "@/assets/images/aightnow/aightnow-thumbnail.png";
+import aightnowMain from "@/assets/images/aightnow/aightnow-image.png";
+import aightnowIntro from "@/assets/images/aightnow/aightnow-intro.png";
+import aightnowArchitecture from "@/assets/images/aightnow/aightnow-architecture.png";
+import aightnowDuration from "@/assets/images/aightnow/aightnow-duration.png";
+import aightnowApi from "@/assets/images/aightnow/aightnow-api.png";
+
 import beta from "@/assets/images/betaBeta/beta-beta-icon.png";
-import betaTumbnail from "@/assets/images/betaBeta/beta-thumbnail.png";
+import betaThumbnail from "@/assets/images/betaBeta/beta-thumbnail.png";
 import betaMain from "@/assets/images/betaBeta/beta-beta-main.png";
 import betaDuration from "@/assets/images/betaBeta/beta-duration.png";
 import betaArchitecture from "@/assets/images/betaBeta/beta-architecture.png";
@@ -120,8 +128,15 @@ export {
   career,
   trophy,
   notebook,
+  aightnow,
+  aightnowTumbnail,
+  aightnowMain,
+  aightnowIntro,
+  aightnowArchitecture,
+  aightnowDuration,
+  aightnowApi,
   beta,
-  betaTumbnail,
+  betaThumbnail,
   betaMain,
   betaDuration,
   betaArchitecture,
