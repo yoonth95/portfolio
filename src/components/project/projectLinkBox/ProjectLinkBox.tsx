@@ -3,23 +3,21 @@ import { ProjectListType } from "@/types";
 import { LazyImage } from "@/components/common";
 import * as PLB from "./ProjectLinkBox.styled";
 
-interface ProjectLinkBoxProps {
-  projectData: Partial<ProjectListType>;
-}
+type ProjectLinkBoxProps = Pick<ProjectListType, "siteLink" | "title" | "introduction" | "icon" | "projectMainImg">;
 
-const ProjectLinkBox: React.FC<ProjectLinkBoxProps> = ({ projectData }) => {
+const ProjectLinkBox: React.FC<ProjectLinkBoxProps> = ({ siteLink, title, introduction, icon, projectMainImg }) => {
   return (
-    <PLB.ProjectLinkBoxContainer href={projectData.siteLink} target="_blank">
+    <PLB.ProjectLinkBoxContainer href={siteLink} target="_blank">
       <PLB.BoxLeft>
-        <PLB.BoxTitle>{projectData.title}</PLB.BoxTitle>
-        <PLB.BoxInfo>{projectData.introduction}</PLB.BoxInfo>
+        <PLB.BoxTitle>{title}</PLB.BoxTitle>
+        <PLB.BoxInfo>{introduction}</PLB.BoxInfo>
         <PLB.BoxLink>
-          <img src={projectData.icon} alt="아이콘" />
-          <span>{projectData.siteLink}</span>
+          <img src={icon} alt="아이콘" />
+          <span>{siteLink}</span>
         </PLB.BoxLink>
       </PLB.BoxLeft>
       <PLB.BoxRight>
-        <LazyImage src={projectData.projectMainImg as string} alt={"메인이미지"} />
+        <LazyImage src={projectMainImg as string} alt={"메인이미지"} />
       </PLB.BoxRight>
     </PLB.ProjectLinkBoxContainer>
   );

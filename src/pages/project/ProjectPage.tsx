@@ -36,8 +36,15 @@ const ProjectPage = () => {
       <P.ProjectInfo ref={containerRef}>
         <Element className="section" name="section1">
           <h1 id="section1">배포 사이트</h1>
-          <ProjectLinkBox projectData={projectData} />
+          <ProjectLinkBox
+            siteLink={projectData.siteLink}
+            title={projectData.title}
+            introduction={projectData.introduction}
+            icon={projectData.icon}
+            projectMainImg={projectData.projectMainImg}
+          />
         </Element>
+
         <Element className="section" name="section2">
           <h1 id="section2">프로젝트 소개</h1>
           {projectData.intention && (
@@ -46,6 +53,9 @@ const ProjectPage = () => {
               <ul>
                 {projectData.intention.map((item, index) => {
                   if (typeof item === "string") {
+                    if (item.includes("assets/images")) {
+                      return <img src={item} alt="프로젝트 소개" style={{ width: "100%" }} />;
+                    }
                     return (
                       <li key={index}>
                         <SafeHtml html={item} />
