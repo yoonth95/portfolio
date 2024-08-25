@@ -20,7 +20,7 @@ const useWithProject = () => {
   }
 
   return {
-    ...projectData,
+    ...(projectData ?? projectList[0]),
     isModal,
   };
 };

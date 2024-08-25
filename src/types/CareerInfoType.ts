@@ -18,5 +18,5 @@ export interface CareerDataType {
   score?: string;
   techStack?: string[];
   description?: Description[];
-  summary: string;
+  summary?: string;
 }

@@ -28,7 +28,7 @@ const CareerActive: React.FC<CareerActiveProps> = ({ data }) => {
           <li key={item}>{item}</li>
         ))}
       </ul>
-      <C.ActiveText>{formatText(data.summary)}</C.ActiveText>
+      <C.ActiveText>{data.summary && formatText(data.summary)}</C.ActiveText>
     </>
   );
 };
