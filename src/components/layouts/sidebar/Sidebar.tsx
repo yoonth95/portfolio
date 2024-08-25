@@ -86,7 +86,7 @@ const Sidebar: React.FC = React.memo(() => {
             <div className="list">
               {project.projects.map((item) => (
                 <S.PostLi key={item.link} $clicked={location.pathname === item.link} onClick={() => moveLink(item.link)}>
-                  <LazyImage src={item.icon} alt={"아이콘이미지"} />
+                  <LazyImage src={item.icon} alt={"아이콘이미지"} style={{ borderRadius: "3px" }} />
                   <p>{item.title}</p>
                 </S.PostLi>
               ))}

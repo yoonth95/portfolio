@@ -19,7 +19,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ data }) => {
   return (
     <P.BoxContainer onClick={() => openModal(data.projectName)}>
       <P.BoxImgDiv>
-        <LazyImage src={data.thumbnail} alt={"썸네일 이미지"} />
+        <LazyImage src={data.thumbnail} alt={"썸네일 이미지"} style={{ objectFit: "cover" }} />
       </P.BoxImgDiv>
       <P.BoxInfo>
         <P.BoxTitle>
