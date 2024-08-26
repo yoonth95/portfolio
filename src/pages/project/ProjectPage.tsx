@@ -136,7 +136,15 @@ const ProjectPage = () => {
           {projectData.api && (
             <Element className="section" name="section8">
               <h2 id="section8">API 설계</h2>
-              <img src={projectData.api} alt="api 이미지" />
+              {typeof projectData.api === "string" ? (
+                <img src={projectData.api} alt="api 이미지" />
+              ) : (
+                <ProjectImgSlide aspectRatio={projectData.projectImgAspectRatio}>
+                  {projectData.api.map((imgSrc, index) => (
+                    <img key={index} src={imgSrc as string} alt={`프로젝트 api 이미지 ${index}`} />
+                  ))}
+                </ProjectImgSlide>
+              )}
             </Element>
           )}
         </Element>

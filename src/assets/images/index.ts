@@ -36,6 +36,20 @@ import aightnowIntro from "@/assets/images/aightnow/aightnow-intro.png";
 import aightnowArchitecture from "@/assets/images/aightnow/aightnow-architecture.png";
 import aightnowDuration from "@/assets/images/aightnow/aightnow-duration.png";
 import aightnowApi from "@/assets/images/aightnow/aightnow-api.png";
+import aightnowApi2 from "@/assets/images/aightnow/aightnow-api2.png";
+import aightnowDiscovery from "@/assets/images/aightnow/aightnow-discovery.gif";
+import aightnowReport from "@/assets/images/aightnow/aightnow-report.gif";
+import aightnowMypage from "@/assets/images/aightnow/aightnow-mypage.gif";
+import aightnowMystock from "@/assets/images/aightnow/aightnow-mystock.gif";
+import aightnowNews from "@/assets/images/aightnow/aightnow-news.gif";
+import aightnowChatbot from "@/assets/images/aightnow/aightnow-chatbot.gif";
+import aightnowMainpage from "@/assets/images/aightnow/aightnow-mainpage.gif";
+import aightnowFind from "@/assets/images/aightnow/aightnow-find.gif";
+import aightnowLogin from "@/assets/images/aightnow/aightnow-login.gif";
+import aightnowPropensity from "@/assets/images/aightnow/aightnow-signup-propensity.png";
+import aightnowProfile from "@/assets/images/aightnow/aightnow-signup-profile.png";
+import aightnowForm from "@/assets/images/aightnow/aightnow-signup-form.png";
+import aightnowAgree from "@/assets/images/aightnow/aightnow-signup-agree.png";
 
 import beta from "@/assets/images/betaBeta/beta-beta-icon.png";
 import betaThumbnail from "@/assets/images/betaBeta/beta-thumbnail.png";
@@ -135,6 +149,20 @@ export {
   aightnowArchitecture,
   aightnowDuration,
   aightnowApi,
+  aightnowApi2,
+  aightnowDiscovery,
+  aightnowReport,
+  aightnowMypage,
+  aightnowMystock,
+  aightnowNews,
+  aightnowChatbot,
+  aightnowMainpage,
+  aightnowFind,
+  aightnowLogin,
+  aightnowPropensity,
+  aightnowProfile,
+  aightnowForm,
+  aightnowAgree,
   beta,
   betaThumbnail,
   betaMain,

@@ -78,7 +78,12 @@ export const ProjectInfo = styled.div`
     margin-bottom: 25px;
   }
 
+  & ul > li a {
+    text-decoration: underline;
+  }
+
   & .subLi {
+    margin-top: 5px;
     list-style: circle;
   }
 

@@ -30,7 +30,11 @@ const ProjectImgRender: React.FC<ProjectImgRenderProps> = ({ projectData }) => {
                     ))}
                   </ProjectImgSlide>
                 ) : (
-                  <img src={images} alt={`${sectionTitle} 이미지`} style={{ width: "100%" }} />
+                  <img
+                    src={images}
+                    alt={`${sectionTitle} 이미지`}
+                    style={{ width: "100%", aspectRatio: projectData.projectImgAspectRatio, objectFit: "contain" }}
+                  />
                 )}
                 <ul className="imgDescription">
                   {projectData.pageDescription?.[sectionTitle]?.map((description, descIndex) => (

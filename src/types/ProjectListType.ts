@@ -17,7 +17,7 @@ export interface ProjectListType {
   duration?: string;
   architecture?: string;
   figma?: string[] | string;
-  api?: string;
+  api?: string[] | string;
   erd?: string;
   responsibleRole?: string[];
   projectImgAspectRatio: string;
