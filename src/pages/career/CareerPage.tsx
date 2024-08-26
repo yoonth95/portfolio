@@ -19,7 +19,7 @@ const CareerPage = () => {
       <CareerBox boxTitle="경력" flexDirection="column">
         <CareerBoxRight careerData={careerData.filter((item) => item.type === "experience")} InfoComponent={CareerExp} />
       </CareerBox>
-      <CareerBox boxTitle="교육이력" flexDirection="column">
+      <CareerBox boxTitle="대외활동" flexDirection="column">
         <CareerBoxRight careerData={careerData.filter((item) => item.type === "active")} InfoComponent={CareerActive} />
       </CareerBox>
     </C.CareerPageContainer>

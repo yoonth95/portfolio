@@ -65,6 +65,15 @@ const careerData = [
   },
   {
     type: "active",
+    start_date: "2023-11",
+    end_date: "2023-12",
+    title: "K-PaaS 활용 디지털 사회혁신 서비스 개발, 아이디어 공모전 웹 개발",
+    subTitle: "공모전",
+    techStack: ["React", "TypeScript", "Tanstack Query", "Zustand"],
+    summary: "K-PaaS 오픈 클라우드를 사용하여 국가 사회 현안을 지원 해결할 수 있는 서비스(웹/앱) 개발 공모전",
+  },
+  {
+    type: "active",
     start_date: "2023-10",
     end_date: "2023-12",
     title: "멋쟁이사자처럼 프론트엔드 스쿨 (심화)",
