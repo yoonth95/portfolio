@@ -50,12 +50,10 @@ const ProjectPage = () => {
           {projectData.intention && (
             <Element className="section" name="section3">
               <h2 id="section3">기획 의도 및 기술 선정</h2>
+              {projectData.projectIntroImg && <img src={projectData.projectIntroImg} alt="프로젝트 인트로 이미지" style={{ width: "100%" }} />}
               <ul>
                 {projectData.intention.map((item, index) => {
                   if (typeof item === "string") {
-                    if (item.includes("assets/images")) {
-                      return <img src={item} alt="프로젝트 소개" style={{ width: "100%" }} />;
-                    }
                     return (
                       <li key={index}>
                         <SafeHtml html={item} />

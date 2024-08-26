@@ -178,8 +178,8 @@ const projectList = [
     siteLink: "https://aightnow.org",
     swaggerLink: "https://api.aightnow.org/api-docs",
     github: ["https://github.com/orgs/doksuri5/repositories"],
+    projectIntroImg: aightnowIntro,
     intention: [
-      aightnowIntro,
       "<b>Jira, Notion, Discord</b>로 협업을 진행",
       "Jira와 Github를 연동으로 커밋, PR, 브랜치 생성 등 <b>Jira 이슈와 자동으로 연결</b>",
       "API 설계 및 문서화를 위해 <b>Swagger</b> 도입 (<a href='https://api.aightnow.org/api-docs' target=_blank><i><b>https://api.aightnow.org/api-docs</b></i></a>)",

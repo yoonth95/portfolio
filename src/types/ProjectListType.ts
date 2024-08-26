@@ -9,6 +9,7 @@ export interface ProjectListType {
   team: string;
   introduction: string;
   projectMainImg: string;
+  projectIntroImg?: string;
   siteLink: string;
   github: string[];
   velog?: string;
