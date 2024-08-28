@@ -7,11 +7,13 @@ const filterProjectData = (projectName: string) => {
 };
 
 const useWithProject = () => {
-  const location = useLocation();
+  const location = useLocation().pathname;
+
+  const filterLocation = location.endsWith("/") ? location.slice(0, -1) : location;
   const navigator = useNavigate();
   const { projectName: storeProjectName, isOpen: isModal } = useModalStore();
 
-  const pathProjectName = location.pathname.replace("/project/", "");
+  const pathProjectName = filterLocation.replace("/project/", "");
 
   const projectData = pathProjectName === "/project" ? filterProjectData(storeProjectName) : filterProjectData(pathProjectName);
 
