@@ -1,4 +1,4 @@
-import { javascript, typescript, react, nodejs, flask, mysql, aws, firebase } from "@/assets/images";
+import { javascript, typescript, react, nodejs, flask, mysql, aws, firebase, nextjs, mongodb } from "@/assets/images";
 
 const stackInfoList = [
   {
@@ -10,9 +10,9 @@ const stackInfoList = [
         description: {
           title: "Vanilla JS를 활용하여 다양한 웹 애플리케이션을 개발한 경험이 풍부합니다.",
           text: [
-            "오디오 및 비디오 플레이어, 텍스트 및 수식 에디터, 차트 및 수료증 생성기, 엑셀 및 PDF 렌더링 및 생성 등을 순수 자바스크립트로 구현해봤습니다.",
-            "이러한 프로젝트를 통해 DOM 조작, 이벤트 처리, 비동기 프로그래밍 등 자바스크립트의 핵심 개념을 더 잘 이해하려고 하며, 사용자 경험을 우선시하는 웹 페이지 제작에 점점 익숙해지고자 합니다.",
-            "코드의 가독성과 유지보수를 중점으로 두어, 시간이 지나도 누구나 쉽게 이해할 수 있도록 작성하는 데 노력하고 있습니다.",
+            "동적으로 HTML 요소를 생성, 수정, 삭제하고 DOM트리를 탐색하여 웹 페이지의 구조를 동적으로 변경하는 데 능숙합니다.",
+            "오디오 및 비디오 플레이어, 텍스트 및 수식 에디터, 차트 및 수료증 생성기, 엑셀 및 PDF 렌더링과 생성 등 다양한 기능을 구현해보았습니다.",
+            "다양한 이벤트 처리를 작성해 보았고 이벤트 버블링과 캡처링을 이해하면서 개발하려고 합니다.",
           ],
         },
       },
@@ -23,8 +23,8 @@ const stackInfoList = [
           title: "React 기반의 소 · 중규모 프로젝트 경험에 익숙합니다.",
           text: [
             "컴포넌트의 재사용성을 항상 고려하면서 코드를 구현합니다.",
-            "가장 좋은 코드는 무엇인지 어떻게 하면 최적화할 수 있는지 관련 글이나 프로젝트를 자주 봅니다.",
-            "Redux, Zustand 클라이언트 및 Tanstack-Query 서버 상태 관리를 개선하기 위해 상태 관리 기법을 적극적으로 활용하고 공부하고 있습니다.",
+            "다중 상태 관리에 있어서 useState 대신 useReducer의 사용을 지향합니다.",
+            "Redux, Zustand 클라이언트 상태 및 Tanstack Query 서버 상태 관리 기법을 적극적으로 활용합니다.",
           ],
         },
       },
@@ -32,11 +32,23 @@ const stackInfoList = [
         stack: "TypeScript",
         img: typescript,
         description: {
-          title: "어떠한 프로젝트를 진행할 때, 타입스크립트를 효율적으로 사용하려고 노력합니다.",
+          title: "프로젝트 진행 시 타입스크립트를 효율적으로 사용하려고 노력합니다.",
           text: [
-            "데이터베이스를 설계하거나 API관련 협업을 할 때, 데이터 타입을 먼저 정의하려고 노력합니다.",
+            "데이터베이스를 설계하거나 API 관련 협업을 할 때, 데이터 타입을 먼저 정의하려고 노력합니다.",
             "esLint를 사용하여 any, unknown 타입은 지양하려고 합니다.",
-            "아직 익숙하지 않지만 관련 글이나 유튜브 등을 통해 계속 배워 나가고 있습니다.",
+            "Zod를 활용해 타입 안전성과 데이터 검증을 강화하려고 합니다.",
+          ],
+        },
+      },
+      {
+        stack: "Next.js",
+        img: nextjs,
+        description: {
+          title: "SSR, SSG를 활용하여 SEO에 최적화된 애플리케이션을 만드려고 노력합니다.",
+          text: [
+            "SSG와 Full Route Cache로 웹의 응답 속도를 높이려고 하고 있습니다.",
+            "동적 라우팅과 API Routes 등을 사용하여 Next의 기능을 적극적으로 활용하려고 합니다.",
+            "Vercel의 기능을 Next에 적극적으로 활용하려고 합니다.",
           ],
         },
       },
@@ -80,6 +92,18 @@ const stackInfoList = [
           ],
         },
       },
+      {
+        stack: "MongoDB",
+        img: mongodb,
+        description: {
+          title: "간단한 비정형 데이터 관리 경험이 있습니다.",
+          text: [
+            "기본적인 CRUD 작업을 위해 MongoDB를 사용해본 경험이 있습니다.",
+            "Mongoose를 이용해 스키마를 정의하고 데이터를 효율적으로 관리할 수 있습니다.",
+            "Aggregation Pipeline을 사용해 간단한 데이터 분석 쿼리를 작성할 수 있습니다.",
+          ],
+        },
+      },
     ],
   },
   {
@@ -102,7 +126,10 @@ const stackInfoList = [
         img: firebase,
         description: {
           title: "간단한 소규모 프로젝트 배포 경험이 있습니다.",
-          text: ["소규모 프로젝트의 배포 및 인증 서비스, 데이터베이스 관리 경험이 있습니다."],
+          text: [
+            "소규모 프로젝트의 배포 및 인증 서비스, 데이터베이스 관리 경험이 있습니다.",
+            "Google Analytics 기능을 사용하여 웹사이트의 사용자 행동을 추적하고, 트래픽 분석 및 사용자 유지 전략을 수립한 경험이 있습니다.",
+          ],
         },
       },
     ],

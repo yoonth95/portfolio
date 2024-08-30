@@ -7,6 +7,8 @@ import mysql from "@/assets/images/icons/mysql.png";
 import nodejs from "@/assets/images/icons/nodejs.png";
 import react from "@/assets/images/icons/react.png";
 import typescript from "@/assets/images/icons/typescript.png";
+import nextjs from "@/assets/images/icons/nextjs.png";
+import mongodb from "@/assets/images/icons/mongodb.png";
 import notebook from "@/assets/images/icons/notebook.png";
 import profile from "@/assets/images/icons/profile.png";
 import book from "@/assets/images/icons/book.png";
@@ -267,4 +269,6 @@ export {
   nodejs,
   react,
   typescript,
+  nextjs,
+  mongodb,
 };
