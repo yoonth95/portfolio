@@ -82,7 +82,7 @@ export const ProfileSkill = styled.div`
 `;
 
 export const SlickList = styled.div`
-  height: 11rem;
+  height: 9rem;
   display: flex !important;
   justify-content: space-around;
   align-items: center;
@@ -103,6 +103,7 @@ export const SlickList = styled.div`
 
 interface IsHoverd {
   $isHovered: boolean;
+  $isItemNum: boolean;
 }
 
 export const SlickItem = styled.div<IsHoverd>`
@@ -112,7 +113,7 @@ export const SlickItem = styled.div<IsHoverd>`
   align-items: center;
   justify-content: center;
   flex: 1 20%;
-  padding: 1rem;
+  padding: ${({ $isItemNum }) => ($isItemNum ? "3rem" : "1rem")};
   border-radius: 8px;
   background-color: ${({ $isHovered }) => ($isHovered ? "#fff" : "rgba(255, 255, 255, 0)")};
   box-shadow: ${({ $isHovered }) => ($isHovered ? "0px 4px 8px rgba(0, 0, 0, 0.2)" : "none")};
@@ -129,8 +130,11 @@ export const SlickItem = styled.div<IsHoverd>`
   }
 
   @media (max-width: 570px) {
+    & {
+      padding: 0.5rem;
+    }
     & img {
-      width: 45%;
+      width: 40%;
     }
   }
 `;
