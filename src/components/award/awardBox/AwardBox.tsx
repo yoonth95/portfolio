@@ -6,6 +6,7 @@ import * as A from "./AwardBox.styled";
 interface AwardBoxProps {
   data: {
     content: string;
+    prize?: string;
     organization: string;
     date: string;
     link?: string;
@@ -23,6 +24,7 @@ const AwardBox: React.FC<AwardBoxProps> = ({ data, type }) => {
             <A.AwardInfoText>
               <h3>{item.organization}</h3>
               <p>{item.content}</p>
+              <p>{item.prize}</p>
             </A.AwardInfoText>
             <A.AwardInfoLink className=".iconHover" $isLink={item.link ? true : false}>
               <a href={item.link} target="_blank">

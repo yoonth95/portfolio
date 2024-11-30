@@ -55,6 +55,15 @@ const careerData = [
   },
   {
     type: "active",
+    start_date: "2024-09",
+    end_date: "2024-11",
+    title: "2024년 K-디지털 트레이닝 해커톤",
+    subTitle: "해커톤",
+    techStack: ["React.js", "TypeScript", "Zod", "Tanstack Query", "Shadcn/ui"],
+    summary: "고용노동부 주관 KDT 훈련생 또는 수료생의 역량을 발휘하고 창의적 융합 사고를 개발하기 위한 대회\n\n- 최우수상(고용노동부 장관상) 수상",
+  },
+  {
+    type: "active",
     start_date: "2024-05",
     end_date: "2024-08",
     title: "[웅진씽크빅X스나이퍼팩토리] Next.js 프로젝트 캠프",

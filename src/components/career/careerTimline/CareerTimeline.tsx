@@ -52,7 +52,7 @@ const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }
                 key={index}
                 className={data.type}
                 data-tooltip-id="items"
-                data-tooltip-content={`${data.title} ${data.subTitle}`}
+                data-tooltip-content={`${data.title}/${data.subTitle}`}
                 data-diff-month={transDiffMonth}
                 data-duration-date={`${data.start_date} ~ ${data.end_date}`}
                 $gridColumn={`${gridColumnStart} / ${gridColumnEnd}`}
@@ -65,15 +65,20 @@ const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }
             id="items"
             opacity={1}
             style={{ zIndex: 10 }}
-            render={({ content, activeAnchor }) => (
-              <>
-                <h3>{content}</h3>
-                <br />
-                {activeAnchor?.getAttribute("data-diff-month")}
-                <br />
-                {activeAnchor?.getAttribute("data-duration-date")}
-              </>
-            )}
+            render={({ content, activeAnchor }) => {
+              if (content) {
+                const [title, subTitle] = content.split("/");
+                return (
+                  <>
+                    <h3 style={{ marginBottom: "5px" }}>{title}</h3>
+                    <h4>{subTitle}</h4>
+                    {activeAnchor?.getAttribute("data-diff-month")}
+                    <br />
+                    {activeAnchor?.getAttribute("data-duration-date")}
+                  </>
+                );
+              }
+            }}
           />
         </C.TimelineGrid>
       </C.TimelineGridWrap>

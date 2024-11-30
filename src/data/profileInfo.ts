@@ -10,7 +10,7 @@ export const iconList = [
 export const detailList = [
   {
     icon: faPhone,
-    detail: "010-4752-4087",
+    detail: "010-9652-4087",
   },
   {
     icon: faEnvelope,
