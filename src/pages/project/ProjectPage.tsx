@@ -34,16 +34,18 @@ const ProjectPage = () => {
       <br />
       <ProjectNav isModal={isModal} headings={headings} />
       <P.ProjectInfo ref={containerRef}>
-        <Element className="section" name="section1">
-          <h1 id="section1">배포 사이트</h1>
-          <ProjectLinkBox
-            siteLink={projectData.siteLink}
-            title={projectData.title}
-            introduction={projectData.introduction}
-            icon={projectData.icon}
-            projectMainImg={projectData.projectMainImg}
-          />
-        </Element>
+        {projectData.siteLink && (
+          <Element className="section" name="section1">
+            <h1 id="section1">배포 사이트</h1>
+            <ProjectLinkBox
+              siteLink={projectData.siteLink}
+              title={projectData.title}
+              introduction={projectData.introduction}
+              icon={projectData.icon}
+              projectMainImg={projectData.projectMainImg}
+            />
+          </Element>
+        )}
 
         <Element className="section" name="section2">
           <h1 id="section2">프로젝트 소개</h1>

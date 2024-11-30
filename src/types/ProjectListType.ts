@@ -10,7 +10,7 @@ export interface ProjectListType {
   introduction: string;
   projectMainImg: string;
   projectIntroImg?: string;
-  siteLink: string;
+  siteLink?: string;
   github: string[];
   velog?: string;
   intention: (string | { [key: string]: string[] | undefined })[];
