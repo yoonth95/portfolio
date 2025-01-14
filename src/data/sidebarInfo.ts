@@ -1,4 +1,4 @@
-import { profile, career, trophy, beta, egg, happymanwon, webBuilder, youtubeCloneIcon, aightnow } from "@/assets/images";
+import { profile, career, trophy, beta, egg, happymanwon, webBuilder, aightnow, duobloom } from "@/assets/images";
 
 const tabList = [
   { icon: profile, title: "프로필", link: "/" },
@@ -11,11 +11,12 @@ const projectTabList = [
   {
     type: "팀 프로젝트",
     projects: [
+      { icon: duobloom, title: "난임 부부 종합 케어 서비스", link: "/project/duobloom" },
       { icon: aightnow, title: "해외 주식 분석 플랫폼", link: "/project/aightnow" },
       { icon: beta, title: "대학생 공연/전시 정보 플랫폼", link: "/project/beta-beta" },
       { icon: happymanwon, title: "만원의 행복", link: "/project/happymanwon" },
       { icon: webBuilder, title: "웅진씽크빅 웹 빌더 시스템", link: "/project/web-builder" },
-      { icon: youtubeCloneIcon, title: "477Tube", link: "/project/youtube-clone" },
+      // { icon: youtubeCloneIcon, title: "477Tube", link: "/project/youtube-clone" },
     ],
   },
 ];
