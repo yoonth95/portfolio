@@ -127,6 +127,9 @@ import {
   duobloomImgPolicy2,
   duobloomImgCommunity1,
   duobloomImgCommunity2,
+  duobloomImgCommunityFeature,
+  duobloomImgPolicyFeature,
+  duobloomImgHospitalFeature,
 } from "@/assets/images";
 
 const projectList = [
@@ -223,9 +226,9 @@ const projectList = [
     projectImgList: [
       {
         "부부 참여형 대화 피드": [duobloomImgFeed1, duobloomImgFeed2],
-        "상담사 연결/멘토링": [duobloomImgCommunity1, duobloomImgCommunity2],
-        "맞춤형 난임 정책 추천": [duobloomImgPolicy1, duobloomImgPolicy2],
-        "맞춤형 의료 정보 추천": [duobloomImgHospital1, duobloomImgHospital2],
+        "상담사 연결/멘토링": [duobloomImgCommunityFeature, duobloomImgCommunity1, duobloomImgCommunity2],
+        "맞춤형 난임 정책 추천": [duobloomImgPolicyFeature, duobloomImgPolicy1, duobloomImgPolicy2],
+        "맞춤형 의료 정보 추천": [duobloomImgHospitalFeature, duobloomImgHospital1, duobloomImgHospital2],
       },
     ],
     pageDescription: {

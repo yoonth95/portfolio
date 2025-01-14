@@ -214,7 +214,7 @@ const ProjectPage = () => {
 
         {/* 프로젝트 상세 이미지 */}
         <Element className="section" name="sectionDetailImage">
-          <h1 id="sectionDetailImage">상세 이미지</h1>
+          <h1 id="sectionDetailImage">핵심 기능 및 상세 이미지</h1>
           <ProjectImgRender projectData={projectData} />
         </Element>
       </P.ProjectInfo>

@@ -43,13 +43,15 @@ import duobloomPropulsion13 from "@/assets/images/duobloom/duobloom-propulsion1-
 import duobloomPropulsion21 from "@/assets/images/duobloom/duobloom-propulsion2-1.png";
 import duobloomPropulsion22 from "@/assets/images/duobloom/duobloom-propulsion2-2.png";
 import duobloomPropulsion3 from "@/assets/images/duobloom/duobloom-propulsion3.png";
-
 import duobloomImgFeed1 from "@/assets/images/duobloom/duobloom-img-feed1.gif";
 import duobloomImgFeed2 from "@/assets/images/duobloom/duobloom-img-feed2.gif";
+import duobloomImgHospitalFeature from "@/assets/images/duobloom/duobloom-img-hospital.png";
 import duobloomImgHospital1 from "@/assets/images/duobloom/duobloom-img-hospital1.gif";
 import duobloomImgHospital2 from "@/assets/images/duobloom/duobloom-img-hospital2.gif";
+import duobloomImgPolicyFeature from "@/assets/images/duobloom/duobloom-img-policy.png";
 import duobloomImgPolicy1 from "@/assets/images/duobloom/duobloom-img-policy1.gif";
 import duobloomImgPolicy2 from "@/assets/images/duobloom/duobloom-img-policy2.gif";
+import duobloomImgCommunityFeature from "@/assets/images/duobloom/duobloom-img-community.png";
 import duobloomImgCommunity1 from "@/assets/images/duobloom/duobloom-img-community1.gif";
 import duobloomImgCommunity2 from "@/assets/images/duobloom/duobloom-img-community2.gif";
 
@@ -180,10 +182,13 @@ export {
   duobloomPropulsion3,
   duobloomImgFeed1,
   duobloomImgFeed2,
+  duobloomImgHospitalFeature,
   duobloomImgHospital1,
   duobloomImgHospital2,
+  duobloomImgPolicyFeature,
   duobloomImgPolicy1,
   duobloomImgPolicy2,
+  duobloomImgCommunityFeature,
   duobloomImgCommunity1,
   duobloomImgCommunity2,
   aightnow,
