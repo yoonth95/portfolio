@@ -13,7 +13,7 @@ export interface ProjectListType {
   siteLink?: string;
   github: string[];
   velog?: string;
-  intention: (string | { [key: string]: string[] | undefined })[];
+  intention?: (string | { [key: string]: string[] | undefined })[];
   reference?: string[];
   duration?: string;
   architecture?: string;
