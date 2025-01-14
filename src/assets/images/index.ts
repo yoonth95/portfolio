@@ -31,6 +31,28 @@ import eggMbti3 from "@/assets/images/eggMbti/egg-mbti-3.png";
 import eggMbti4 from "@/assets/images/eggMbti/egg-mbti-4.png";
 import eggMbti5 from "@/assets/images/eggMbti/egg-mbti-5.png";
 
+import duobloom from "@/assets/images/duobloom/duobloom-icon.png";
+import duobloomTumbnail from "@/assets/images/duobloom/duobloom-thumbnail.png";
+import duobloomArchitecture from "@/assets/images/duobloom/duobloom-architecture.png";
+import duobloomApi from "@/assets/images/duobloom/duobloom-api1.png";
+import duobloomApi2 from "@/assets/images/duobloom/duobloom-api2.png";
+import duobloomDuration from "@/assets/images/duobloom/duobloom-duration.png";
+import duobloomPropulsion11 from "@/assets/images/duobloom/duobloom-propulsion1-1.png";
+import duobloomPropulsion12 from "@/assets/images/duobloom/duobloom-propulsion1-2.png";
+import duobloomPropulsion13 from "@/assets/images/duobloom/duobloom-propulsion1-3.png";
+import duobloomPropulsion21 from "@/assets/images/duobloom/duobloom-propulsion2-1.png";
+import duobloomPropulsion22 from "@/assets/images/duobloom/duobloom-propulsion2-2.png";
+import duobloomPropulsion3 from "@/assets/images/duobloom/duobloom-propulsion3.png";
+
+import duobloomImgFeed1 from "@/assets/images/duobloom/duobloom-img-feed1.gif";
+import duobloomImgFeed2 from "@/assets/images/duobloom/duobloom-img-feed2.gif";
+import duobloomImgHospital1 from "@/assets/images/duobloom/duobloom-img-hospital1.gif";
+import duobloomImgHospital2 from "@/assets/images/duobloom/duobloom-img-hospital2.gif";
+import duobloomImgPolicy1 from "@/assets/images/duobloom/duobloom-img-policy1.gif";
+import duobloomImgPolicy2 from "@/assets/images/duobloom/duobloom-img-policy2.gif";
+import duobloomImgCommunity1 from "@/assets/images/duobloom/duobloom-img-community1.gif";
+import duobloomImgCommunity2 from "@/assets/images/duobloom/duobloom-img-community2.gif";
+
 import aightnow from "@/assets/images/aightnow/aightnow-icon.png";
 import aightnowTumbnail from "@/assets/images/aightnow/aightnow-thumbnail.png";
 import aightnowMain from "@/assets/images/aightnow/aightnow-image.png";
@@ -81,12 +103,12 @@ import betaImageStoryManage from "@/assets/images/betaBeta/beta-img-story-manage
 import betaImageStory from "@/assets/images/betaBeta/beta-img-story.gif";
 import betaImageToss from "@/assets/images/betaBeta/beta-img-toss.gif";
 
-import youtubeCloneIcon from "@/assets/images/youtubeClone/youtube-clone-icon.png";
-import youtubeCloneMain from "@/assets/images/youtubeClone/youtube-clone-main.png";
-import youtubeCloneThumbnail from "@/assets/images/youtubeClone/youtube-clone-thumbnail.png";
-import youtubeCloneMainPage from "@/assets/images/youtubeClone/youtube-clone-img-main.gif";
-import youtubeCloneDetail from "@/assets/images/youtubeClone/youtube-clone-img-detail.gif";
-import youtubeCloneSearch from "@/assets/images/youtubeClone/youtube-clone-img-search.gif";
+// import youtubeCloneIcon from "@/assets/images/youtubeClone/youtube-clone-icon.png";
+// import youtubeCloneMain from "@/assets/images/youtubeClone/youtube-clone-main.png";
+// import youtubeCloneThumbnail from "@/assets/images/youtubeClone/youtube-clone-thumbnail.png";
+// import youtubeCloneMainPage from "@/assets/images/youtubeClone/youtube-clone-img-main.gif";
+// import youtubeCloneDetail from "@/assets/images/youtubeClone/youtube-clone-img-detail.gif";
+// import youtubeCloneSearch from "@/assets/images/youtubeClone/youtube-clone-img-search.gif";
 
 import happymanwon from "@/assets/images/happymanwon/happymanwon-icon.png";
 import happymanwonThumbnail from "@/assets/images/happymanwon/happymanwon.png";
@@ -144,6 +166,26 @@ export {
   career,
   trophy,
   notebook,
+  duobloom,
+  duobloomTumbnail,
+  duobloomArchitecture,
+  duobloomApi,
+  duobloomApi2,
+  duobloomDuration,
+  duobloomPropulsion11,
+  duobloomPropulsion12,
+  duobloomPropulsion13,
+  duobloomPropulsion21,
+  duobloomPropulsion22,
+  duobloomPropulsion3,
+  duobloomImgFeed1,
+  duobloomImgFeed2,
+  duobloomImgHospital1,
+  duobloomImgHospital2,
+  duobloomImgPolicy1,
+  duobloomImgPolicy2,
+  duobloomImgCommunity1,
+  duobloomImgCommunity2,
   aightnow,
   aightnowTumbnail,
   aightnowMain,
@@ -192,12 +234,12 @@ export {
   betaImageStoryManage,
   betaImageStory,
   betaImageToss,
-  youtubeCloneIcon,
-  youtubeCloneMain,
-  youtubeCloneThumbnail,
-  youtubeCloneMainPage,
-  youtubeCloneDetail,
-  youtubeCloneSearch,
+  // youtubeCloneIcon,
+  // youtubeCloneMain,
+  // youtubeCloneThumbnail,
+  // youtubeCloneMainPage,
+  // youtubeCloneDetail,
+  // youtubeCloneSearch,
   egg,
   eggMbti,
   eggMbtiMain,
