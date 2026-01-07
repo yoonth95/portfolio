@@ -19,4 +19,5 @@ export interface CareerDataType {
   techStack?: string[];
   description?: Description[];
   summary?: string;
+  isTimeline?: boolean;
 }

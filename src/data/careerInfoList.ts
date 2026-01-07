@@ -21,7 +21,7 @@ const careerData = [
     description: [
       {
         title: "인공지능 온라인 시험 TestWith 개발 및 유지 보수",
-        link: "https://testwith.io/kr",
+        // link: "https://testwith.io/kr",
         duration: "2022-01 ~ 2023-05",
         works: [
           "관리자 시험 생성 및 관리 시스템, 응시 인원 초대 및 관리 시스템 개발",
@@ -36,7 +36,7 @@ const careerData = [
       },
       {
         title: "KMA 온라인 진단 시스템 LMS 개발 및 유지 보수",
-        link: "https://kma.qualification.or.kr",
+        // link: "https://kma.qualification.or.kr",
         duration: "2022-08 ~ 2023-05",
         works: [
           "수강생 및 관리자 시스템 기획부터 개발까지 진행",
@@ -47,11 +47,32 @@ const careerData = [
       },
       {
         title: "인공지능 온라인 모의고사 시스템 개발 및 유지 보수",
-        link: "https://testwith.io/mock_student/main/kr",
+        // link: "https://testwith.io/mock_student/main/kr",
         duration: "2023-02 ~ 2023-05",
         works: ["토스페이먼츠 API를 통한 결제 시스템 구현", "클라이언트가 첨부한 PDF를 서버에서 암호화하여 사용자가 다운로드할 수 있도록 구현"],
       },
     ],
+  },
+  {
+    type: "active",
+    start_date: "2025-11",
+    end_date: "2025-11",
+    title: "SK AI SUMMIT 2025 Claude Code Builder Hackathon",
+    subTitle: "해커톤",
+    techStack: ["Claude code"],
+    summary: "SK 텔레콤, Anthropic, Coxwave 주관 Claude Code 해커톤",
+    isTimeline: false,
+  },
+  {
+    type: "active",
+    start_date: "2025-09",
+    end_date: "2025-09",
+    title: "메타 라마 아카데미 AI 워크숍",
+    subTitle: "",
+    techStack: ["LLM", "RAG"],
+    summary:
+      "생성형 AI 기반 에이전트를 설계하고, 최신 On-device LLM 기술을 활용해 직접 AI 서비스 구현\n\n- AI Agent를 FastAPI·React 로컬 웹에 연동해 문서 OCR/벤치마크 결과를 실시간 시각화하는 워크벤치를 개발",
+    isTimeline: false,
   },
   {
     type: "active",

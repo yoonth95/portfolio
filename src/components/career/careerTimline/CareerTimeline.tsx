@@ -9,6 +9,7 @@ interface CareerTimelineType {
 }
 
 const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }) => {
+  const timelineData = careerData.filter((item) => item.isTimeline !== false);
   // careerYear의 가장 빠른 년도와 careerData의 start_date 년도 값 비교
   const getAdjustedStartDate = (dataStartDate: string, baseYear: number) => {
     const start = new Date(dataStartDate);
@@ -17,7 +18,7 @@ const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }
 
   // 전체 개발 경력
   const totalExperience = () => {
-    const filterData = careerData.filter((item) => item.type === "experience");
+    const filterData = timelineData.filter((item) => item.type === "experience");
     return filterData.reduce((total, item) => {
       const start_date = new Date(item.start_date);
       const end_date = new Date(item.end_date);
@@ -40,7 +41,7 @@ const CareerTimeline: React.FC<CareerTimelineType> = ({ careerYear, careerData }
           ))}
         </C.TimelineGridLabels>
         <C.TimelineGrid $totalYear={careerYear.length}>
-          {careerData.map((data, index) => {
+          {timelineData.map((data, index) => {
             const adjustedStartDate = getAdjustedStartDate(data.start_date, careerYear[0]);
             const gridColumnStart = diffMonth(`${careerYear[0]}-01`, adjustedStartDate);
             const gridColumnEnd = gridColumnStart + diffMonth(adjustedStartDate, data.end_date);
