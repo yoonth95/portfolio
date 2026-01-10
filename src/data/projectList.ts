@@ -134,6 +134,167 @@ import {
 
 const projectList = [
   {
+    projectName: "samchuly-jdy",
+    type: "외주 프로젝트",
+    thumbnail: betaThumbnail, // 임시 이미지
+    date: "2025. 10",
+    techStack: [
+      ["TypeScript", "#c8ecf1"],
+      ["Next.js", "#d3e5ef"],
+      ["React", "#d3e5ef"],
+      ["TailwindCSS", "#55555599"],
+      ["Shadcn/ui", "#55555599"],
+      ["Zustand", "#c7c7c7"],
+      ["Tanstack Query", "#ffe494"],
+      ["Tanstack Table", "#ffe494"],
+      ["Zod", "#3e67b1b0"],
+      ["React-Quill", "#c7c7c7"],
+      ["react-naver-maps", "#c7c7c7"],
+      ["Supabase", "#3ecf8e"],
+      ["Vercel", "#c7c7c7"],
+    ],
+    icon: beta, // 임시 이미지
+    title: "삼천리 자전거 중동역점 웹사이트",
+    team: "기획·디자인·개발 1인",
+    introduction: "삼천리 자전거 중동역점 웹사이트 리뉴얼 및 관리자 페이지 구축",
+    projectMainImg: betaMain, // 임시 이미지
+    siteLink: "https://samchuly-jdy.vercel.app",
+    github: [],
+    velog: "https://velog.io/@yoonth95/첫-외주-개발-과정",
+    intention: [
+      "운영 비용을 최소화하면서 관리자가 텍스트·이미지·섹션 순서를 즉시 수정할 수 있는 구조를 목표로 설정",
+      "정적 사이트가 아닌 서버 기능이 필요한 구조로 판단해 Next.js 서버 기능을 적극 활용",
+      "콘텐츠를 데이터로 관리하고 캐시 무효화로 즉시 반영되도록 구성",
+    ],
+    extraSections: [
+      {
+        id: "sectionForeword",
+        title: "서론",
+        items: [
+          "친구 부모님이 운영하는 삼천리 자전거 직영점 웹사이트 신규 구축 요청",
+          "modoo! 서비스 종료로 기존 사이트 유지가 불가능한 상황",
+          "빌더형 호스팅(아임웹·카페24 등)은 월 비용 부담과 커스텀 한계로 보류",
+          {
+            "<b>핵심 요구사항</b>": [
+              "운영 비용이 거의 발생하지 않을 것",
+              "페이지 레이아웃·텍스트·이미지를 자유롭게 수정 가능할 것",
+              "비개발자도 관리하기 쉬운 백오피스/관리 UI 보유",
+            ],
+          },
+        ],
+      },
+      {
+        id: "sectionSelectionBackground",
+        title: "선택 배경",
+        items: [
+          {
+            "<b>이미지/도메인</b>": [
+              "본사에 저작권 및 상표 사용 가능 여부를 사전 확인 후 공식 이미지 제공받음",
+              "가맹점 홍보/홈페이지 제작 용도는 가능하되 재배포·2차 상업 이용은 가이드라인 준수",
+              "브랜드명 사용 도메인 승인 후 매장명/지역명을 함께 표기해 상표권 오해 방지",
+            ],
+          },
+          {
+            "<b>호스팅/DB</b>": [
+              "AWS 대비 월 평균 40명 수준 트래픽에 맞춰 Vercel 무료 플랜 선택",
+              "Vercel Storage 대비 Auth·스토리지·대시보드 UX가 강한 Supabase 선택",
+            ],
+          },
+          {
+            "<b>서버 구성</b>": [
+              "정적 사이트가 아닌 서버 기능이 필요해 별도 서버 분리보다 Next.js 서버 기능(SSR/API Routes)을 활용",
+              "Vercel 배포 환경과 일관된 운영 흐름 유지",
+            ],
+          },
+        ],
+      },
+      {
+        id: "sectionTechReason",
+        title: "기술 스택 선정 이유",
+        items: [
+          "<b>Next.js + Vercel</b>: SSR/API Routes를 활용해 별도 서버 없이 운영하고, 소규모 트래픽에는 무료 플랜으로 비용 최소화",
+          "<b>Supabase</b>: Auth/스토리지/대시보드 UX가 잘 갖춰져 관리자 페이지 구현에 유리",
+          "<b>React-Quill + Delta(JSON)</b>: 구조화된 포맷 저장으로 XSS 위험을 줄이고 버전 관리/병합에 유리",
+          "<b>TanStack Query</b>: 조회 캐시 구성 후 저장 시 무효화/동기화를 즉시 처리",
+          "<b>JSONB 기반 콘텐츠</b>: 레이아웃/섹션 콘텐츠를 데이터로 제어해 즉시 반영 가능",
+        ],
+      },
+      {
+        id: "sectionDirection",
+        title: "개발 방향",
+        items: [
+          "런칭 이후에도 텍스트·이미지·레이아웃(섹션/내비게이션 순서)을 관리자가 즉시 변경 가능하도록 설계",
+          "React-Quill로 글자 크기/색상 등을 쉽게 편집하고 저장 형식은 HTML 대신 Delta(JSON) 채택",
+          "DB는 pages/page_layouts/page_sections 중심으로 설계하고 JSONB로 레이아웃/콘텐츠를 제어",
+          "Edge 캐시(태그 기반)와 경로/태그 무효화, TanStack Query 캐시를 결합해 저장 즉시 반영",
+        ],
+      },
+      {
+        id: "sectionDesign",
+        title: "웹 디자인",
+        items: [
+          "Vercel v0를 활용해 레이아웃 구조, 메인 컬러, 반응형 규칙을 프롬프트로 생성",
+          "html.to.design 확장 프로그램으로 캡처 → Figma 플러그인 연동 후 UI 패턴 자동 생성",
+          "Figma에서 수정 보완 후 Cursor Figma MCP로 디자인 패턴과 페이지 UI를 코드화",
+        ],
+      },
+      {
+        id: "sectionOperationPlan",
+        title: "운영 계획",
+        items: [
+          {
+            "<b>도메인</b>": ["현재는 Vercel 기본 도메인 사용", "매장 이전으로 상호/지역명이 확정되면 커스텀 도메인 구매 및 연결 예정"],
+          },
+          {
+            "<b>SEO</b>": [
+              "네이버 웹마스터 도구 등록 완료",
+              "Google Search Console 등록 및 sitemap 제출 예정",
+              "키워드/상단 노출 최적화는 학습 후 적용",
+            ],
+          },
+          {
+            "<b>Analytics</b>": [
+              "Vercel 또는 Firebase Analytics로 방문자 수/체류 페이지 확인",
+              "관리자 페이지 내 요약 지표 제공 요청에 대해 최소 지표 정의 후 적용 검토",
+              "방문 요약(일/주간 방문자·페이지뷰·평균 체류시간), 인기 페이지, 유입 경로, 디바이스/지역 분포",
+            ],
+          },
+        ],
+      },
+    ],
+    beforeAfter: [
+      {
+        title: "메인 페이지",
+        before: [betaImageMain, betaImageDetail], // 임시 이미지 (Before)
+        after: [betaImageShow, betaImageStory], // 임시 이미지 (After)
+        notes: ["Before 이미지는 modoo! 종료 전 캡처본이라 일부 페이지는 없거나 화질이 낮음", "삼천리 red 컬러 사용 및 섹션 구분 강화"],
+      },
+      {
+        title: "자전거 목록 페이지",
+        before: [betaImagePostManage, betaImagePostUpdate], // 임시 이미지 (Before)
+        after: [betaImagePostUpload, betaImageProfile], // 임시 이미지 (After)
+      },
+      {
+        title: "공지사항 페이지",
+        before: [betaImageReviewManage, betaImageReservationManage], // 임시 이미지 (Before)
+        after: [betaImageReview, betaImageReservationManageAdmin], // 임시 이미지 (After)
+        notes: ["공지사항/문의 작성 공간을 분리해 관리자/사용자 역할을 구분"],
+      },
+      {
+        title: "후기 페이지",
+        before: [betaImageStoryManage], // 임시 이미지 (Before)
+        after: [betaImageLike, betaImageLikeManage], // 임시 이미지 (After)
+        notes: ["기존 사용자 리뷰 공간 대신 네이버 블로그 리뷰를 크롤링해 노출"],
+      },
+    ],
+    projectImgAspectRatio: "16/9",
+    projectImgList: [
+      {
+        "메인/관리자": [betaImageMain, betaImageDetail], // 임시 이미지
+      },
+    ],
+  },
+  {
     projectName: "egg-mbti",
     type: "개인 프로젝트",
     thumbnail: eggMbti,
