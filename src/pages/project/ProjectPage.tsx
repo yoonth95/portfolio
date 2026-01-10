@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Element } from "react-scroll";
 import { SafeHtml } from "@/components/common";
 import { ProjectHeader, ProjectImgRender, ProjectPropulsionRender, ProjectImgSlide, ProjectLinkBox, ProjectNav } from "@/components/project";
 import { useResize, useWithProject } from "@/hooks";
+import { ProjectDetailItem } from "@/types";
 import * as P from "./ProjectPage.styled";
 
 const ProjectPage = () => {
@@ -26,6 +27,49 @@ const ProjectPage = () => {
   if (!projectData) {
     return <div>Loading...</div>;
   }
+
+  const renderDetailItems = (items: ProjectDetailItem[]) => (
+    <ul>
+      {items.map((item, index) => {
+        if (typeof item === "string") {
+          return (
+            <li key={index}>
+              <SafeHtml html={item} />
+            </li>
+          );
+        }
+
+        const [objectKey, objectValues] = Object.entries(item)[0];
+
+        return (
+          <li key={index}>
+            <SafeHtml html={objectKey} />
+            <ul>
+              {objectValues.map((value: string, valueIndex: number) => (
+                <li key={valueIndex} className="subLi">
+                  <SafeHtml html={value} />
+                </li>
+              ))}
+            </ul>
+          </li>
+        );
+      })}
+    </ul>
+  );
+
+  const renderImageBlock = (images: string[] | string, altPrefix: string) => {
+    if (typeof images === "string") {
+      return <img src={images} alt={altPrefix} />;
+    }
+
+    return (
+      <ProjectImgSlide aspectRatio={projectData.projectImgAspectRatio}>
+        {images.map((imgSrc, index) => (
+          <img key={index} src={imgSrc} alt={`${altPrefix} ${index}`} />
+        ))}
+      </ProjectImgSlide>
+    );
+  };
 
   return (
     <P.ProjectContainer style={{ zoom: zoom }}>
@@ -68,37 +112,17 @@ const ProjectPage = () => {
               ) : (
                 <h2 id="sectionIntention">구현 목표</h2>
               )}
-
-              <ul>
-                {projectData.intention.map((item, index) => {
-                  if (typeof item === "string") {
-                    return (
-                      <li key={index}>
-                        <SafeHtml html={item} />
-                      </li>
-                    );
-                  } else if (typeof item === "object") {
-                    const [objectKey, objectValues] = Object.entries(item)[0];
-
-                    return (
-                      <li key={index}>
-                        <SafeHtml html={objectKey} />
-                        <ul>
-                          {objectValues.map((value: string, valueIndex: number) => (
-                            <li key={valueIndex} className="subLi">
-                              <SafeHtml html={value} />
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    );
-                  } else {
-                    return null;
-                  }
-                })}
-              </ul>
+              {renderDetailItems(projectData.intention)}
             </Element>
           )}
+
+          {projectData.extraSections?.map((section) => (
+            <Element className="section" name={section.id} key={section.id}>
+              <h2 id={section.id}>{section.title}</h2>
+              {section.image && <img src={section.image} alt={section.title} />}
+              {renderDetailItems(section.items)}
+            </Element>
+          ))}
 
           {/* 참고 사이트 */}
           {projectData.reference && (
@@ -213,6 +237,35 @@ const ProjectPage = () => {
         )}
 
         {/* 프로젝트 상세 이미지 */}
+        {projectData.beforeAfter && (
+          <Element className="section" name="sectionBeforeAfter">
+            <h1 id="sectionBeforeAfter">Before / After</h1>
+            {projectData.beforeAfter.map((section, index) => (
+              <div key={index} className="beforeAfterBlock">
+                <h3>{section.title}</h3>
+                <div className="beforeAfterGrid">
+                  <div>
+                    <p className="beforeAfterLabel">Before</p>
+                    {renderImageBlock(section.before, `${section.title} before`)}
+                  </div>
+                  <div>
+                    <p className="beforeAfterLabel">After</p>
+                    {renderImageBlock(section.after, `${section.title} after`)}
+                  </div>
+                </div>
+                {section.notes && (
+                  <ul className="beforeAfterNotes">
+                    {section.notes.map((note, noteIndex) => (
+                      <li key={noteIndex}>
+                        <SafeHtml html={note} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </Element>
+        )}
         <Element className="section" name="sectionDetailImage">
           <h1 id="sectionDetailImage">핵심 기능 및 상세 이미지</h1>
           <ProjectImgRender projectData={projectData} />

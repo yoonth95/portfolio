@@ -90,6 +90,25 @@ export const ProjectInfo = styled.div`
   & .imgDescription {
     margin-top: 40px;
   }
+
+  & .beforeAfterBlock {
+    margin-bottom: 2rem;
+  }
+
+  & .beforeAfterGrid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  & .beforeAfterLabel {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  & .beforeAfterNotes {
+    margin-top: 0.75rem;
+  }
 `;
 
 export const ReferenceBox = styled.div`
